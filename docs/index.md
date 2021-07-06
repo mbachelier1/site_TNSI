@@ -26,7 +26,8 @@ Le programme est découpé en 5 parties :
 [Gestion des processus](archi/processuss.html){ .md-button}
 
 ##Programmation
-
+[Récursivité](Programmation/recursivite.html){ .md-button}  
+[Modularité](Programmation/modularite.html){ .md-button}  
 
 ##Algorithmie
 
