@@ -1,0 +1,110 @@
+site_name: NSI au Lycée Henri Avril
+
+
+nav:
+  - 'Accueil': 'index.md'
+  - 'Structures de données':
+    -  'Listes piles et files ' : 'Structure/listes_piles_files.md'
+    - 'Arbres' : 'Structure/arbres.md'
+    - 'Les graphes' : 'Structure/graphes.md'
+  - 'Bases de données':
+    -  'Modèle relationnel': 'BDD/modele_relationnel.md'
+    -  'Langage SQL ' : 'BDD/langageSQL.md'
+    -  'Projet SQL ' : 'BDD/projet_SQL.md'
+  - 'Programmation':
+    -  'Modularité' : 'Programmation/modularite.md'
+    -  'Projet : Créer un module' : 'Programmation/projet_modularite.md'
+    -  'Récursivité' : 'Programmation/recursivite.md'
+  - 'Architecture et OS':
+    -  'Gestion ds processus' : 'archi/processus.md'
+    -  'Protocoles de routage' : 'archi/routage.md'
+    -  'Système sur puce' : 'archi/soc.md'
+    -  'Sécurisation des communications' : 'archi/communications.md'
+  
+  
+theme:
+  name: material
+  font: false
+  language: fr
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - header.autohide
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mode sombre
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Mode clair
+
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.superfences
+  - admonition
+  - meta
+  - abbr
+  - def_list
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: false
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.tabbed
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 3
+
+
+
+plugins:
+  - search
+  - macros
+#  - markdownmermaid
+  - pdf-export:
+      verbose: true
+      media_type: print
+      enabled_if_env: ENABLE_PDF_EXPORT
+      theme_handler_path: theme-handler.py
+
+extra:
+  local: G:/info/site_NSI/site/
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js
+  - javascripts/mermaid.js
+
+extra_css:
+  - stylesheets/extra.css
