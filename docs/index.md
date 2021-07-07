@@ -16,7 +16,7 @@ Le programme est découpé en 5 parties :
 
 
 ##Bases de données  
-[Modèle relationnel](BDD/modele_relationel.html){ .md-button}  
+[Modèle relationnel](BDD/modele_relationnel.html){ .md-button}  
 
 [Langage SQL](BDD/langage_SQL.html){ .md-button} 
 
