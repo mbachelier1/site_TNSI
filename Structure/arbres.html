@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#les-arbres-binaires" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -336,10 +341,63 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Arbres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="arbres.html" class="md-nav__link md-nav__link--active">
         Arbres
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulaire" class="md-nav__link">
+    Vocabulaire
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-proprietes-dun-arbre" class="md-nav__link">
+    Les propriétés d'un arbre
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arbre-binaire" class="md-nav__link">
+    Arbre binaire
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -586,9 +644,32 @@
               
                 
                 
-                  <h1>Arbres</h1>
-                
-                
+                <h1 id="les-arbres-binaires">Les arbres binaires<a class="headerlink" href="#les-arbres-binaires" title="Permanent link">⚓︎</a></h1>
+<h2 id="vocabulaire">Vocabulaire<a class="headerlink" href="#vocabulaire" title="Permanent link">⚓︎</a></h2>
+<p><img alt="vocabulaire des arbres" src="img/arbre_voca.png" /></p>
+<p>Un arbre est une structure permettant de réprésenter des relations en informatique.  </p>
+<p>Chaue élément de l'arbre est appélé un <strong>noeud</strong>. Une <strong>feuille</strong> est un neoud n'ayant pas de descendant.<br />
+la <strong>racine</strong> est le noeud de départ, qui n'a pas d'acsendant. </p>
+<p>Nœuds <strong>descendants</strong> (ou fils) : nœuds liés à un nœud ascendant en s'éloignant de la racine.</p>
+<h2 id="les-proprietes-dun-arbre">Les propriétés d'un arbre<a class="headerlink" href="#les-proprietes-dun-arbre" title="Permanent link">⚓︎</a></h2>
+<p>La <strong>Hauteur</strong> de l'arbre est le nombre d'arrêtes maximale entre la racine et les feuilles.<br />
+La <strong>taille</strong> de l'arbre : nombre de nœuds.<br />
+La <strong>profondeur</strong> d'un nœud est le nombre d'arrêtes entre le nœud et la racine.</p>
+<div class="admonition example">
+<p class="admonition-title">exemple</p>
+<p>Dans l'exemple ci-dessus, la taille de l'arbre est de 10, la hauteur est de 3 et la profondeur du noeud 10 est 2.
+La racine est le noeud 2 en haut, 2, 10, 1, 11 et 4 sont des feuilles.</p>
+</div>
+<h2 id="arbre-binaire">Arbre binaire<a class="headerlink" href="#arbre-binaire" title="Permanent link">⚓︎</a></h2>
+<p>Un arbre est généralement orienté de la racine aux feuilles. Il est considéré comme <strong>binaire</strong> lorsqu'un neud ne peut pas avoir plus de deux descendants.</p>
+<h2 id="exemples">Exemples<a class="headerlink" href="#exemples" title="Permanent link">⚓︎</a></h2>
+<p><img alt="exemple1" src="img/example1.png" />   </p>
+<p><img alt="exemple2" src="img/example2.png" />  </p>
+<p><img alt="exemple3" src="img/example3.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">arbre binaire</p>
+<p>Seul le deuxième est un arbre binaire</p>
+</div>
                 
               
               

@@ -4,6 +4,13 @@ p{text-align: justify;}
 #center{
 	text-align: center;
 }
-p {
+p{
 	text-align: justify;
+	line-height: 2;
+	font-family:Verdana, sans-serif;
+
+}
+li, a{
+	text-align: justify;
+	font-family:Verdana, sans-serif;
 }
