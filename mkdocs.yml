@@ -69,8 +69,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight:
       linenums: true
-  - pymdownx.tasklist:
-      custom_checkbox: false
+  - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox:    false   #   avec cases d'origine
+        clickable_checkbox: true    #   et cliquables.
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.tabbed
