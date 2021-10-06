@@ -725,6 +725,28 @@ Toutes fonction récursive doit posséder une condition d'arrêt.  </p>
 <p class="admonition-title">Oubli du <code>return</code></p>
 <p>Il est fréquent lorsqu'on débute avec cette pratique d'exécuter la fonction en omettant le mot clé <code>return</code>. La fonction ne renverra rien sans forcément donner un message d'erreur. Alors si cela ne "marche pas" c'est la première chose à vérifier.</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">Application</p>
+<p>Ouvrir une console basthon.
+Ecrire une fonction qui prend une liste d'entiers en paramètre et en retourne la somme en utilisant la récursivité.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Que fait-elle</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">fonction </span><span class="nv">fct3</span><span class="p">(</span><span class="nv">n</span><span class="p">)</span>
+        <span class="k">SI </span><span class="nv">n</span><span class="o">=</span><span class="mi">0</span> <span class="k">ALORS</span>
+<span class="k">            </span><span class="nv">retourne</span>
+        <span class="nv">FINSI</span>
+        <span class="nv">fct3</span><span class="p">(</span><span class="nv">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+        <span class="nb">Ecrire</span><span class="p">(</span><span class="nv">n</span><span class="err">%</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+Coder cette fonction en python et dire ce qu'elle fait.</p>
+</div>
 <hr />
 <p style="text-align: center; color:gray; font-size: 10px;">
 Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
