@@ -72,8 +72,22 @@ print(factorielle_recursif(8))
 !!! caution "Oubli du `return`"
 	Il est fréquent lorsqu'on débute avec cette pratique d'exécuter la fonction en omettant le mot clé `return`. La fonction ne renverra rien sans forcément donner un message d'erreur. Alors si cela ne "marche pas" c'est la première chose à vérifier.
 
-    
-      
+!!! question "Application"
+	Ouvrir une console basthon.
+	Ecrire une fonction qui prend une liste d'entiers en paramètre et en retourne la somme en utilisant la récursivité.
+	
+!!! question "Que fait-elle"
+	```pseudocode
+		fonction fct3(n)
+			SI n=0 ALORS
+				retourne
+			FINSI
+			fct3(n/2)
+			Ecrire(n%2)
+	```
+	Coder cette fonction en python et dire ce qu'elle fait.
+	
+	
 ---
 <p style="text-align: center; color:gray; font-size: 10px;">
 Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
