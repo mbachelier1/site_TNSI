@@ -4,7 +4,8 @@ site_name: NSI au Lycée Henri Avril
 nav:
   - 'Accueil': 'index.md'
   - 'Structures de données':
-    -  'Listes piles et files ' : 'Structure/listes_piles_files.md'
+    - 'Listes piles et files ' : 'Structure/listes_piles_files.md'
+    - 'Programmation Orientée Objet' : 'Structure/POO.md'
     - 'Arbres' : 'Structure/arbres.md'
     - 'Les graphes' : 'Structure/graphes.md'
   - 'Bases de données':
@@ -12,14 +13,17 @@ nav:
     -  'Langage SQL ' : 'BDD/langageSQL.md'
     -  'Projet SQL ' : 'BDD/projet_SQL.md'
   - 'Programmation':
+    -  'Récursivité' : 'Programmation/recursivite.md'
     -  'Modularité' : 'Programmation/modularite.md'
     -  'Projet : Créer un module' : 'Programmation/projet_modularite.md'
-    -  'Récursivité' : 'Programmation/recursivite.md'
+
   - 'Architecture et OS':
-    -  'Gestion ds processus' : 'archi/processus.md'
-    -  'Protocoles de routage' : 'archi/routage.md'
+    -  'Sécurisation des communications' : 'archi/crypto.md'
+    -  'Et si on codait Enigma?' : 'archi/enigma.md'
     -  'Système sur puce' : 'archi/soc.md'
-    -  'Sécurisation des communications' : 'archi/communications.md'
+    -  'Gestion ds processus' : 'archi/processus.md'
+
+
   
   
 theme:

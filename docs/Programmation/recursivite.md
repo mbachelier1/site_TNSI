@@ -78,16 +78,18 @@ print(factorielle_recursif(8))
 	
 !!! question "Que fait-elle"
 	```pseudocode
-		fonction fct3(n)
+		fonction fonction(n)
 			SI n=0 ALORS
 				retourne
 			FINSI
-			fct3(n/2)
+			fonction(n//2)
 			Ecrire(n%2)
 	```
 	Coder cette fonction en python et dire ce qu'elle fait.
 	
-	
+
+
+
 ---
 <p style="text-align: center; color:gray; font-size: 10px;">
 Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
