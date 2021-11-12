@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -345,8 +345,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Structure/arbres.html" class="md-nav__link">
-        Arbres
+      <a href="../Structure/graphes.html" class="md-nav__link">
+        Les graphes
       </a>
     </li>
   
@@ -357,8 +357,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Structure/graphes.html" class="md-nav__link">
-        Les graphes
+      <a href="../Structure/arbres.html" class="md-nav__link">
+        Arbres
       </a>
     </li>
   
@@ -559,6 +559,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gestion_bug.html" class="md-nav__link">
+        Gestion des Bugs
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -696,22 +708,22 @@ Cette fonction devra retourner la valeur de l'incertitude calculée.</p>
 <div class="admonition help">
 <p class="admonition-title">Quelques aides précieuses</p>
 <p>valeurs de k (1ere ligne contient le nombre de mesures, les deuxième et troisième lignes les valeurs de k pour 95% et 98%) :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#Tableau regroupant les valeurs de k</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#Tableau regroupant les valeurs de k</span>
 <span class="n">coeff_elargissement</span><span class="o">=</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">20</span><span class="p">],</span>
                           <span class="p">[</span><span class="mf">12.7</span><span class="p">,</span><span class="mf">4.3</span><span class="p">,</span><span class="mf">3.18</span><span class="p">,</span><span class="mf">2.78</span><span class="p">,</span><span class="mf">2.57</span><span class="p">,</span><span class="mf">2.45</span><span class="p">,</span><span class="mf">2.37</span><span class="p">,</span><span class="mf">2.31</span><span class="p">,</span><span class="mf">2.26</span><span class="p">,</span><span class="mf">2.20</span><span class="p">,</span><span class="mf">2.16</span><span class="p">,</span><span class="mf">2.13</span><span class="p">,</span><span class="mf">2.11</span><span class="p">,</span><span class="mf">2.09</span><span class="p">],</span>
                           <span class="p">[</span><span class="mf">63.7</span><span class="p">,</span><span class="mf">9.93</span><span class="p">,</span><span class="mf">5.84</span><span class="p">,</span><span class="mf">4.60</span><span class="p">,</span><span class="mf">4.03</span><span class="p">,</span><span class="mf">3.71</span><span class="p">,</span><span class="mf">3.50</span><span class="p">,</span><span class="mf">3.36</span><span class="p">,</span><span class="mf">3.25</span><span class="p">,</span><span class="mf">3.11</span><span class="p">,</span><span class="mf">3.01</span><span class="p">,</span><span class="mf">2.95</span><span class="p">,</span><span class="mf">2.90</span><span class="p">,</span><span class="mf">2.86</span><span class="p">]]</span>
 </code></pre></div>
 </td></tr></table>
 Comment fixer une valeur de paramètre par défaut :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">incertitude</span> <span class="p">(</span><span class="n">Liste</span><span class="p">,</span> <span class="n">confiance</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">incertitude</span> <span class="p">(</span><span class="n">Liste</span><span class="p">,</span> <span class="n">confiance</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="k">pass</span>
 <span class="c1"># si on exécute la fonction sans préciser la valeur de confiance elle vaudra False;</span>
 <span class="n">incertitude</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
@@ -757,8 +769,9 @@ Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -785,13 +798,13 @@ Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
       
       
         
-        <a href="../archi/crypto.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Sécurisation des communications" rel="next">
+        <a href="gestion_bug.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Gestion des Bugs" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Sécurisation des communications
+              Gestion des Bugs
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -820,10 +833,10 @@ Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       
