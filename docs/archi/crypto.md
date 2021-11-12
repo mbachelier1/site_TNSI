@@ -16,7 +16,7 @@ le message SUBSTITUTION devient LWZLMOMWMOGF
 
 
 ### Exemple 2: Chiffrement de Verman (ou chiffrement XOR)
-![table OU EXCLUSIF](img/xor.PNG){align=left}
+![table OU EXCLUSIF](img/xor.png){align=left}
 Il s'agit d'un système parfaitement sûr, le mathématicien C.Shannon a montré que si on respecte bien les 3 règles de Verman, ce système est inviolable.  
 
 - La clé doit être une suite de caractères au moins aussi longue que le message à chiffrer.
@@ -49,7 +49,7 @@ Pour déchiffrer, on fait l'opération inverse : (M⊕S)⊕S=M
 	Si Eve intercepte tous les messages elle peut aussi intercepter la clé qui est forcément transmise en clair.  
 	3.Dans le cas des deux systèmes proposés, quel est la clé secrète ?   
 	4.Coder votre prénom grâce au code de Verman avec comme clé 'nsi'.  
-	![table ASCII en binaire](img/ascii.PNG)  
+	![table ASCII en binaire](img/ascii.png)  
 	[un peu plus rapide](https://www.rapidtables.com/convert/number/ascii-to-binary.html)
 
 
