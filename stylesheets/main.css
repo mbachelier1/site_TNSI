@@ -1,0 +1,78 @@
+
+
+h2{
+
+	font-family: arial;
+	font-weight: bold;
+}
+h3{
+
+	font-family:arial;
+	font-size : 14px;
+	font-weight: bold;
+}
+
+li,a {
+	font-family:Verdana, sans-serif;
+
+}
+p,td {
+	color:black;
+	font-size: 13px;
+	font-family:Verdana, sans-serif;
+	text-align: justify;
+	line-height: 2;
+
+}
+
+details {color:black;
+	background-color :  lavender;
+	font-size: 13px;
+	font-family:Verdana, sans-serif;
+	text-align: justify;
+	line-height: 2;
+	font-style: italic;}
+
+
+ul{
+	margin-left: 0;
+  padding-left: 40px;
+}
+.quest{
+	padding-left:40px;
+	font-weight:bold;
+
+}
+.inl{
+	display : inline-block;
+	text-align: right;
+}
+
+}
+.def{
+	font-style : italic;
+	text-indent:40px;
+}
+img{
+		max-width: 80%;
+	  	padding:5px;
+		display: block;
+		margin: auto;
+}
+
+
+#application{
+	border : 2px solid black;
+	box-shadow:  10px 5px 5px grey;
+	padding: 5px;
+}
+footer{
+	border-top : solid gray 1px;
+	padding-top : 4px;
+	margin-left:10%;
+	margin-right:10%;
+	text-align: center;
+	color: gray;
+	font-family: verdana;
+	font-size: 10px;
+}
