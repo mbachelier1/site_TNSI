@@ -67,6 +67,13 @@ Le principe est le même que le cryptage précédent mais avant même de passer 
 	A l'aide du nouveau tableau contenant le cablâge,  essayer de crypter deux fois de suite la lettre C.
 	![trouver la lettre](img/rotor_avec_cablage.PNG){align=left}
 
+??? danger "Faites le avant pour être sur d'avoir compris"
+    Premier C : I dans le cablage, devient R par le premier rotor, R devient U par le deuxieme rotor, U devient Q par le 3e rotor, et Q devient Z dans le réflecteur.  
+    Le Z du réflecteur devient un B dans le rotor V, puis le B devient W, le W devient R et le R par l'inversion du câblage devient un S.  
+    Le premier rotor tourne d'un cran et le O passe en 1er et tout se décale vers la droite.  
+    Deuxième C : I dans le cablage, devient P par le premier rotor (attention le rotor a tourné), P devient H par le deuxieme rotor, H devient Y par le 3e rotor, et Y devient U dans le réflecteur.  
+    Le U du réflecteur devient un I dans le rotor V, puis le I devient V, le V devient E (le rotor a tourné) et le E par l'inversion du câblage devient un M.  
+
 
 ### Implémentation des rotors et des réflecteurs
 Les rotors que nous utiliserons seront ceux d'origine. Pour cela nous aurons une variable globale `rotors` qui sera un tuple contenant les chaînes de 26 caractères, dans l'ordre dans lequel elles apparaissaient sur les rotors d'Enigma.
@@ -120,17 +127,35 @@ machine=enigma(premier_rotor,deuxieme_rotor,troisieme_rotor,reglage_premier_roto
 ### Fonctions
 
 ```python
+#variables globales
+alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+rotors=('EKMFLGDQVZNTOWYHXUSPAIBRCJ',
+        'AJDKSIRUXBLHWTMCQGZNPYFVOE',
+        'BDFHJLCPRTXVZNYEIWGAKMUSQO',
+        'ESOVPZJAYQUIRHXLNFTGKDCMWB',
+        'VZBRGITYUPSDNHLXAWMJQOFECK')
+REFLECTEURS = ('YRUHQSLDPXNGOKMIEBFZCWVJAT', 'RDOBJNTKVEHMLFCWZAXGYIPSUQ')
+
+
 class enigma:
     def __init__(self,...):
         '''initilisation de la classe en utilisant les paramètres donnés dans le détail du projet'''
-        
+        self.rotor1=... #str contenant 26 caractères
+        self.rotor2=...
+        self.rotor3=...
+        self.reflecteur=...
+        self.cablage=...  #str contenant les lettres à inverser dans l'ordre
+        self.alphabet_cable=''  #str de 26 lettres contenant l'aphabet cablé
+        self.pos_rotor1=... #premiere lettre du rotor dans la position initiale
+        self.pos_rotor2=...
+        self.pos_rotor3=...
         
         
     def inversion(self):#niveau 3 uniquement
         '''cette fonction renvoi les lettre de l'alphabet dont l'ordre
         est modifié par la chaine de cablage.
         avec un cablage ='ABCDEFGHIJKL'
-        la fonction doit renvoyer 'BADCFEHGJILKMNOPQRSTUVWXYZ''''
+        la fonction doit renvoyer 'BADCFEHGJILKMNOPQRSTUVWXYZ'''
         
         
     def positionner_rotors(self):#tous les niveaux
@@ -196,6 +221,8 @@ class message:
     instance de la classe enigma pour traiter le message'''
     def __init__(self,message,machine):
         '''initialisation de la classe'''
+        self.message=...
+        self.machine=...
     
     def crypter(self):
         '''cette fonction va appliquer les reglages de la machine créée par la classe
@@ -203,43 +230,37 @@ class message:
         du message devra être cryptée'''
         ...
         return msg_crypte
-    
+
 ####### programme principal ##############
-alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-rotors=('EKMFLGDQVZNTOWYHXUSPAIBRCJ',
-        'AJDKSIRUXBLHWTMCQGZNPYFVOE',
-        'BDFHJLCPRTXVZNYEIWGAKMUSQO',
-        'ESOVPZJAYQUIRHXLNFTGKDCMWB',
-        'VZBRGITYUPSDNHLXAWMJQOFECK')
-REFLECTEURS = ('YRUHQSLDPXNGOKMIEBFZCWVJAT', 'RDOBJNTKVEHMLFCWZAXGYIPSUQ')
+if __name__=='__main__':
 
-##choix des réglages
-#choix des rotors das l'ordre que l'on veut parmi les 5
-premier_rotor=...
-deuxieme_rotor=...
-troisieme_rotor=...
-#choix du réflecteur entre le premier et le deuxieme
-choix_reflecteur=...
-#choix de la lettre placée en premiere position pour chaque rotor
-reglage_premier_rotor=...
-reglage_deuxieme_rotor=...
-reglage_troisieme_rotor=...
+    ##choix des réglages
+    #choix des rotors das l'ordre que l'on veut parmi les 5
+    premier_rotor=...
+    deuxieme_rotor=...
+    troisieme_rotor=...
+    #choix du réflecteur entre le premier et le deuxieme
+    choix_reflecteur=...
+    #choix de la lettre placée en premiere position pour chaque rotor
+    reglage_premier_rotor=...
+    reglage_deuxieme_rotor=...
+    reglage_troisieme_rotor=...
 
-#niveaux 1 et 2
-machine=enigma(premier_rotor,deuxieme_rotor,troisieme_rotor,reglage_premier_rotor,reglage_deuxieme_rotor,
-               reglage_troisieme_rotor,choix_reflecteur)
-machine.configuration()
+    #niveaux 1 et 2
+    machine=enigma(premier_rotor,deuxieme_rotor,troisieme_rotor,reglage_premier_rotor,reglage_deuxieme_rotor,
+                   reglage_troisieme_rotor,choix_reflecteur)
+    machine.configuration()
 
-#niveau 3
-#suite de lettres à inverser deux à deux (on inverse la premiere et la deuxieme, la troisieme et la quatrième ...
-suite_cablage=...
-machine=enigma(premier_rotor,deuxieme_rotor,troisieme_rotor,reglage_premier_rotor,reglage_deuxieme_rotor,
-               reglage_troisieme_rotor,choix_reflecteur,suite_cablage)
-machine.configuration()
+    #niveau 3
+    #suite de lettres à inverser deux à deux (on inverse la premiere et la deuxieme, la troisieme et la quatrième ...
+    suite_cablage=...
+    machine=enigma(premier_rotor,deuxieme_rotor,troisieme_rotor,reglage_premier_rotor,reglage_deuxieme_rotor,
+                   reglage_troisieme_rotor,choix_reflecteur,suite_cablage)
+    machine.configuration()
 
-#vous completerez le programe de façon à afficher un message crypté et à tester son
-#décryptage
-msg=message(...)
+    #vous completerez le programe de façon à afficher un message crypté et à tester son
+    #décryptage
+    msg=message(...)
 ```
 
 !!! faq "Décrypter ceci"
@@ -249,4 +270,4 @@ msg=message(...)
 	Décrypter le message  
 	**Niveau 1** : XITDETNCISCDTYERRI.  
 	**Niveau 2** : XQAXREIANLYOWWANWV.  
-	**Niveau 3** :  : SFLSXGGNNQPLUJDYZF.  
+	**Niveau 3** : SFLSXGGNNQPLUJDYZF.  

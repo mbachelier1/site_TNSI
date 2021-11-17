@@ -114,3 +114,9 @@ Ce certificat est un fichier contenant la clé publique, des informations sur la
 !!! info "Compléments"
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/ymez1h_tn7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/7W7WPMX7arI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+!!! info "Dates clés de la cryptographie"
+	<div style="width: 100%;"><div style="position: relative; padding-bottom: 200.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="800" height="1600" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619361b3deff4a0dd4beeb66" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+	
+!!! important "Ce que je retiens"
+	![le principal à retenir](img/CMsecu.PNG)

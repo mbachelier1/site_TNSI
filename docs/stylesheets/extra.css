@@ -1,16 +1,66 @@
-h1{text-align : center;}
-p{text-align: justify;}
 
 #center{
 	text-align: center;
 }
-p{
+
+p {
+	color:black;
 	text-align: justify;
 	line-height: 2;
-	font-family:Verdana, sans-serif;
 
 }
-li, a{
-	text-align: justify;
-	font-family:Verdana, sans-serif;
+h1
+{text-align: center;}
+
+.quest{
+	padding-left:40px;
+	font-weight:bold;
+
+}
+.inl{
+	display : inline-block;
+}
+
+
+.md-typeset .admonition {
+    font-size: 0.8rem;
+}
+
+.md-typeset details {
+    font-size: 0.8rem;
+}
+
+.def{
+	font-style : italic;
+	text-indent:40px;
+}
+img{
+	max-width: 80%;
+	padding:5px;
+	display: block;
+	margin: auto;
+}
+
+.tableau{
+	border : solid black 2px;
+	margin : auto;
+	padding: 0px;
+	border-collapse: collapse
+	 
+}
+.tableau>td{
+	border : black solid 1px;
+	width : 50px;
+	padding:auto;
+	
+}
+footer{
+	border-top : solid gray 1px;
+	padding-top : 4px;
+	margin-left:10%;
+	margin-right:10%;
+	text-align: center;
+	color: gray;
+	font-family: verdana;
+	font-size: 10px;
 }
