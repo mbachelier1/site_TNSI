@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -712,40 +712,40 @@
 <h2 id="rappels">Rappels<a class="headerlink" href="#rappels" title="Permanent link">⚓︎</a></h2>
 <h3 id="utilisation-dun-module"><strong>Utilisation d'un module</strong><a class="headerlink" href="#utilisation-dun-module" title="Permanent link">⚓︎</a></h3>
 <p>Vous avez déjà utilisé les modules <code>math</code>et <code>random</code>par exemple. Nous rappelons que l'on peut appeler un module ainsi :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># import du module</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># import du module</span>
 <span class="kn">import</span> <span class="nn">statistics</span>
 <span class="c1"># affiche l&#39;aide</span>
 <span class="n">help</span><span class="p">(</span><span class="n">statistics</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
 <p><strong>Utilisation du module</strong>  <br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">statistics</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">statistics</span>
 <span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne:&quot;</span><span class="p">,</span> <span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">notes</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Écart-type:&quot;</span><span class="p">,</span> <span class="n">statistics</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">notes</span><span class="p">))</span>
 </code></pre></div>
 </td></tr></table></p>
 <p>On peut aussi utiliser un alias :    </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">stat</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">stat</span>
 <span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne:&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">notes</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Écart-type:&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">notes</span><span class="p">))</span>
 </code></pre></div>
 </td></tr></table>
 <p>Ou encore sans avoir à écrire de préfixe :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">form</span> <span class="n">statistics</span> <span class="kn">import</span> <span class="nn">mean</span><span class="o">,</span><span class="nn">stdev</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">form</span> <span class="n">statistics</span> <span class="kn">import</span> <span class="nn">mean</span><span class="o">,</span><span class="nn">stdev</span>
 <span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne:&quot;</span><span class="p">,</span> <span class="n">mean</span><span class="p">(</span><span class="n">notes</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Écart-type:&quot;</span><span class="p">,</span> <span class="n">stdev</span><span class="p">(</span><span class="n">notes</span><span class="p">))</span>
@@ -757,30 +757,30 @@
 </div>
 <p><strong>Aide d'un module</strong>
 On peut invoquer l'aide sur un module c'est-à-dire sa description, la liste de ses fonctions et l'aide sur chacune des fonctions. Il faut que le module soit importé :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">module</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">module</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="assertions"><strong>Assertions</strong><a class="headerlink" href="#assertions" title="Permanent link">⚓︎</a></h3>
 <p>Pour tester les fonctions, on peut ajouter des tests en cours de code, sans que celui-ci n soit pris en compte Ce sont des lignes que l'on peut supprimer sans changer la sructure du code.<br />
 Elles permettent de tester les conditions critiques et permettent de stopper le programme si l'une d'elle se produit (ce qui ne doit pas arriver si le programme est correctement implémenté).
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">avg</span><span class="p">(</span><span class="n">notes</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">avg</span><span class="p">(</span><span class="n">notes</span><span class="p">):</span>
         <span class="k">assert</span> <span class="n">notes</span><span class="o">.</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;une note minimum requise&#39;</span>
         <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">notes</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 Si on teste ceci, tout va bien :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">notes</span> <span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">notes</span> <span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">avg</span><span class="p">(</span><span class="n">notes</span><span class="p">))</span>
 </code></pre></div>
 </td></tr></table>
 En revanche, ceci fait stopper le programme :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">notes</span> <span class="o">=</span><span class="p">[]</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">notes</span> <span class="o">=</span><span class="p">[]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">avg</span><span class="p">(</span><span class="n">notes</span><span class="p">))</span>
 </code></pre></div>
 </td></tr></table></p>
@@ -788,11 +788,11 @@ En revanche, ceci fait stopper le programme :
 <p>On peut anticiper les problèmes que posent l'utilisation des modules comme par exemple un argument de fonction qi ne serait pas du bon type de donnée.
 Pour cela on utilise des tests qui permettent de revenir au début de la fonction tout en signanlant à l'utilisateur l'ereur commise.<br />
 Par exemple :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">try</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">try</span><span class="p">:</span>
         <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number: &quot;</span><span class="p">))</span>
         <span class="k">break</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
@@ -800,12 +800,12 @@ Par exemple :
 </code></pre></div>
 </td></tr></table>
 Ce code permet de tester que l'entrée de l'utilisateur est bien un entier. Si l'on veut que le programme repète la demande jusqu'à ce que l'entrée soit correcte, on peut placer une boucle infinie.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number: &quot;</span><span class="p">))</span>
         <span class="k">break</span>
@@ -823,15 +823,15 @@ Ce code permet de tester que l'entrée de l'utilisateur est bien un entier. Si l
 </div>
 <div class="admonition example">
 <p class="admonition-title">un exemple complet</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">try</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">try</span><span class="p">:</span>
         <span class="n">numerateur</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez un numérateur : &quot;</span><span class="p">))</span>
         <span class="n">denominateur</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez un dénominateur : &quot;</span><span class="p">))</span>
         <span class="n">resultat</span> <span class="o">=</span> <span class="n">numerateur</span> <span class="o">/</span> <span class="n">denominateur</span>
@@ -851,51 +851,51 @@ les noms de fonctions et des variables doivent être explicites pour la meilleur
 Vous pouvez créer une documentation à part (de préférence en anglais) pour détailler encore plus les recommandations.<br />
 Voici un exemple de module créer sur les suites de fibonacci (voir reproduction des lapins au chapitre <em>Récursivité</em>).<br />
 Pour afficher cette description, on utilisera la fonction <code>help()</code>.  </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot; Module fibo relatif à la création de nombres de Fibionacci</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot; Module fibo relatif à la création de nombres de Fibionacci</span>
 
 <span class="sd">Pour rappel, la suite de Fibonacci est une suite d&#39;entiers dans laquelle chaque terme est la somme </span>
 <span class="sd">des deux termes qui le précèdent.(voir: https://fr.wikipedia.org/wiki/Suite_de_Fibonacci)</span>
@@ -949,11 +949,11 @@ Elles doivent être documentées précisement.</p>
 <p class="admonition-title">Fonctions privées</p>
 <p>On peut avoir besoin dans le module de créer des fonctions privées, c'est-à-dire qu'elle ne sera pas forcément accessible de l'extérieure mais ne sera utilisée que à l'intérieur du module : </p>
 </div>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="c1">#module</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="c1">#module</span>
     <span class="k">def</span> <span class="nf">__mafontion</span><span class="p">(</span><span class="n">mon_paramètre</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">un</span> <span class="n">truc</span>
     <span class="c1">#programme principal</span>
@@ -963,8 +963,8 @@ Elles doivent être documentées précisement.</p>
 <h3 id="finir-le-fichier"><strong>Finir le fichier</strong><a class="headerlink" href="#finir-le-fichier" title="Permanent link">⚓︎</a></h3>
 <p>Lors de l'exécution d'un programme, python crée une variable appelée <code>__name__</code>. Lorsque le fichier principal est exécuté, cette variable pour ce fichier prend la valeur <code>__main__</code>. Le code si dessous permet de détecter si le fichier dans lequel il apparait est le programme exécuté directement ou un programme appelé par le prorgramme principal.<br />
 Tout ce qui se trouve dans la boucle ne sera exécuté que si <strong>CE</strong> programme est exécuté et pas s'il est appelé par un autre 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Executé si le programme est invoqué directement&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
@@ -984,8 +984,9 @@ Création MB. (ré)utilisation et modification libre mais non commerciale CC-BY-
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1047,10 +1048,10 @@ Création MB. (ré)utilisation et modification libre mais non commerciale CC-BY-
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       
