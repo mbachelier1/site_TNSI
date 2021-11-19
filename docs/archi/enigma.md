@@ -71,8 +71,8 @@ Le principe est le même que le cryptage précédent mais avant même de passer 
     Premier C : I dans le cablage, devient R par le premier rotor, R devient U par le deuxieme rotor, U devient Q par le 3e rotor, et Q devient Z dans le réflecteur.  
     Le Z du réflecteur devient un B dans le rotor V, puis le B devient W, le W devient R et le R par l'inversion du câblage devient un S.  
     Le premier rotor tourne d'un cran et le O passe en 1er et tout se décale vers la droite.  
-    Deuxième C : I dans le cablage, devient P par le premier rotor (attention le rotor a tourné), P devient H par le deuxieme rotor, H devient Y par le 3e rotor, et Y devient U dans le réflecteur.  
-    Le U du réflecteur devient un I dans le rotor V, puis le I devient V, le V devient E (le rotor a tourné) et le E par l'inversion du câblage devient un M.  
+    Deuxième C : I dans le cablage, devient T par le premier rotor (attention le rotor a tourné), T devient P par le deuxieme rotor, P devient X par le 3e rotor, et X devient S dans le réflecteur.  
+    Le S du réflecteur devient un K dans le rotor V, puis le K devient B, le B devient Z (le rotor a tourné) et le Z par l'inversion du câblage devient un O.  
 
 
 ### Implémentation des rotors et des réflecteurs
@@ -122,7 +122,7 @@ machine=enigma(premier_rotor,deuxieme_rotor,troisieme_rotor,reglage_premier_roto
 !!! caution "Type des paramètres"
 	`premier_rotor`,`deuxieme_rotor` , `troisieme_rotor` et `choix_reflecteur` sont des chaînes de 26 caractères contenant les lettres du rotor. Il faudra utiliser la variable globale `rotors` pour les récupérer.  
 	`reglage_premier_rotor`,`reglage_deuxieme_rotor` , `reglage_troisieme_rotor` et` reglage_reflecteur` sont des chaînes de 1 caractère. il s'agit de la lettre apparaissant en premier.  
-	`suite_cablage` est une chaîne de 6 caractères à inverser.
+	`suite_cablage` est une chaîne de 6 paires caractères à inverser.
 
 ### Fonctions
 
