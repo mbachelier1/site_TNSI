@@ -89,7 +89,7 @@ En revanche, le principal inconvénient d’un SoC est que là ou un ordinateur 
 ### Quelques familles de SoC utilisées dans les smartphones 
  
 ![Composants d'un Soc](img/tab_soc.PNG){align=left}
-Les nouveaux procédés de gravure des semi-conducteurs CMOS telle que la lithographie extrême ultraviolette, ont permis de réduire significativement la taille des composants électroniques constituants les SoC. Ainsi, on dispose aujourd’hui de la même puissance dans un smartphone que celle embarquée dans un ordinateur il y a quelques années de cela. Ceci s’est cependant fait au prix d’une complexité technologique croissante. L’actuelle génération de SoC est gravée en 7 nm (1 nm = 10-9 m) depuis juillet 2019. Le SoC A13 Bionic d’Apple est par exemple composé de 8,5 milliards de transistors répartis sur une surface de 98,48 mm2 ! La prochaine génération gravée en 5 nm devrait voir le jour à partir de 2021. 
+Les nouveaux procédés de gravure des semi-conducteurs CMOS telle que la lithographie extrême ultraviolette, ont permis de réduire significativement la taille des composants électroniques constituants les SoC. Ainsi, on dispose aujourd’hui de la même puissance dans un smartphone que celle embarquée dans un ordinateur il y a quelques années de cela. Ceci s’est cependant fait au prix d’une complexité technologique croissante. L’actuelle génération de SoC est gravée en 7 nm (1 nm = 10-9 m) depuis juillet 2019. Le SoC A13 Bionic d’Apple est par exemple composé de 8,5 milliards de transistors répartis sur une surface de 98,48 mm<sup>2</sup> ! La prochaine génération gravée en 2 nm a vu le jour chez IBM en 2021. 
  
 Au sein de la génération actuelle de smartphone on trouve une grande variété de SoC en fonction des différents constructeurs : 
  
@@ -109,7 +109,7 @@ Pour les derniers modèles de smartphones 2019-2020, la principale difficulté t
  
 ## L’architecture ARM   
 Dotés d'une architecture relativement plus simple que d'autres familles de processeurs, et bénéficiant d'une faible consommation électrique, les processeurs ARM (Advanced Risc Machine) sont devenus dominants dans le domaine de l'informatique embarquée, en particulier la téléphonie mobile et les tablettes. Les architectures ARM reposent sur des processeurs à jeux d’instructions réduit RISC (Reduced Instruction Set Computer) 32 bits (ARMv1 à ARMv7) ou 64 bits (ARMv8).   
-Aujourd'hui, ARM est surtout connu pour ses systèmes sur puce (SoC), intégrant sur une seule puce : microprocesseur, processeur graphique (GPU), DSP, FPU, SIMD, et contrôleur de périphériques. Ceux-ci sont  présents dans la majorité des smartphones et tablettes. 
+Aujourd'hui, ARM est surtout connu pour ses systèmes sur puce (SoC), intégrant sur une seule puce : microprocesseur, processeur graphique (GPU), DSP, FPU, et contrôleur de périphériques. Ceux-ci sont  présents dans la majorité des smartphones et tablettes. 
 ARM propose des architectures qui sont vendues sous licence de propriété intellectuelle aux concepteurs. Ils proposent différentes options dans lesquelles les constructeurs peuvent prendre ce qui les intéresse pour compléter avec leurs options propres ou de concepteurs tiers. ARM propose ainsi pour les SoC les plus récents les microprocesseurs Cortex (Cortex-A pour les dispositifs portables de type smartphones et tablettes, Cortex-M pour le couplage à un microcontrôleur, Cortex-R pour les microprocesseurs temps réel), des processeurs graphiques (Mali), des bus AMBA sous licence libre, ainsi que les divers autres composants nécessaires à la composition du SoC complet. Certains constructeurs, tels que Nvidia, préfèrent produire leur propre processeur graphique, d'autres, comme Samsung, préfèrent prendre dans certains cas un processeur graphique de prestataire tiers ou d'ARM selon les modèles, et d'autres, comme Apple, modifient certains composants du microprocesseur en mélangeant plusieurs architectures processeur ARM. 
 >(wikipédia)  
 
@@ -134,15 +134,14 @@ A partir de l'article du site [elektormagazine.fr](https://www.elektormagazine.f
 ![Rpi](img/rpi.png){align=left}
 1. Relevez les différentes caractéristiques du SoC du Raspberry Pi 3 modèle B+.   
 2. Les comparez au SoC du Raspberry Pi 4.    
-3. Quelles sont les principales évolutions qui contribuent à ce gain? Une copie de l'article disponible.  
-
+3. Quelles sont les principales évolutions qui contribuent à ce gain?   
 ### Exercice n°3 :
 ![CPU](img/cpu.png)  
 La photo ci-dessus montre le détail d'un SoC Kirin 990.  
 Identifier les différentes parties de ce SoC.
 
 ### Exercice n°4 :  
-![tableau](img/tab_TP.png){align=left} 
+![tableau](img/tab_TP.PNG){align=left} 
 Faire une analogie entre les 2 colonnes (un ordinateur et vous qui êtes installé chez vous à votre bureau).  
 
 

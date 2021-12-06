@@ -167,7 +167,7 @@ class enigma:
     def configuration(self):#tous les niveaux
         '''cette fonction ne renvoie rien mais execute la configuration de la
         machine, à savoir la modification du cablage de l'alphabet, le positionnement des rotors
-        et mémorise dans de nouveaux attribut la derniere lettre de chaque rotor avec que
+        et mémorise dans de nouveaux attribut la derniere lettre de chaque rotor afin que
         lors de la rotation on puisse savoir si on est à la fin du tour'''
 
         

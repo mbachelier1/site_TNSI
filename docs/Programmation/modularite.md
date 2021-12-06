@@ -36,7 +36,7 @@ print("Moyenne:", mean(notes))
 print("Écart-type:", stdev(notes))
 ```
 !!! caution "Attention"
-	Cette dernière méthode est priviligiée car elle permet d'importer uniqument les fonctions nécessaires et donc de gagner en temps d'éxecution si on utilise un module important. En remplaçant la liste des fonctions par `*` on impore tout le module.  
+	Cette dernière méthode est priviligiée car elle permet d'importer uniqument les fonctions nécessaires et donc de gagner en temps d'éxecution si on utilise un module important. En remplaçant la liste des fonctions par `*` on importe tout le module.  
 
 **Aide d'un module**
 On peut invoquer l'aide sur un module c'est-à-dire sa description, la liste de ses fonctions et l'aide sur chacune des fonctions. Il faut que le module soit importé :  
@@ -46,7 +46,7 @@ On peut invoquer l'aide sur un module c'est-à-dire sa description, la liste de 
 ```  
 
 ###**Assertions**
-Pour tester les fonctions, on peut ajouter des tests en cours de code, sans que celui-ci n soit pris en compte Ce sont des lignes que l'on peut supprimer sans changer la sructure du code.  
+Pour tester les fonctions, on peut ajouter des tests en cours de code, sans que celui-ci ne soit pris en compte Ce sont des lignes que l'on peut supprimer sans changer la structure du code.  
 Elles permettent de tester les conditions critiques et permettent de stopper le programme si l'une d'elle se produit (ce qui ne doit pas arriver si le programme est correctement implémenté).
 ``` python
 	def avg(notes):
@@ -65,7 +65,7 @@ print(avg(notes))
 ```
 
 ###**Bloc `try ... except...`**
-On peut anticiper les problèmes que posent l'utilisation des modules comme par exemple un argument de fonction qi ne serait pas du bon type de donnée.
+On peut anticiper les problèmes que posent l'utilisation des modules comme par exemple un argument de fonction qui ne serait pas du bon type de donnée.
 Pour cela on utilise des tests qui permettent de revenir au début de la fonction tout en signanlant à l'utilisateur l'ereur commise.  
 Par exemple :
 ```python
@@ -109,14 +109,28 @@ while True:
 	
 	```
 
-##Créer son propore module
+## Créer son propore module
+### Strucutre de base d'un module
+!!! important "Important"
+    ![structure](img/structure.PNG)
+    Pour obtenir cette structure on réera un dossier `mesmodules` contenant les diférents fichiers `.py` du module. On créera un fichier vide `__init__.py` dans ce dossier et on appelera les différentes parties du module dans le fichier comme ci-dessous :.
+    Appel des modules :
+    ```python
+    import mesmodules.extension
+
+    Ou 
+    from mesmodules.part.niveaudeux import une_fonction
+    ```
+
+
+
 Un module est un dossier comprenant une ou plusieurs bibliothèques (ou library) qui sont en fait des fichiers `.py`.  Par exemple le module `matplotlib` contient entre autre, le fichier `pylab.py`et `pyplot.py`.  
 
-###**La Documentation du module**
-Il faudra documenter le module de façon **explicite**. Chaque fonction devra comporter des `docstrings` qui explique clairement le type d'arguments attendus et le type de données retournées.  
-les noms de fonctions et des variables doivent être explicites pour la meilleur compréhension de tous.   
+### **La Documentation du module**
+Il faudra documenter le module de façon **explicite**. Chaque fonction devra comporter des `docstrings` qui expliquent clairement le type d'arguments attendus et le type de données retournées.  
+Les noms de fonctions et des variables doivent être explicites pour la meilleure compréhension de tous.   
 Vous pouvez créer une documentation à part (de préférence en anglais) pour détailler encore plus les recommandations.  
-Voici un exemple de module créer sur les suites de fibonacci (voir reproduction des lapins au chapitre *Récursivité*).  
+Voici un exemple de module créé sur les suites de fibonacci (voir reproduction des lapins au chapitre *Récursivité*).  
 Pour afficher cette description, on utilisera la fonction `help()`.  
 
 ```python
@@ -167,13 +181,13 @@ def fib_to_array(n):
     return result
 
 ```
-###**Les fonctions**  
+### **Les fonctions**  
 
-Les fonctions doivent contenir des tests de façon à ce que lorsqu'une erreur soit détectée, elle fasse afficher un message d'erreur compréhensible par l'utilisateur.  
+Les fonctions doivent contenir des tests de façon à ce que lorsqu'une erreur est détectée, elle fasse afficher un message d'erreur compréhensible par l'utilisateur.  
 Elles doivent être documentées précisement.
 
 !!! important "Fonctions privées"
-    On peut avoir besoin dans le module de créer des fonctions privées, c'est-à-dire qu'elle ne sera pas forcément accessible de l'extérieure mais ne sera utilisée que à l'intérieur du module : 
+    On peut avoir besoin dans le module de créer des fonctions privées, c'est-à-dire qu'elle ne sera pas forcément accessible de l'extérieur mais ne sera utilisée que à l'intérieur du module : 
 
 ```python
     #module
@@ -183,8 +197,8 @@ Elles doivent être documentées précisement.
     __mafonction(mavariable)#renvoie une erreur
 
 ```  
-###**Finir le fichier**
-Lors de l'exécution d'un programme, python crée une variable appelée `__name__`. Lorsque le fichier principal est exécuté, cette variable pour ce fichier prend la valeur `__main__`. Le code si dessous permet de détecter si le fichier dans lequel il apparait est le programme exécuté directement ou un programme appelé par le prorgramme principal.  
+### **Finir le fichier**
+Lors de l'exécution d'un programme, python crée une variable appelée `__name__`. Lorsque le fichier principal est exécuté, cette variable pour ce fichier prend la valeur `"__main__"`. Le code ci-dessous permet de détecter si le fichier dans lequel il apparait est le programme exécuté directement ou un programme appelé par le prorgramme principal.  
 Tout ce qui se trouve dans la boucle ne sera exécuté que si **CE** programme est exécuté et pas s'il est appelé par un autre 
 ```python
 if __name__ == "__main__":
@@ -194,7 +208,10 @@ if __name__ == "__main__":
 Votre module devra donc se finir ainsi si vous ajoutez des tests devant s'afficher.
 
 
+## Projet
+Un petit tour par [ici](projet_modularite.html) pour voir le travail à faire.
+
 ---
 <p style="text-align: center; color:gray; font-size: 10px;">
-Création MB. (ré)utilisation et modification libre mais non commerciale CC-BY-NC 2021
+Création MB. (ré)utilisation et modification libre mais non commerciale CC-BY-NC
 </p>

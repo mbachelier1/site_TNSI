@@ -1,9 +1,9 @@
-#Projet : Module incertitude
+# Projet : Module incertitude
 L'objectif est de créer un module `incertitude ` permettant à nos amis physicien de faire les calculs nécessaires à l'évaluation des erreurs de mesures. On ne s'interessera ici qu'aux incertitudes de type A c'est-à-dire issue d'une série de mesure.  
 En bonus, on pourra traiter les différentes incertitudes de type B, issue d'un mesure unique.  
 
-##Principe des incertitudes de type A
-Lorsque l'on fait une mesure en physique, il y a toujours une incertitude liée à l'appareil utilisé ou à la précision de la manipulation de l'opérateur. Il existe aussi une ineritude aléatoire, qui fait que si on repète la mesure un grand nombre de fois, on ne trouve pas tujours exactement la même valeur.
+## Principe des incertitudes de type A
+Lorsque l'on fait une mesure en physique, il y a toujours une incertitude liée à l'appareil utilisé ou à la précision de la manipulation de l'opérateur. Il existe aussi une ineritude aléatoire, qui fait que si on repète la mesure un grand nombre de fois, on ne trouve pas toujours exactement la même valeur.
 Les incertitudes de types A sont ces dernières. On peut dire à l'aide d'une série de mesures que la aleur *vraie* est comprise dans un intervalle que l'on détermine grâce à des calculs sur la série de mesures.  
 
 **Incertitude**
@@ -14,13 +14,13 @@ Pour calculer l'incertitude, il faut déjà calculer l'écart type, le multiplie
 Un intervalle de confiance à 95% signifie que l'intervalle que l'on va calculer, contiendra à coup sûr 95% des mesures.  
 Ce coefficient k, dépend du nombre de mesures et de l'intervalle de confiance.
 ![calcul incertitude](img/k.png){align=right}
-Par exemple, pour un intervalle de confiance de 95% (le plus couramment utilisé) avec 9 mesures réalisée, k vaudra 2,31. 
+Par exemple, pour un intervalle de confiance de 95% (le plus couramment utilisé) avec 9 mesures réalisées, k vaudra 2,31. 
 
 **Intervalle**
-L'incertitude U trouvée par le calcul nous permet de dire que 95% des mesures se sitent dans l'intervalle [moyenne-U ; moyenne+U].
+L'incertitude U trouvée par le calcul nous permet de dire que 95% des mesures se situent dans l'intervalle [moyenne-U ; moyenne+U].
 L'objectif de ce projet est de créer un module permettant de calculer cet intervalle à partir d'une série de mesures.
 
-##Fonctions contenues dans le module.
+## Fonctions contenues dans le module.
 Dans une bibliothèque nommée `typeA.py` contenu dans le dossier `ìncertitude` on devra trouver les fonctions suivantes :    
 
 **fonction `moyenne()`**  
@@ -67,7 +67,7 @@ Cette fonction devra retourner la valeur de l'incertitude calculée.
 	#ou si on ne veut pas de la valeur par défaut
 	incertitude(L,True)
 	```
-##Fichier de test
+## Fichier de test
 Pour ne pas dénaturer votre code, vous pouvez créer un fichier `tests.py` qui contiendra tous les tests que vous avez fait pour tester toutes les situations de vos fonctions.  
 Cela permet de s'y retrouver plus facilement et d'organiser son travail. Cela permet aussi à la personne qui utilise (ndlr : corrige) votre travail de gagner du temps et de la lisibilité
 
@@ -101,7 +101,9 @@ $$U= \dfrac{PourcentageDeLaMesure}{\sqrt{3}}$$
 
 
 Vous devez créer le fichier `typeB.py` contenant les fonctions `double_lecture(graduation, mesure)`, `simple_lecture(graduation, mesure)`, `tolerance_donnee(tolerance,mesure)` et `appareil_numerique(digit,tolerance,mesure)` .
-Il est important que les paramètre digit et graduation soient renseignés dans la même unité que la mesure. Cette information pourra être donnée à l'utilsation de la fonciton et/ou dans la documentation.
+Il est important que les paramètres `digit` et `graduation` soient renseignés dans la même unité que la mesure. Cette information pourra être donnée à l'utilsation de la fonciton et/ou dans la documentation.
+
+Vous créerez ensuite le module `incertitudes` contenant les fichiers `typeA.py` et `typeB.py` qui pourront être utilisés comme un module.
 
 ---
 <p style="text-align: center; color:gray; font-size: 10px;">
