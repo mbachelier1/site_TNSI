@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -800,13 +800,13 @@
 <p>Dans cet exemple, nous allons utilisé la gestion d'un parc automobile. Chaque voiture du parc aura les caractéristiques suivantes : <strong>marque, modèle, couleur, année, propriétaire, prix neuf</strong>. On pourra modifier ces caractéristiques en <strong>vendant</strong> ou <strong>repeignant</strong> et <strong>déterminer sa côte</strong> en fonction de l'année.  </p>
 <h2 id="creation-de-la-classe">Création de la classe<a class="headerlink" href="#creation-de-la-classe" title="Permanent link">⚓︎</a></h2>
 <p>La classe est le moule qui va nous permettre de abriquer des objets ayant accès aux mêmes caractéristiques et méthodes.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Voiture</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Voiture</span><span class="p">:</span>
     <span class="n">marque</span><span class="o">=</span><span class="s2">&quot;Peugeot&quot;</span>
 <span class="c1">#on créé un moule appelé voiture dont l&#39;attribut marque vaut &quot;Peugeot&quot;</span>
 <span class="c1">#On crée des voitures à partir ce moule</span>
@@ -816,7 +816,7 @@
 </code></pre></div>
 </td></tr></table>
 On peut modifier la valeur de l'attribut :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">voiture_de_maman</span><span class="o">.</span><span class="n">marque</span><span class="o">=</span><span class="s2">&quot;citroen&quot;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">voiture_de_maman</span><span class="o">.</span><span class="n">marque</span><span class="o">=</span><span class="s2">&quot;citroen&quot;</span>
 </code></pre></div>
 </td></tr></table></p>
 <div class="admonition hint">
@@ -826,14 +826,14 @@ On peut modifier la valeur de l'attribut :
 <h2 id="methode-et-self">Méthode et <code>self</code><a class="headerlink" href="#methode-et-self" title="Permanent link">⚓︎</a></h2>
 <p>Une méthode prend toujours en premier paramètre l'objet lui-même par l'intermédiare de l'argument <code>self</code>.
 L'appel de la méthode se fait également avec la notation : <code>nom_instance.methode(...)</code></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Voiture</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Voiture</span><span class="p">:</span>
     <span class="n">marque</span><span class="o">=</span><span class="s2">&quot;Peugeot&quot;</span>
     <span class="k">def</span> <span class="nf">ajoute_modele</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">modele</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">marque</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">marque</span><span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">modele</span>
@@ -845,15 +845,15 @@ L'appel de la méthode se fait également avec la notation : <code>nom_instance.
 </td></tr></table>
 <h2 id="constructeur">Constructeur<a class="headerlink" href="#constructeur" title="Permanent link">⚓︎</a></h2>
 <p>Le constructeur <code>__init__</code> permet de créer des objets dont les attributs seront différents. On va prendre un exemple :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Personne</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Personne</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
@@ -869,16 +869,16 @@ L'appel de la méthode se fait également avec la notation : <code>nom_instance.
 <p>Pour afficher la totalité des attributs de la classe en une seule fois, on serai tenté de faire <code>print(jim)</code>. Mais le résultat n'est as concluant.</p>
 </div>
 <p>La méthode <code>print()</code> appelle une méthode de classe appelée <code>__repr__</code>. On va modifier cette méthode pour que tout l'objet s'affiche. 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Personne</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Personne</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
@@ -893,25 +893,25 @@ L'appel de la méthode se fait également avec la notation : <code>nom_instance.
 <h2 id="methodes-specifiques-a-lobjet">Méthodes spécifiques à l'objet<a class="headerlink" href="#methodes-specifiques-a-lobjet" title="Permanent link">⚓︎</a></h2>
 <p>On peut créer des méthodes dans la classes permettant par exemple de modifier certains attributs.<br />
 Etudier le code suivant :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Personne</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Personne</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">annee</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">annee</span> <span class="o">=</span> <span class="n">annee</span>
@@ -936,10 +936,10 @@ La méthode <code>renommer()</code> permet de modifier la valeur de l'attribut <
 <div class="admonition note">
 <p class="admonition-title">année courante</p>
 <p>On pourrait même faire appel au module <code>datetime</code> pour accéder à l'année courante et mettre à jour l'âge automatiquement.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">datetime</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">datetime</span>
 <span class="n">date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
 <span class="n">annee_courante</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">year</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pierre</span><span class="o">.</span><span class="n">calculer_age</span><span class="p">(</span><span class="n">annee_courante</span><span class="p">))</span>
@@ -950,38 +950,38 @@ La méthode <code>renommer()</code> permet de modifier la valeur de l'attribut <
 <p>En réalité, si l'on souhaite modifier les attributs :<br />
 <code>get_nom_attribut</code>: pour le récupérer.<br />
 <code>set_nom_attribut</code>: pour le modifier.<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Personne</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Personne</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
@@ -1026,11 +1026,11 @@ Les <strong>attributs</strong> : caractéristiques personnalisables des objets.<
 Les <strong>méthodes</strong>  sont des actions que l'on peut réaliser sur les objets.  </p>
 <h3 id="creer-une-classe">Créer une classe<a class="headerlink" href="#creer-une-classe" title="Permanent link">⚓︎</a></h3>
 <p><strong>Sans consructeur</strong>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sandwich</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sandwich</span><span class="p">:</span>
     <span class="n">sauce</span><span class="o">=</span><span class="s2">&quot;blanche&quot;</span>
     <span class="n">pain</span><span class="o">=</span><span class="s2">&quot;pita&quot;</span>
     <span class="n">legume</span><span class="o">=</span><span class="s2">&quot;tomate&quot;</span>
@@ -1040,12 +1040,12 @@ Les <strong>méthodes</strong>  sont des actions que l'on peut réaliser sur les
 Tous les objets créés auront les mêmes attributs que l'on pourra modifier ensuite.
 On peut remplacer les valeurs par défaut par None.</p>
 <p><strong>Avec constructeur</strong>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sandwich</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sandwich</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">sauce</span><span class="p">,</span><span class="n">viande</span><span class="p">,</span><span class="n">pain</span><span class="p">,</span><span class="n">legume</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sauce</span><span class="o">=</span><span class="n">sauce</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pain</span><span class="o">=</span><span class="n">pain</span>
@@ -1057,7 +1057,7 @@ On donne aux objets des attributs précis dès la création
 A chaque utilisation de la méthode self est remplacé par le nom de l'instance.</p>
 <h3 id="creer-une-instance-de-classe">créer une instance de classe<a class="headerlink" href="#creer-une-instance-de-classe" title="Permanent link">⚓︎</a></h3>
 <p>Chaque sandwich créé est une instance de la classe <code>sandwich</code>.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">vegie</span><span class="o">=</span><span class="n">Sandwich</span><span class="p">(</span><span class="s2">&quot;blanche&quot;</span><span class="p">,</span><span class="s2">&quot;staeck de soja&quot;</span><span class="p">,</span><span class="s2">&quot;pita&quot;</span><span class="p">,</span><span class="s2">&quot;salade&quot;</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">vegie</span><span class="o">=</span><span class="n">Sandwich</span><span class="p">(</span><span class="s2">&quot;blanche&quot;</span><span class="p">,</span><span class="s2">&quot;staeck de soja&quot;</span><span class="p">,</span><span class="s2">&quot;pita&quot;</span><span class="p">,</span><span class="s2">&quot;salade&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
 <div class="admonition note">
@@ -1069,22 +1069,22 @@ A chaque utilisation de la méthode self est remplacé par le nom de l'instance.
 <p><code>Vegie</code> est une instance de la classe sandwich.</p>
 </div>
 <h3 id="creer-et-appeler-uen-methode">Créer et appeler uen méthode<a class="headerlink" href="#creer-et-appeler-uen-methode" title="Permanent link">⚓︎</a></h3>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sandwich</span><span class="p">:</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sandwich</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">sauce</span><span class="p">,</span><span class="n">viande</span><span class="p">,</span><span class="n">pain</span><span class="p">,</span><span class="n">legume</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sauce</span><span class="o">=</span><span class="n">sauce</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pain</span><span class="o">=</span><span class="n">pain</span>
@@ -1106,28 +1106,28 @@ Cet appel affiche :<br />
 ['blanche', 'pita', 'steack de soja', 'salade']</p>
 <h3 id="getteurs-et-setters">Getteurs et setters<a class="headerlink" href="#getteurs-et-setters" title="Permanent link">⚓︎</a></h3>
 <p>C'est la manière la plus "propre" d'accéder et de modifier les attributs d'instance.  </p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sandwich</span><span class="p">:</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sandwich</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">sauce</span><span class="p">,</span><span class="n">viande</span><span class="p">,</span><span class="n">pain</span><span class="p">,</span><span class="n">legume</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sauce</span><span class="o">=</span><span class="n">sauce</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pain</span><span class="o">=</span><span class="n">pain</span>
@@ -1154,49 +1154,49 @@ Cet appel affiche :<br />
 Le premier appel affiche 'pita' le second 'galette'.</p>
 <div class="admonition hint">
 <p class="admonition-title">récapitulatif de la syntaxe</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MaClasse</span><span class="p">:</span>  
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MaClasse</span><span class="p">:</span>  
     <span class="n">attribut</span><span class="o">=</span><span class="err">…</span>
 </code></pre></div>
 </td></tr></table>
 Créer une instance de classe : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="o">=</span><span class="n">MaClasse</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="o">=</span><span class="n">MaClasse</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 Créer une méthode :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">methode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">args</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">methode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">args</span><span class="p">):</span>
 <span class="k">return</span> <span class="err">…</span>
 </code></pre></div>
 </td></tr></table>
 Appeler une méthode sur une instance : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">objet</span><span class="o">.</span><span class="n">methode</span><span class="p">()</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">objet</span><span class="o">.</span><span class="n">methode</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
 Accéder à un attribut d'une instance :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="o">.</span><span class="n">attribut</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">instance</span><span class="o">.</span><span class="n">attribut</span>
 </code></pre></div>
 </td></tr></table>
 Constructeur :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">attribut1</span><span class="o">=</span><span class="n">arg1</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">attribut2</span><span class="o">=</span><span class="n">arg2</span>
 </code></pre></div>
 </td></tr></table>
 Accéder à un attribut d'instance (getters)
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_attribut</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_attribut</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">attribut</span>
 <span class="n">instance</span><span class="o">.</span><span class="n">get_attribut</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
 Modifier un attribut d'instance
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_attribut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">arg</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_attribut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">arg</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">attribut</span><span class="o">=</span><span class="n">arg</span>
 <span class="n">instance</span><span class="o">.</span><span class="n">set_attribut</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
 </code></pre></div>
@@ -1213,8 +1213,9 @@ Modifier un attribut d'instance
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1276,10 +1277,10 @@ Modifier un attribut d'instance
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       
