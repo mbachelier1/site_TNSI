@@ -50,7 +50,7 @@ Pour tester les fonctions, on peut ajouter des tests en cours de code, sans que 
 Elles permettent de tester les conditions critiques et permettent de stopper le programme si l'une d'elle se produit (ce qui ne doit pas arriver si le programme est correctement implémenté).
 ``` python
 	def avg(notes):
-    	assert notes.length > 0, 'une note minimum requise'
+    	assert len(notes) > 0, 'une note minimum requise'
      	return sum(notes) / len(notes)
 ```
 Si on teste ceci, tout va bien :
@@ -111,6 +111,7 @@ while True:
 
 ## Créer son propore module
 ### Strucutre de base d'un module
+
 !!! important "Important"
     ![structure](img/structure.PNG)
     Pour obtenir cette structure on réera un dossier `mesmodules` contenant les diférents fichiers `.py` du module. On créera un fichier vide `__init__.py` dans ce dossier et on appelera les différentes parties du module dans le fichier comme ci-dessous :.

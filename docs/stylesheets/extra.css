@@ -21,15 +21,15 @@ h1
 	display : inline-block;
 }
 
-
 .md-typeset .admonition {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    background-color: #f5f5f5;
 }
 
 .md-typeset details {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    background-color: #f5f5f5;
 }
-
 .def{
 	font-style : italic;
 	text-indent:40px;
