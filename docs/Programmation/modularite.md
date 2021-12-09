@@ -113,7 +113,7 @@ while True:
 ### Strucutre de base d'un module
 
 !!! important "Important"
-    ![structure](img/structure.PNG)
+    ![structure](img/structure.png)
     Pour obtenir cette structure on réera un dossier `mesmodules` contenant les diférents fichiers `.py` du module. On créera un fichier vide `__init__.py` dans ce dossier et on appelera les différentes parties du module dans le fichier comme ci-dessous :.
     Appel des modules :
     ```python
