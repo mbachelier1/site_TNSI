@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -799,8 +799,8 @@ La communication avec d’autres « objets IP » d’autres réseaux IP distants
 <p><img alt="adressage" src="img/image1.jpg" /></p>
 <div class="admonition note">
 <p class="admonition-title">Remarques</p>
-<p>Grâce à des adresses de 128 bits au lieu de 32 bits, IPv6 dispose d'un espace d'adressage bien plus important qu'IPv4 (près de 7,9 × 1028 de fois plus) et résout donc le problème de pénurie d’adresses IPv4 publiques liée à la multiplication des objets connectés dans la vie quotidienne. </p>
-<p>Les commutateurs (« switchs » en anglais) construisent une table d’adresses MAC des machines IP connectées à eux. Ils se basent sur les adresses MAC pour commuter les trames. Contrairement aux commutateurs, le routeur se basent quant à eux sur les adresses IP pour transporter les données. 
+<p>Grâce à des adresses de 128 bits au lieu de 32 bits, IPv6 dispose d'un espace d'adressage bien plus important qu'IPv4 (près de 7,9 × 1028 de fois plus) et résout donc le problème de pénurie d’adresses IPv4 publiques liée à la multiplication des objets connectés dans la vie quotidienne. 
+Les commutateurs (« switchs » en anglais) construisent une table d’adresses MAC des machines IP connectées à eux. Ils se basent sur les adresses MAC pour commuter les trames. Contrairement aux commutateurs, le routeur se basent quant à eux sur les adresses IP pour transporter les données. 
 La forme de l’adresse MAC ne permet pas de localiser le destinataire distant c’est la raison pour laquelle elle est utilisée seulement dans les réseaux locaux, contrairement à l’adresse IP dont la partie réseau et la partie Hôte permettent de localiser l’ordinateur d’une façon précise quel que soit son emplacement dans le monde. </p>
 </div>
 <h2 id="principe-du-routage">Principe du routage<a class="headerlink" href="#principe-du-routage" title="Permanent link">⚓︎</a></h2>
@@ -814,12 +814,12 @@ Le transfert du paquet devient alors la responsabilité de ce second routeur. De
 <p><img alt="réseau" src="img/protocole3.jpg" /></p>
 <div class="admonition faq">
 <p class="admonition-title">Questions</p>
-<p>1.Identifier les 3 grandes familles d’éléments interconnectés constituant ce réseau. Donner la composition de chacune d’entre elle. 
-2.Rappeler les symboles normalisés d’un commutateur et d’un routeur (voir schéma). <br />
-3.Quel est le rôle d’un commutateur (ou switch) ? 
-4.Quel est le rôle d’un routeur ? 
-5.A minima, combien d’interfaces réseau doit comporter un routeur ?
-6.Identifier les réseaux qualifiés de locaux. </p>
+<p>1.Identifier les 3 grandes familles d’éléments interconnectés constituant ce réseau. Donner la composition de chacune d’entre elle. <br />
+2.Rappeler les symboles normalisés d’un commutateur et d’un routeur (voir schéma).  <br />
+3.Quel est le rôle d’un commutateur (ou switch) ?<br />
+4.Quel est le rôle d’un routeur ? <br />
+5.A minima, combien d’interfaces réseau doit comporter un routeur ?<br />
+6.Identifier les réseaux qualifiés de locaux.   </p>
 </div>
 <p><strong>Quelques exemples de communication entre machine de ce réseau sont donnés ci-après.</strong>
  <strong>Cas n° 1 : M1 veut communiquer avec M3</strong><br />
@@ -879,10 +879,8 @@ Le but d’un algorithme de routage est de trouver un chemin dans ce graphe qui 
 Les algorithmes de routage peuvent aussi tenir compte des performances des différents chemins entre deux routeurs. La mise à jour des tables routage permet alors de trouver des chemins plus courts ou plus rapides pour acheminer une donnée à une IP précise. Il suffit pour cela de tenir compte des temps de transferts entre routeurs. Pour cela il suffit d'associer à chaque arrête, c’est-à-dire à chaque chemin entre deux routeurs, un poids (pondération) qui indique sa rapidité. Plus la vitesse de transfert est faible entre ces deux routeurs, plus ce nombre sera fort. Pour chaque chemin identifié, l'algorithme additionne le temps de transfert de chaque flèche. Le but de l'algorithme est de trouver le chemin qui minimise le temps de transfert total.  </p>
 <div class="admonition faq">
 <p class="admonition-title">Question</p>
-<ol>
-<li>Quel est l’objectif d’un algorithme de routage ?   </li>
-<li>Comment modélise-t-on un réseau d’un point de vue mathématique ?   </li>
-</ol>
+<p>10.Quel est l’objectif d’un algorithme de routage ? <br />
+11.Comment modélise-t-on un réseau d’un point de vue mathématique ?   </p>
 </div>
 <h3 id="le-protocole-rip-routing-information-protocol">Le protocole RIP (Routing Information Protocol)<a class="headerlink" href="#le-protocole-rip-routing-information-protocol" title="Permanent link">⚓︎</a></h3>
 <p>Le protocole RIP s'appuie sur l'algorithme de <a href="https://fr.wikipedia.org/wiki/Algorithme_de_Bellman-Ford">Bellman-Ford</a>, algorithme permettant de calculer les plus courts chemins dans un graphe. <br />
@@ -899,15 +897,15 @@ Chaque routeur du réseau qui applique le protocole RIP envoie périodiquement (
 <p><img alt="RIP" src="img/protocole8.png" />
 <img alt="RIP" src="img/protocole9.png" /></p>
 <p>Pour renseigner la colonne "métrique", le protocole utilise le nombre de sauts, autrement dit, le nombre de routeurs qui doivent être traversés pour atteindre le réseau cible (dans la table de routage de A, on aura donc une métrique de 1 pour le réseau 10.0.0.0/8 car depuis A il est nécessaire de traverser le routeur G pour atteindre le réseau 10.0.0.0/8) </p>
-<p><img alt="RIP" src="img/protocole10.png" /></p>
+<p><img alt="RIP" src="img/protocole10.PNG" /></p>
 <p><strong>Notion de protocole à vecteur de distance</strong> <br />
 RIP appartient à la famille des protocoles à vecteur de distance.  Avec ce type de protocole, les routeurs envoient régulièrement l'ensemble de leur table de routage aux routeurs voisins, auxquels il est directement connecté. Ceux-ci mettent alors à jour leur propre table de routage en tenant compte des informations envoyées. Évidemment, cela consomme beaucoup de débit réseau, ce qui est un défaut majeur. C'est la raison principale pour laquelle il ne peuvent pas être utilisés sur des réseaux trop importants : les envois prendraient beaucoup trop de temps avec des grosses tables de routage. De plus, les tables de routage mettent beaucoup de temps avant de se stabiliser, ce qui rend le routage très inefficace au début de l'utilisation du réseau.   </p>
 <p><strong>Message RIP v2</strong> <br />
 Un message RIP comprend un en-tête suivi de 1 à 25 enregistrement(s) de route (24 si un message d'authentification est requis). Un message RIP v2 est envoyé en <a href="https://www.techno-science.net/definition/3782.html">multicast</a> à l’IP 224.0.0.9.  </p>
-<p><img alt="RIP v2" src="img/protocole11.png" /></p>
-<p><strong>Les limitations du protocole RIP :</strong>
-•Pour éviter les boucles de routage, le nombre de sauts est limité à 15. Au-delà, les paquets sont supprimés. Au-delà de 15 sauts, le protocole RIP affecte une métrique  à la liaison. <br />
-•RIP ne prend en compte que la distance entre deux machines en ce qui concerne le saut, mais il ne considère pas l'état de la liaison afin de choisir la meilleure bande passante possible. Si l'on considère un réseau composé de trois routeurs A, B et C, reliés en triangle, RIP préférera passer par la liaison directe A-B même si la bande passante n'est que de 56 kbit/s alors qu'elle est de 10 Gbit/s entre A et C et C et B. <br />
+<p><img alt="RIP v2" src="img/protocole11.PNG" /></p>
+<p><strong>Les limitations du protocole RIP :</strong><br />
+• Pour éviter les boucles de routage, le nombre de sauts est limité à 15. Au-delà, les paquets sont supprimés. Au-delà de 15 sauts, le protocole RIP affecte une métrique  à la liaison.   <br />
+• RIP ne prend en compte que la distance entre deux machines en ce qui concerne le saut, mais il ne considère pas l'état de la liaison afin de choisir la meilleure bande passante possible. Si l'on considère un réseau composé de trois routeurs A, B et C, reliés en triangle, RIP préférera passer par la liaison directe A-B même si la bande passante n'est que de 56 kbit/s alors qu'elle est de 10 Gbit/s entre A et C et C et B. <br />
 De facto, le protocole RIP est aujourd'hui très rarement utilisé dans les grandes infrastructures. En effet, il génère, du fait de l'envoi périodique de message, un trafic réseau important (surtout si les tables de routages contiennent beaucoup d'entrées). On lui préfère donc souvent le protocole OSPF qui corrige les limitations évoquées précédemment. <br />
 <a href="https://youtu.be/eRl0an-a3m0">EN SAVOIR PLUS SUR LE PROTOCOLE RIP</a></p>
 <div class="admonition faq">
@@ -938,14 +936,16 @@ Par défaut, OSPF envoie des paquets hello toutes les 10 secondes sur un réseau
 <p><br>
 <strong>Quels sont les états possibles des voisins OSFP ?</strong><br />
 Avant d’établir une relation de voisinage, les routeurs OSPF doivent passer par plusieurs changements d’état : <br />
-1.État init – un routeur a reçu un message Hello de l’autre routeur OSPF. <br />
-2.État 2-way – le voisin a reçu le message Hello et a répondu avec un message Hello 
-3.État Exstart – début de l’échange LSDB (Link-State Database) entre les deux routeurs. Les routeurs commencent à échanger des informations sur l’état des liens. <br />
-4.État Exchange – Les paquets DBD (Database Descriptor) sont échangés. Les DBD contiennent des en-têtes LSA (Link-state Advertisements). Les routeurs utiliseront cette information pour voir quels LSA doivent être échangés. <br />
-5.État Loading – un voisin envoie des LSR (Link State Requests) pour chaque réseau qu’il ne connaît pas. L’autre voisin répond avec les LSU (Link State Updates) qui contiennent des informations sur les réseaux demandés. Après que toutes les informations demandées ont été reçues, l’autre voisin passe par le même processus <br />
-6.État Full – les deux routeurs ont la base de données synchronisée et sont complètement adjacents l’un à l’autre. <br />
+1. État init – un routeur a reçu un message Hello de l’autre routeur OSPF. <br />
+2. État 2-way – le voisin a reçu le message Hello et a répondu avec un message Hello 
+3. État Exstart – début de l’échange LSDB (Link-State Database) entre les deux routeurs. Les routeurs commencent à échanger des informations sur l’état des liens. <br />
+4. État Exchange – Les paquets DBD (Database Descriptor) sont échangés. Les DBD contiennent des en-têtes LSA (Link-state Advertisements). Les routeurs utiliseront cette information pour voir quels LSA doivent être échangés. <br />
+5. État Loading – un voisin envoie des LSR (Link State Requests) pour chaque réseau qu’il ne connaît pas. L’autre voisin répond avec les LSU (Link State Updates) qui contiennent des informations sur les réseaux demandés. Après que toutes les informations demandées ont été reçues, l’autre voisin passe par le même processus <br />
+6. État Full – les deux routeurs ont la base de données synchronisée et sont complètement adjacents l’un à l’autre. <br />
+<br>
 <br>
 <strong>En résumé :</strong> chaque routeur communique la liste des réseaux auxquels il est connecté par des messages Link-state advertisements (LSA) propagés de proche en proche à tous les routeurs du réseau. L'ensemble des LSA forme une base de données de l'état des liens Link-State Database (LSDB) pour chaque zone (area), qui est identique pour tous les routeurs de cette zone. Chaque routeur utilise ensuite l'algorithme de Dijkstra, Shortest Path First (SPF) pour déterminer la route la plus rapide vers chacun des réseaux connus dans la LSDB.<br />
+<br>
 <br>
 <strong>Notion de zone / area OSFP</strong><br />
 <img align="left" alt="" src="img/protocole15.PNG" />
@@ -953,15 +953,16 @@ OSPF utilise le concept de zone (area). Une zone est un regroupement logique de 
 Chaque zone (area) du réseau OSPF doit se connecter à la zone de backbone (area 0) : toutes les autres zones y sont connectées. Tous les routeurs à l’intérieur d’une zone doivent avoir le même ID de zone pour devenir des voisins OSPF. Un routeur qui a des interfaces dans plus d’une zone (zone 0 et zone 1, par exemple) s’appelle Area Border Router (ABR). Un routeur qui connecte un réseau OSPF à d’autres domaines de routage (réseau EIGRP, par exemple) s’appelle Autonomous System Border Routers (ASBR). 
 Remarque : le rôle d’un routeur ABR consiste à annoncer des résumés de routes aux zones voisines. Le rôle d’un ASBR est de connecter un domaine de routage OSPF à un autre réseau externe (par exemple Internet, EIGRP …). 
 <br>
+<br>
 <strong>Messages LSA, LSU et LSR</strong>  </p>
 <p><img align="left" alt="" src="img/protocole16.PNG" /></p>
 <p>Les messages LSA (Link-State Advertisments) sont utilisées par les routeurs OSPF pour échanger des informations de topologie. Chaque LSA contient des informations de routage et de topologie pour décrire une partie d’un réseau OSPF. Lorsque deux voisins décident d’échanger des routes, ils envoient mutuellement une liste de tous les LSA de leur base de données de topologie respective. Chaque routeur vérifie ensuite sa base de données de topologie et envoie un message LSR (Link State Request) demandant tous les LSA introuvables dans sa table de topologie. L’autre routeur répond avec la LSU (Link State Update) qui contient tous les LSA demandés par l’autre voisin.    </p>
 <p><br></p>
 <p><img align="right" alt="" src="img/protocole17.PNG" width="50%" /></p>
 <p>Sur l’exemple ci-contre, après avoir initialisé OSPF sur les deux routeurs, ceux-ci échangent des LSA pour décrire leur base de données de topologie respective. <br />
-1.Le routeur R1 envoie un en-tête LSA pour son réseau directement connecté 10.0.1.0/24. <br />
-2.Le routeur R2 vérifie sa base de données de topologie et détermine qu’il ne dispose pas d’informations sur ce réseau. Le routeur R2 envoie alors un message de demande d’état de liaison LSR demandant des informations supplémentaires sur ce réseau. <br />
-3.Le routeur R1 répond avec Link State Update LSU qui contient des informations sur le sous-réseau 10.0.1.0/24 (adresse hop suivant, coût …).   </p>
+1. Le routeur R1 envoie un en-tête LSA pour son réseau directement connecté 10.0.1.0/24. <br />
+2. Le routeur R2 vérifie sa base de données de topologie et détermine qu’il ne dispose pas d’informations sur ce réseau. Le routeur R2 envoie alors un message de demande d’état de liaison LSR demandant des informations supplémentaires sur ce réseau. <br />
+3. Le routeur R1 répond avec Link State Update LSU qui contient des informations sur le sous-réseau 10.0.1.0/24 (adresse hop suivant, coût …).   </p>
 <p><strong>Notion de protocole à état de lien</strong><br />
 OSFP appartient à la famille des protocoles à état de lien Ces protocoles sont plus efficaces en termes de débit et de stabilisation des tables de routage. Au lieu d'envoyer la table de routage complète, ils envoient des messages courts, qui donnent des indications sur la connectivité du réseau. De manière générale, ces messages sont de simples tests qui vérifient que le voisin est toujours accessible, connecté. Au bout de plusieurs tentatives échouées, le routeur contacté est considéré comme inaccessible et le routeur envoie une indication aux autres voisins comme quoi il ne peut plus communiquer avec lui. En clair, chaque routeur indique quel est l'état des liens qu'il entretient avec les autres routeurs : il dit qu'il est connecté à tel ou tel routeur, que telle connexion a été déconnectée, etc. Avec ces protocoles, le volume de données transmises est plus faible. Pas besoin d'envoyer une table de routage complète, juste quelques messages courts. Outre la forte réduction de débit utilisé, la vitesse de convergence est plus rapide.   </p>
 <p><strong>Métrique</strong>  <br />
@@ -1002,9 +1003,8 @@ Vous pouvez vous aider de cette vidéo :
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
-            Back to top
           </a>
         
       </main>
@@ -1066,10 +1066,10 @@ Vous pouvez vous aider de cette vidéo :
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       
