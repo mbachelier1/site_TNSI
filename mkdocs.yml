@@ -25,6 +25,7 @@ nav:
     -  'Sécurisation des communications' : 'archi/crypto.md'
     -  'Et si on codait Enigma?' : 'archi/enigma.md'
     -  'Système sur puce' : 'archi/soc.md'
+    -  'Protocoles de routage' : 'archi/routage.md'
     -  'Gestion ds processus' : 'archi/processus.md'
 
 
