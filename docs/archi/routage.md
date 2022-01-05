@@ -154,7 +154,7 @@ De facto, le protocole RIP est aujourd'hui très rarement utilisé dans les gran
 [EN SAVOIR PLUS SUR LE PROTOCOLE RIP](https://youtu.be/eRl0an-a3m0)
 
 !!! faq "Questions"
-	12.Quel est le principe du protocole RIP ?   
+	12.Quel est le principe du protocole RIP ?     
 	13.Quels sont ses principaux inconvénients ?   
 	14.En vous basant sur le protocole RIP (métrique = nombre de sauts), déterminez la table de routage du routeur A appartenant au réseau ci-dessous.   
 	![RIP](img/protocole12.jpg)  
@@ -222,7 +222,7 @@ OSFP appartient à la famille des protocoles à état de lien Ces protocoles son
 Le protocole OSPF, contrairement à RIP, n'utilise pas le "nombre nécessaire de sauts" pour établir la métrique, mais la notion de "coût des routes". Dans les messages échangés par les routeurs on trouve le coût de chaque liaison (plus le coût est grand et moins la liaison est intéressante). Quand on parle de "liaison" on parle simplement du câble qui relie un routeur à un autre routeur. Le protocole OSPF permet de connaitre le coût de chaque liaison entre routeurs, et donc, de connaitre le coût d'une route (en ajoutant le coût de chaque liaison traversée). On notera que pour effectuer ces calculs, le protocole OSPF s'appuie sur l'algorithme de Dijkstra.   
 La notion de coût est directement liée au débit des liaisons entre les routeurs. Le débit correspond au nombre de bits de données qu'il est possible de faire passer dans un réseau par seconde. Le débit est donc donné en bits par seconde (bps), mais on trouve souvent des kilo bits par seconde (kbps) ou encore des méga bits par seconde (Mbps) => 1 kbps = 1000 bps et 1 M  bps = 1000 kbps. Connaissant le débit d'une liaison, il est possible de calculer le coût d'une liaison à l'aide de la formule suivante : 
 <br><br>
-**Coût (en bits / s)  = 108 / débit (en bps)**
+**Coût (en bits / s)  = 10<sup>8</sup> / débit (en bps)**
 <br>
 
 Pour obtenir la métrique d'une route, il suffit d'additionner les coûts de chaque liaison (par exemple si pour aller d'un réseau 1 à un réseau 2 on doit traverser une liaison de coût 1, puis une liaison de coût 10 et enfin une liaison de coût 1, la métrique de cette route sera de 1 + 10 + 1 = 12). Comme dans le cas du protocole RIP, les routes ayant les métriques les plus faibles sont privilégiées.   

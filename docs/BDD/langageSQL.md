@@ -1,7 +1,39 @@
-#Le langage SQL
-##Les bases du langage SQL
-###**Bloc de sélection**
-Nous allons illustrer les exemples en partant d'une table Etudiant :
+# Le langage SQL
+## Les bases du langage SQL
+### Créer une table
+Pour créer une base, on aura besoin de connaître son schéma relationnel. Ici nous allons créer la base de données **scolarité** cotenant les tables **Etudiants** et **Notes** dont le schéma relationnel est donné ci-dessous :
+<div id="center">
+	<img src="img/schema_scolarite.PNG" atl="Schéma relationnel base scolarité" >
+</div>
+
+On crée une nouvelle base de données appelée scolarite.db. Puis on lance la création des tables Etudiants :
+```SQL
+CREATE TABLE Etudiants(
+	id INTEGER PRIMARY KEY,
+	Nom VARCHAR,
+	Prenom VARCHAR,
+	Sexe VARCHAR,
+	Age INTEGER);
+```
+Puis Notes : 
+```SQL
+CREATE TABLE Notes ( 
+    id           INTEGER PRIMARY KEY, 
+    etudiant INTEGER,
+    stats    INTEGER,
+    Maths INTEGER,
+    Physique INTEGER,
+    Anglais INTEGER, 
+    description  TEXT,
+    FOREIGN KEY (etudiant) REFERENCES Etudiants(id)
+);
+
+```
+!!! remarque "Clé étrangère"
+	A noter que avec SQLite vous ne pourrez pas créer la clé étrangère après création de la table, il est donc indispensable de le faire au moment de la création de celle-ci.
+
+### **Bloc de sélection**
+Nous allons illustrer les exemples en partant d'une table Etudiants déjà complétée (nous verrons plus loin comment insérer des éléments dans la table) :
 <div id="center">
 	<img src="img/table_ex.png" atl="Table Etudiant" >
 </div>  
@@ -11,7 +43,7 @@ Pour sélectionner des informations dans une base de données, on utilise le blo
 Par exemple :
 
 ```SQL
-SELECT * FROM Etudiant;
+SELECT * FROM Etudiants;
 ```
 
 Permet d'afficher la table en entier.
@@ -20,19 +52,19 @@ Si on ne veut que les noms et les prénoms :
 
 ```SQL
 SELECT Nom,Prenom
-     FROM Etudiant;
+     FROM Etudiants;
 ```
 On peut ajouter le mot clé DISTINCT à la suite de SELECT pour éviter les doublons.  
 <div id="center">
 	<img src="img/res_nom.png" atl="Restriction sur le nom et le prénom" >
 </div>
 
-###**Utilisation des filtres et des tris**
+### **Utilisation des filtres et des tris**
 On veut afficher les noms et prénoms des étudiants dont l'age est inférieur à 19 ans.     
 
 ```SQL
 SELECT Nom,Prenom
-    FROM Etudiant
+    FROM Etudiants
     WHERE age<19;
 ```     
 <div id="center">
@@ -42,7 +74,7 @@ SELECT Nom,Prenom
 On veut afficher les noms et prénoms des étudiants dont l'age est supérieur à 19 ans dans l'ordre alphabétique des noms  
 ```SQL
 SELECT Nom,Prenom
-     FROM Etudiant
+     FROM Etudiants
      WHERE age>19
      ORDER BY nom;
 ```    
@@ -53,7 +85,7 @@ SELECT Nom,Prenom
 </div>
 *On ajoutera le mot clé `desc` à la fin de la dernière ligne de la requête pour l'ordre inverse.*   
 
-###**Compter les occurrences**
+### **Compter les occurrences**
 La commande `count` permet de compter le nombre de valeurs non nulles présentes dans la table pour un attribut donné. Cette commande renvoie 2.  
 ```SQL 
 SELECT count(id) 
@@ -61,7 +93,7 @@ SELECT count(id)
      WHERE age=19 ;
 ```  
 
-###**Modification de la table : INSERT, UPDATE, DELETE**
+### **Modification de la table : INSERT, UPDATE, DELETE**
 Pour **ajouter** une entrée dans la base de données :
 ````SQL
 INSERT INTO Etudiants(id, nom, prenom, sexe, age)
@@ -70,7 +102,7 @@ VALUES
 	(7,'De Beauvoir','Simone','F',113);
 ````
 <div id="center">
-	<img src="img/res_insert.PNG" atl="Ajouter des valeurs dans une table" >
+	<img src="img/res_insert.png" atl="Ajouter des valeurs dans une table" >
   
 </div>
 
