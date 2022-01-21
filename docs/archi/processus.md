@@ -133,7 +133,7 @@ Cette situation d'interblocage a été théorisée par l'informatitien Edward Co
 
 1. Donner les cinq états possible d'un processus.
 2. Compléter le schéma sivat ainsi que la légende correspondant au changemet d'état.
-![schéma à compléter](img/schema_processus_a_acompleter.PNG)
+![schéma à compléter](img/schema_processus_a_completer.jpg)
 3. En vous basant sur le schéma d'arborescence, donnez le PID (en partant du principe qu'il est créé juste après init) et le PPID du processus "getty". 
 4. Identifiez et explicitez sur l'exemple du carrefour à priorité à droite les 4 conditions de Coffman menant à l'interblocage.  
 5. Dans l'exmple donné ci-dessus, Montrer que les conditions d’interlocage de Coffman sont réunies

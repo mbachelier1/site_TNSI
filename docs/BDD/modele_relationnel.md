@@ -1,5 +1,6 @@
-#Modèle relationnel
-##Vocabulaire
+# Modèle relationnel
+Ce modèle d'utilisation des bases de données a été créé par Edgar Frank « Ted » Codd das les années 1960 et 1970.
+## Vocabulaire
 Nous allons nous baser sur la table suivante pour définir le vocabulaire nécessaire :  
 <div id="center">
 	<img src="img/Table_relationnel.png" atl="table de données" >

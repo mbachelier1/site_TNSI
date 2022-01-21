@@ -1,4 +1,4 @@
-# Le langage SQL
+# Le langage SQL (Structured Query Language)
 ## Les bases du langage SQL
 ### Créer une table
 Pour créer une base, on aura besoin de connaître son schéma relationnel. Ici nous allons créer la base de données **scolarité** cotenant les tables **Etudiants** et **Notes** dont le schéma relationnel est donné ci-dessous :
