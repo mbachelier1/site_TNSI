@@ -2,7 +2,7 @@
 En informatique, on applique souvent cette méthode algorithmique qui constitue à diviser un problème en problèmes plus petits, donc plus facile à résoudre puis de l'étendre au problème plus grand.  
 Il faudra pour cela résoudre trois étapes :
 
-- **devisier** : découper le problème en problèmes plus petits
+- **divisier** : découper le problème en problèmes plus petits
 - **régner** : résoudre ces problèmes plus petits, déterminer coment on passe de ce problème à un problème un tout petit peu plus grand et définir les cas d'arrêt (on utilisera souvent la récursivité).
 - **combiner** : recombiner les solutions des sous-problèmes pour obtenir la solution générale du problème de départ.
 
@@ -60,12 +60,8 @@ Le jeu des tours de Hanoï est un jeu pour enfants, qui généralement finissent
 - on ne peut poser un disque que sur un disque plus grand ou sur une tige vide. 
 
 Vous pouvez tester le jeu avec plus ou moins de disques.  
-<iframe id="inlineFrameExample"
-    title="Inline Frame Example"
-    width="100%"
-    height="600"
-    src="http://championmath.free.fr/tourhanoi.htm">
-</iframe>
+[![jeu hanoi](img/site_Hanoi.PNG)](http://championmath.free.fr/tourhanoi.htm)
+
 
 Pour un seul disque le problème est assez simple, il suffit de déplacer le disque de la tige de départ à la tige d'arrivée.  
 Pour deux disques, on déplace le plus petit, sur la tige intermédiaire, puis le grand sur la tige d'arrivée et enfin le petit sur le grand. Jusqu'ici, tout va bien.

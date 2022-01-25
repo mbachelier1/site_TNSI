@@ -33,7 +33,7 @@ Cette fonction prend une liste de mesures en paramètre et retourne la moyenne d
 
 **fonction `_ecart_type()`**  
 
-![formule ecart type](https://calculis.net/images/ecart-type.png)
+![formule ecart type](img/ecart-type.png)
 La formule de l'écart type est donnée ci-contre. Cette fonction doit prendre en paramètre une liste de mesures et renvoyer la valeur de l'écart type.  
 
 
