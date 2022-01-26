@@ -586,6 +586,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pre-et-postconditions" class="md-nav__link">
+    Pré et postconditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Pré et postconditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preconditions" class="md-nav__link">
+    préconditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postconditions" class="md-nav__link">
+    Postconditions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tests" class="md-nav__link">
     Tests
   </a>
@@ -663,6 +690,18 @@
     <li class="md-nav__item">
       <a href="../algorithmie/diviser.html" class="md-nav__link">
         Diviser pour Régner
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/parcours_graphe.html" class="md-nav__link">
+        Algorithmes des graphes
       </a>
     </li>
   
@@ -870,9 +909,129 @@ On reprend les exemples ci-dessus :
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a*b = &quot;</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-La grandeur liée au programme qui est vérifiée lors de l'exécution du programme est que <code>b+m/a</code> vaut la valeur de départ de b que l'on a mémorisée dans c.
-Pour être sûr que le programme se déroule correctement on peut ajouter avant la sortie de la boucle la ligne :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">assert</span> <span class="n">b</span><span class="o">+</span><span class="n">m</span><span class="o">/</span><span class="n">a</span><span class="o">==</span><span class="n">c</span>
+Si on déroule la boucle étape par étape : </p>
+<table>
+<thead>
+<tr>
+<th align="center">a</th>
+<th align="center">b</th>
+<th align="center">c</th>
+<th align="center">m</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">a</td>
+<td align="center">c</td>
+<td align="center">c</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">a</td>
+<td align="center">c-1</td>
+<td align="center">c</td>
+<td align="center">a</td>
+</tr>
+<tr>
+<td align="center">a</td>
+<td align="center">c-2</td>
+<td align="center">c</td>
+<td align="center">2a</td>
+</tr>
+<tr>
+<td align="center">a</td>
+<td align="center">c-i</td>
+<td align="center">c</td>
+<td align="center">ixa</td>
+</tr>
+</tbody>
+</table>
+<p>On constate ici une donnée commune dans l'évolution des variables (i) : en remplaçant i par m/a dans l'expression de b, on trouve b=c-m/a. Cette propriété est valable à chauqe boucle, elle constitue un invariant. On pourra ajouter l'assertion ci-dessous dans la boucle.<br />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">assert</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="n">c</span><span class="o">-</span><span class="n">m</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<h2 id="pre-et-postconditions">Pré et postconditions<a class="headerlink" href="#pre-et-postconditions" title="Permanent link">⚓︎</a></h2>
+<h3 id="preconditions">préconditions<a class="headerlink" href="#preconditions" title="Permanent link">⚓︎</a></h3>
+<div class="admonition example">
+<p class="admonition-title">exemple</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">code</label><div class="tabbed-content">
+<p>On étudie une fonction qui prend un entier en paramètre et renvoie le chiffre des unités.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_unite</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    renvoie le chiffre des unités d&#39;un entier n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">while</span> <span class="n">n</span><span class="o">&gt;=</span><span class="mi">10</span> <span class="p">:</span>       <span class="c1"># répétition tant que n est supérieur ou égal à 10</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">10</span>
+    <span class="k">return</span> <span class="n">n</span>
+</code></pre></div>
+</td></tr></table></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">sortie</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">get_unite</span><span class="p">(</span><span class="mi">4567</span><span class="p">)</span>
+<span class="mi">7</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">get_unite</span><span class="p">(</span><span class="mf">45.67</span><span class="p">)</span>
+<span class="mf">5.670000000000002</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">get_unite</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">)</span>
+<span class="o">-</span><span class="mi">6</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+</div>
+<p>On peut voir que la fonction ne respecte pas la documentation puisqu'elle s'exécute même avec un flottant. Avant même l'éxécution du code, nous allons donc ajouter des assertions permettant de fixer les conditions suivantes : n doit être un entier, n doit être positif ou nul.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_unite</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    renvoie le chiffre des unités d&#39;un entier n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">==</span><span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;vous devez entrer un nombre entier.&quot;</span>          <span class="c1"># &quot;Précondition 1&quot;</span>
+    <span class="k">assert</span> <span class="n">n</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;le nombre étudié doit être positif ou nul.&quot;</span>           <span class="c1"># &quot;Précondition 2&quot;</span>
+    <span class="k">while</span> <span class="n">n</span><span class="o">&gt;=</span><span class="mi">10</span> <span class="p">:</span>       <span class="c1"># répétition tant que n est supérieur ou égal à 10</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">10</span>
+    <span class="k">return</span> <span class="n">n</span>
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="postconditions">Postconditions<a class="headerlink" href="#postconditions" title="Permanent link">⚓︎</a></h3>
+<p>Avant de renvoyer le résutat on vérifie sa validité avec une postcondition : le résultat retourné doit être strictement inférieur à 10 et supérieur à 0.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_unite</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    renvoie le chiffre des unités d&#39;un entier n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">==</span><span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;vous devez entrer un nombre entier.&quot;</span>          <span class="c1"># &quot;Précondition 1&quot;</span>
+    <span class="k">assert</span> <span class="n">n</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;le nombre étudié doit être positif ou nul.&quot;</span>           <span class="c1"># &quot;Précondition 2&quot;</span>
+    <span class="k">while</span> <span class="n">n</span><span class="o">&gt;=</span><span class="mi">10</span> <span class="p">:</span>       <span class="c1"># répétition tant que n est supérieur ou égal à 10</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">10</span>
+    <span class="k">assert</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;le nombre renvoyé doit être inférieur à 10.&quot;</span>  <span class="c1"># Postcondition 1</span>
+    <span class="k">assert</span> <span class="n">n</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;le nombre renvoyé doit être positif.&quot;</span>  <span class="c1"># Postcondition 2</span>
+    <span class="k">return</span> <span class="n">n</span>
 </code></pre></div>
 </td></tr></table></p>
 <h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">⚓︎</a></h2>
@@ -938,7 +1097,7 @@ Ce sont ce que l'on appelle des cas limites, qui peuvent provoquer des effets de
 Les tests peuvent être intégérés aux fonctions sous forme de préconditions ou postconditions ou dans une autre fonction, voire même dans un autre programme.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">main.py</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">main.py</label><div class="tabbed-content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -965,7 +1124,7 @@ Les tests peuvent être intégérés aux fonctions sous forme de préconditions 
 </code></pre></div>
 </td></tr></table>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">test.py</label><div class="tabbed-content">
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">test.py</label><div class="tabbed-content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
