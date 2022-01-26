@@ -6,8 +6,8 @@ Il faudra pour cela résoudre trois étapes :
 - **régner** : résoudre ces problèmes plus petits, déterminer coment on passe de ce problème à un problème un tout petit peu plus grand et définir les cas d'arrêt (on utilisera souvent la récursivité).
 - **combiner** : recombiner les solutions des sous-problèmes pour obtenir la solution générale du problème de départ.
 
-Pour ne pas 
-Nous allons pour illustrer cette méthodes utiliser deux exemples classiques : le tri-fusion et les tour de hanoï.
+
+Nous allons pour illustrer cette méthode, utiliser deux exemples classiques : le tri-fusion et les tour de hanoï.
 
 ## Le tri fusion
 Le tri fusion est un tri de tableau comme il a déjà été vu en première avec le tri par insertion et le tri par sélection.
@@ -59,7 +59,7 @@ Le jeu des tours de Hanoï est un jeu pour enfants, qui généralement finissent
 - on ne peut déplacer que un disque à la fois  
 - on ne peut poser un disque que sur un disque plus grand ou sur une tige vide. 
 
-Vous pouvez tester le jeu avec plus ou moins de disques.  
+Vous pouvez tester [le jeu](http://championmath.free.fr/tourhanoi.htm) avec plus ou moins de disques.  
 [![jeu hanoi](img/site_Hanoi.PNG)](http://championmath.free.fr/tourhanoi.htm)
 
 
