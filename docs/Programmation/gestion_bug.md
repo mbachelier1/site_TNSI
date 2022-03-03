@@ -72,10 +72,74 @@ while b > 0:
     b -= 1
 print("a*b = ", m)
 ```
-La grandeur liée au programme qui est vérifiée lors de l'exécution du programme est que `b+m/a` vaut la valeur de départ de b que l'on a mémorisée dans c.
-Pour être sûr que le programme se déroule correctement on peut ajouter avant la sortie de la boucle la ligne :
+Si on déroule la boucle étape par étape : 
+
+| a   | b        | c      | m      |  
+| :-: |:--------:| :-----:| :-----:|  
+| a   |   c      |  c     | 0      |  
+| a   | c-1      |   c    | a      |  
+| a   | c-2      |    c   | 2a     |  
+| a   | c-i      |    c   | ixa    |  
+
+On constate ici une donnée commune dans l'évolution des variables (i) : en remplaçant i par m/a dans l'expression de b, on trouve b=c-m/a. Cette propriété est valable à chauqe boucle, elle constitue un invariant. On pourra ajouter l'assertion ci-dessous dans la boucle.  
 ```python
-    assert b+m/a==c
+    assert (b==c-m/a)
+```
+## Pré et postconditions
+### préconditions
+
+
+!!! example "exemple"
+
+	=== "code"
+		On étudie une fonction qui prend un entier en paramètre et renvoie le chiffre des unités.
+		```python
+		def get_unite(n: int) -> int:
+			"""
+			renvoie le chiffre des unités d'un entier n
+			"""
+			while n>=10 : 		# répétition tant que n est supérieur ou égal à 10
+				n = n-10
+			return n
+		```
+
+	=== "sortie"
+		```python
+		>>> get_unite(4567)
+		7
+		>>> get_unite(45.67)
+		5.670000000000002
+		>>> get_unite(-6)
+		-6
+		```
+
+On peut voir que la fonction ne respecte pas la documentation puisqu'elle s'exécute même avec un flottant. Avant même l'éxécution du code, nous allons donc ajouter des assertions permettant de fixer les conditions suivantes : n doit être un entier, n doit être positif ou nul.
+```python
+def get_unite(n: int) -> int:
+	"""
+	renvoie le chiffre des unités d'un entier n
+	"""
+	assert type(n)==int, "vous devez entrer un nombre entier."  		# "Précondition 1"
+	assert n>=0, "le nombre étudié doit être positif ou nul."			# "Précondition 2"
+	while n>=10 : 		# répétition tant que n est supérieur ou égal à 10
+		n = n-10
+	return n
+```
+
+### Postconditions
+Avant de renvoyer le résutat on vérifie sa validité avec une postcondition : le résultat retourné doit être strictement inférieur à 10 et supérieur à 0.
+```python
+def get_unite(n: int) -> int:
+	"""
+	renvoie le chiffre des unités d'un entier n
+	"""
+	assert type(n)==int, "vous devez entrer un nombre entier."  		# "Précondition 1"
+	assert n>=0, "le nombre étudié doit être positif ou nul."			# "Précondition 2"
+	while n>=10 : 		# répétition tant que n est supérieur ou égal à 10
+		n = n-10
+	assert n<10, "le nombre renvoyé doit être inférieur à 10."  # Postcondition 1
+	assert n>=0, "le nombre renvoyé doit être positif."  # Postcondition 2
+	return n
 ```
 
 ## Tests

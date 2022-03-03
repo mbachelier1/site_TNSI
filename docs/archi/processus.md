@@ -14,9 +14,9 @@ Tous les systèmes d'exploitation "modernes" (Linux, Windows, macOS, Android, iO
 **Voici les différents états :**
 
 ![schema processus](img/etat_processus.PNG){align=left}
-- Lors du démarrage d'un programme ou de l'ouverture d'un nouvel onglet par exemple, un processus est créé, il estdans l'état **nouveau**.
-- Lorsqu'un processus est en train de s'exécuter (qu'il utilise le microprocesseur), on dit que le processus est dans l'état **en exéution**.
-- Un processus qui se trouve dans l'état en exéution peut demander à accéder à une ressource pas forcément disponible instantanément (par exemple lire une donnée sur le disque dur). Le processus ne peut pas poursuivre son exécution tant qu'il n'a pas obtenu cette ressource. En attendant de recevoir cette ressource, il passe de l'état "en exéution" à l'état **en attente**.  
+- Lors du démarrage d'un programme ou de l'ouverture d'un nouvel onglet par exemple, un processus est créé, il estdans l'état **nouveau**.  
+- Lorsqu'un processus est en train de s'exécuter (qu'il utilise le microprocesseur), on dit que le processus est dans l'état **en exéution**.  
+- Un processus qui se trouve dans l'état en exéution peut demander à accéder à une ressource pas forcément disponible instantanément (par exemple lire une donnée sur le disque dur). Le processus ne peut pas poursuivre son exécution tant qu'il n'a pas obtenu cette ressource. En attendant de recevoir cette ressource, il passe de l'état "en exéution" à l'état **en attente**.    
 
 Lorsque le processus finit par obtenir la ressource attendue, celui-ci peut potentiellement reprendre son exécution. Mais comme nous l'avons vu ci-dessus, les systèmes d'exploitation permettent de gérer plusieurs processus "en même temps", mais un seul processus peut se trouver dans un état "en exéution" (le microprocesseur ne peut "s'occuper" que d'un seul processus à la fois). Quand un processus passe d'un état "en exéution" à un état "en attente", un autre processus peut alors "prendre sa place" et passer dans l'état "en exéution". Le processus qui vient de recevoir la ressource attendue ne va donc pas forcément pouvoir reprendre son exécution tout de suite, car pendant qu'il était dans un état "en attente" un autre processus a "pris sa place". Un processus qui quitte l'état en attente ne repasse pas forcément à l'état "en exéution", il peut, en attendant que "la place se libère" passer dans l'état **prêt** (sous entendu "j'ai obtenu ce que j'attendais, je suis prêt à reprendre mon exécution dès que la "place sera libérée"").
 
@@ -68,8 +68,8 @@ Dans un système monotâche (processeur simple coeur pour simplifier) une seule 
 Les différentes tâches (thread) d'un ordinateur sont réalisées de cette façon lorsque plusieurs applications sont ouvertes en même temps. Chaque programme attend son tour et la disponibilité de la ressource.
 
 !!! note "Comment aurais-je pu aller plus vite?"
-	En demandant de l'aide à quelqu'un, j'aurai pu réaliser les préparation réellement en **parallèle** alors qu'ici je les ai réaliser en **concurrence**.
-	C'est le principe du processeur multicoeur. Chaque coeur fera une chose à la fois mais les différents coeurs trvaiallent en parallèle.
+	En demandant de l'aide à quelqu'un, j'aurai pu réaliser les préparation réellement en **parallèle** alors qu'ici je les ai réaliser en **concurrence**.  
+	C'est le principe du processeur multicoeur. Chaque coeur fera une chose à la fois mais les différents coeurs trvaiallent en parallèle.  
 
 **Arrêt d'un processus**
 S'il a fini d'être exécuté le processus s'arrête.  
@@ -129,10 +129,10 @@ Cette situation d'interblocage a été théorisée par l'informatitien Edward Co
 	- Le processus B détient le dérouleur de bande et demande l’imprimante.
 	![Interblocage](img/interbloc.PNG)
 
-##Questions 
+## Questions 
 
 1. Donner les cinq états possible d'un processus.
-2. Compléter le schéma sivat ainsi que la légende correspondant au changemet d'état.
+2. Compléter le schéma suivant ainsi que la légende correspondant aux changements d'état (en trouvant le nom des changements d'état ou une description de quelques mots).
 ![schéma à compléter](img/schema_processus_a_completer.jpg)
 3. En vous basant sur le schéma d'arborescence, donnez le PID (en partant du principe qu'il est créé juste après init) et le PPID du processus "getty". 
 4. Identifiez et explicitez sur l'exemple du carrefour à priorité à droite les 4 conditions de Coffman menant à l'interblocage.  

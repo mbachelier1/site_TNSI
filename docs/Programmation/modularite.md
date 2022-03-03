@@ -45,7 +45,7 @@ On peut invoquer l'aide sur un module c'est-à-dire sa description, la liste de 
 >>> help(module)
 ```  
 
-###**Assertions**
+### **Assertions**
 Pour tester les fonctions, on peut ajouter des tests en cours de code, sans que celui-ci ne soit pris en compte Ce sont des lignes que l'on peut supprimer sans changer la structure du code.  
 Elles permettent de tester les conditions critiques et permettent de stopper le programme si l'une d'elle se produit (ce qui ne doit pas arriver si le programme est correctement implémenté).
 ``` python
@@ -113,7 +113,7 @@ while True:
 ### Strucutre de base d'un module
 
 !!! important "Important"
-    ![structure](img/structure.PNG)
+    ![structure](img/structure.jpg)
     Pour obtenir cette structure on réera un dossier `mesmodules` contenant les diférents fichiers `.py` du module. On créera un fichier vide `__init__.py` dans ce dossier et on appelera les différentes parties du module dans le fichier comme ci-dessous :.
     Appel des modules :
     ```python
