@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -808,9 +808,9 @@
 <p>Tous les systèmes d'exploitation "modernes" (Linux, Windows, macOS, Android, iOS...) sont capables de gérer l'exécution de plusieurs processus en même temps. Mais pour être précis, cela n'est pas en véritable "en même temps", mais plutôt un "chacun son tour". Pour gérer ce "chacun son tour", les systèmes d'exploitation attribuent des "états" au processus.</p>
 <p><strong>Voici les différents états :</strong></p>
 <p><img align="left" alt="schema processus" src="img/etat_processus.PNG" />
-- Lors du démarrage d'un programme ou de l'ouverture d'un nouvel onglet par exemple, un processus est créé, il estdans l'état <strong>nouveau</strong>.
-- Lorsqu'un processus est en train de s'exécuter (qu'il utilise le microprocesseur), on dit que le processus est dans l'état <strong>en exéution</strong>.
-- Un processus qui se trouve dans l'état en exéution peut demander à accéder à une ressource pas forcément disponible instantanément (par exemple lire une donnée sur le disque dur). Le processus ne peut pas poursuivre son exécution tant qu'il n'a pas obtenu cette ressource. En attendant de recevoir cette ressource, il passe de l'état "en exéution" à l'état <strong>en attente</strong>.  </p>
+- Lors du démarrage d'un programme ou de l'ouverture d'un nouvel onglet par exemple, un processus est créé, il estdans l'état <strong>nouveau</strong>.<br />
+- Lorsqu'un processus est en train de s'exécuter (qu'il utilise le microprocesseur), on dit que le processus est dans l'état <strong>en exéution</strong>.<br />
+- Un processus qui se trouve dans l'état en exéution peut demander à accéder à une ressource pas forcément disponible instantanément (par exemple lire une donnée sur le disque dur). Le processus ne peut pas poursuivre son exécution tant qu'il n'a pas obtenu cette ressource. En attendant de recevoir cette ressource, il passe de l'état "en exéution" à l'état <strong>en attente</strong>.    </p>
 <p>Lorsque le processus finit par obtenir la ressource attendue, celui-ci peut potentiellement reprendre son exécution. Mais comme nous l'avons vu ci-dessus, les systèmes d'exploitation permettent de gérer plusieurs processus "en même temps", mais un seul processus peut se trouver dans un état "en exéution" (le microprocesseur ne peut "s'occuper" que d'un seul processus à la fois). Quand un processus passe d'un état "en exéution" à un état "en attente", un autre processus peut alors "prendre sa place" et passer dans l'état "en exéution". Le processus qui vient de recevoir la ressource attendue ne va donc pas forcément pouvoir reprendre son exécution tout de suite, car pendant qu'il était dans un état "en attente" un autre processus a "pris sa place". Un processus qui quitte l'état en attente ne repasse pas forcément à l'état "en exéution", il peut, en attendant que "la place se libère" passer dans l'état <strong>prêt</strong> (sous entendu "j'ai obtenu ce que j'attendais, je suis prêt à reprendre mon exécution dès que la "place sera libérée"").</p>
 <ul>
 <li>une fois le processus terminé il passe dans l'état <strong>arrêté</strong>.</li>
@@ -864,8 +864,8 @@ Voici les étapes de la préparation de mes boulettes :</p>
 <p>Les différentes tâches (thread) d'un ordinateur sont réalisées de cette façon lorsque plusieurs applications sont ouvertes en même temps. Chaque programme attend son tour et la disponibilité de la ressource.</p>
 <div class="admonition note">
 <p class="admonition-title">Comment aurais-je pu aller plus vite?</p>
-<p>En demandant de l'aide à quelqu'un, j'aurai pu réaliser les préparation réellement en <strong>parallèle</strong> alors qu'ici je les ai réaliser en <strong>concurrence</strong>.
-C'est le principe du processeur multicoeur. Chaque coeur fera une chose à la fois mais les différents coeurs trvaiallent en parallèle.</p>
+<p>En demandant de l'aide à quelqu'un, j'aurai pu réaliser les préparation réellement en <strong>parallèle</strong> alors qu'ici je les ai réaliser en <strong>concurrence</strong>.<br />
+C'est le principe du processeur multicoeur. Chaque coeur fera une chose à la fois mais les différents coeurs trvaiallent en parallèle.  </p>
 </div>
 <p><strong>Arrêt d'un processus</strong>
 S'il a fini d'être exécuté le processus s'arrête.<br />
@@ -951,7 +951,7 @@ Chaque processus a besoin d’un accès exclusif au dérouleur et à l’imprima
 <h2 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">⚓︎</a></h2>
 <ol>
 <li>Donner les cinq états possible d'un processus.</li>
-<li>Compléter le schéma sivat ainsi que la légende correspondant au changemet d'état.
+<li>Compléter le schéma suivant ainsi que la légende correspondant aux changements d'état (en trouvant le nom des changements d'état ou une description de quelques mots).
 <img alt="schéma à compléter" src="img/schema_processus_a_completer.jpg" /></li>
 <li>En vous basant sur le schéma d'arborescence, donnez le PID (en partant du principe qu'il est créé juste après init) et le PPID du processus "getty". </li>
 <li>Identifiez et explicitez sur l'exemple du carrefour à priorité à droite les 4 conditions de Coffman menant à l'interblocage.  </li>
@@ -972,8 +972,9 @@ Chaque processus a besoin d’un accès exclusif au dérouleur et à l’imprima
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1020,10 +1021,10 @@ Chaque processus a besoin d’un accès exclusif au dérouleur et à l’imprima
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       

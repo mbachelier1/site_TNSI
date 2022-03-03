@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -799,35 +799,35 @@ Cette fonction prend une liste de mesures en paramètre et retourne la moyenne d
 <p>Ne pas importer de modules de calcul de moyenne ou autre, vous devez l'implémenter vous-même.<br />
 La seule tolérance sera pour la fonction <code>sqrt</code> mais qui peut être remplacé par une puissance 0,5.</p>
 </div>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
 <span class="mf">3.9583333333333326</span>
 </code></pre></div>
 </td></tr></table>
 <p><strong>fonction <code>ecart_type()</code></strong>  </p>
 <p><img alt="formule ecart type" src="img/ecart-type.png" />
 La formule de l'écart type est donnée ci-contre. Cette fonction doit prendre en paramètre une liste de mesures et renvoyer la valeur de l'écart type.  </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ecart_type</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ecart_type</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
 <span class="mf">0.18465433171800283</span>
 </code></pre></div>
 </td></tr></table>
 <p><strong>fonction <code>nb_mesures()</code></strong>  </p>
 <p>Cette fonction prend en paramètre une liste de mesures et renvoie le nombre de mesures dans la liste. 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_mesures</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_mesures</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
 <span class="mi">12</span>
 </code></pre></div>
 </td></tr></table></p>
 <p><strong>fonction <code>valeur_plus_proche(valeur,Tableau):</code></strong><br />
 Lorsque l'on regarde le tableau des coefficients d'élargissement, on peut voir que toutes les quantités de mesures n'y figurent pas. il y a trop peu de différence avec les valeurs données pour que cela soit significatif. On cherchera donc le nombre de mesures le plus proche que celui qu'on possède.
 Cette fonction prend en paramètre une valeur et un tableau, et renvoie la valeur du tableau la plus proche de la valeur <code>valeur</code>. En cas d'égalité pour deux valeurs on retournera la première rencontrée.  <br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_plus_proche</span><span class="p">(</span><span class="mi">20</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_plus_proche</span><span class="p">(</span><span class="mi">20</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
 <span class="mi">5</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_plus_proche</span><span class="p">(</span><span class="mi">7</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
 <span class="mi">6</span>
@@ -838,10 +838,10 @@ Cette fonction prend en paramètre une valeur et un tableau, et renvoie la valeu
 <p><strong>fonction <code>incertitude()</code></strong><br />
 Cette fonction utilisera les autres pour calculer l'incertitude telle qu'elle est expliqué plus haut. Elle prend en paramètre la liste de mesures et un booléen <code>confiance</code> qui par défaut vaudra False ce qui signifie que l'on se place dans un intervalle de confiance de 95%. Si on exécute la fonction avec <code>confiance=True</code> on aura un intervalle de confiance de 98%.
 Cette fonction devra retourner la valeur de l'incertitude calculée.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">incertitude</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">incertitude</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
 <span class="mf">0.11727125093686133</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">incertitude</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">],</span><span class="kc">True</span><span class="p">)</span>
 <span class="mf">0.16577890473347215</span>
@@ -849,18 +849,18 @@ Cette fonction devra retourner la valeur de l'incertitude calculée.</p>
 </td></tr></table>
 <p><strong>fonction <code>absolue(relative,mesure)</code></strong><br />
 Elle permet de passer de l'incertitude relative de la mesure à l'incertitude absolue.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">absolue</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mf">4.56</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">absolue</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mf">4.56</span><span class="p">)</span>
 <span class="mf">0.9119999999999999</span>
 <span class="c1">#une inertitude de 20% sur une mesure de 4.56V correspond à une incertitude de 0,91V.</span>
 </code></pre></div>
 </td></tr></table></p>
 <p><strong>fonction <code>relative(absolue,mesure)</code></strong><br />
 Elle permet de passer de l'incertitude absolue de la mesure à l'incertitude relative.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">relative</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">4.56</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">relative</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">4.56</span><span class="p">)</span>
 <span class="mf">19.73684210526316</span>
 <span class="c1">#une inertitude de 0.9V sur une mesure de 4.56V correspond à une incertitude de 19,7%.</span>
 </code></pre></div>
@@ -868,22 +868,22 @@ Elle permet de passer de l'incertitude absolue de la mesure à l'incertitude rel
 <div class="admonition help">
 <p class="admonition-title">Quelques aides précieuses</p>
 <p>valeurs de k (1ere ligne contient le nombre de mesures, les deuxième et troisième lignes les valeurs de k pour 95% et 98%) :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#Tableau regroupant les valeurs de k</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#Tableau regroupant les valeurs de k</span>
 <span class="n">coeff_elargissement</span><span class="o">=</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">20</span><span class="p">],</span>
                           <span class="p">[</span><span class="mf">12.7</span><span class="p">,</span><span class="mf">4.3</span><span class="p">,</span><span class="mf">3.18</span><span class="p">,</span><span class="mf">2.78</span><span class="p">,</span><span class="mf">2.57</span><span class="p">,</span><span class="mf">2.45</span><span class="p">,</span><span class="mf">2.37</span><span class="p">,</span><span class="mf">2.31</span><span class="p">,</span><span class="mf">2.26</span><span class="p">,</span><span class="mf">2.20</span><span class="p">,</span><span class="mf">2.16</span><span class="p">,</span><span class="mf">2.13</span><span class="p">,</span><span class="mf">2.11</span><span class="p">,</span><span class="mf">2.09</span><span class="p">],</span>
                           <span class="p">[</span><span class="mf">63.7</span><span class="p">,</span><span class="mf">9.93</span><span class="p">,</span><span class="mf">5.84</span><span class="p">,</span><span class="mf">4.60</span><span class="p">,</span><span class="mf">4.03</span><span class="p">,</span><span class="mf">3.71</span><span class="p">,</span><span class="mf">3.50</span><span class="p">,</span><span class="mf">3.36</span><span class="p">,</span><span class="mf">3.25</span><span class="p">,</span><span class="mf">3.11</span><span class="p">,</span><span class="mf">3.01</span><span class="p">,</span><span class="mf">2.95</span><span class="p">,</span><span class="mf">2.90</span><span class="p">,</span><span class="mf">2.86</span><span class="p">]]</span>
 </code></pre></div>
 </td></tr></table>
 Comment fixer une valeur de paramètre par défaut :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">incertitude</span> <span class="p">(</span><span class="n">Liste</span><span class="p">,</span> <span class="n">confiance</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">incertitude</span> <span class="p">(</span><span class="n">Liste</span><span class="p">,</span> <span class="n">confiance</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="k">pass</span>
 <span class="c1"># si on exécute la fonction sans préciser la valeur de confiance elle vaudra False;</span>
 <span class="n">incertitude</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
@@ -903,9 +903,9 @@ Vous structurerez votre code comme un module en créant le fichier <code>__init_
 Lorsqu'on lit une graduation à l'aide d'une règle l'erreur peut venir de la lecture de la graduation mais aussi du positionnement du zéro. On a donc plus de chance de faire une mesure imprécise.
 L'incertitude se calcule ainsi :  </p>
 <div class="arithmatex">\[U= \dfrac{2 \times UnitéDeGraduation}{\sqrt{6}}\]</div>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#exemple pour une règle graduée en mm l&#39;incertitude est de 0,81mm</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#exemple pour une règle graduée en mm l&#39;incertitude est de 0,81mm</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">double_lecture</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="mf">0.8164965809277261</span>
 </code></pre></div>
@@ -913,9 +913,9 @@ L'incertitude se calcule ainsi :  </p>
 <p><strong>Cas de la lecture simple graduation</strong><br />
 Une lecture à simple graduation serait celle d'un baromètre à aiguille ou d'un thermomètre analogique. L'utilisation d'une burette en est aussi un bon exemple. Voici comment se calcule l'incertitude :  </p>
 <div class="arithmatex">\[U= \dfrac{2 \times UnitéDeGraduation}{\sqrt{12}}\]</div>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#exemple pour un thermomètre avec une graduation pour 1°C l&#39;incertitude est de 1,41°C</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#exemple pour un thermomètre avec une graduation pour 1°C l&#39;incertitude est de 1,41°C</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">simple_lecture</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="mf">1.414213562373095</span>
 </code></pre></div>
@@ -925,9 +925,9 @@ Le constructeur d'un appareil donne au minimum la tolérance de la mesure. C'est
 Pour une mesure donnant 4,586V le dernier digit sera la plus petite unité mesurée soit 0,001V.<br />
 Le pourcentage de la mesure correspondant à celui de la tolérance donnée. Par exemple une mesure de 4,6V avec une tolérence de 5%, le pourcentage sera de 5% de 4,6 soit 0,23.  </p>
 <div class="arithmatex">\[U= \dfrac{2 \times PourcentageDeLaMesure + 2 \times digit}{\sqrt{3}}\]</div>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">exemple</span> <span class="n">avec</span> <span class="n">une</span> <span class="n">mesure</span> <span class="n">de</span> <span class="mf">4.56</span><span class="n">V</span> <span class="n">avec</span> <span class="n">une</span> <span class="n">tolérance</span> <span class="n">de</span> <span class="mi">12</span><span class="o">%</span> <span class="n">et</span> <span class="n">une</span> <span class="n">incertitude</span> <span class="n">de</span> <span class="mi">0</span><span class="p">,</span><span class="mi">01</span><span class="n">digit</span><span class="o">.</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">exemple</span> <span class="n">avec</span> <span class="n">une</span> <span class="n">mesure</span> <span class="n">de</span> <span class="mf">4.56</span><span class="n">V</span> <span class="n">avec</span> <span class="n">une</span> <span class="n">tolérance</span> <span class="n">de</span> <span class="mi">12</span><span class="o">%</span> <span class="n">et</span> <span class="n">une</span> <span class="n">incertitude</span> <span class="n">de</span> <span class="mi">0</span><span class="p">,</span><span class="mi">01</span><span class="n">digit</span><span class="o">.</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">appareil_numerique</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mf">4.56</span><span class="p">)</span>
 <span class="mf">0.6549461453687115</span>
 </code></pre></div>
@@ -935,9 +935,9 @@ Le pourcentage de la mesure correspondant à celui de la tolérance donnée. Par
 <p><strong>Cas d'un appareil quelconque</strong><br />
 On calculera l'incertitude par la formule :  </p>
 <div class="arithmatex">\[U= \dfrac{PourcentageDeLaMesure}{\sqrt{3}}\]</div>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">exemple</span> <span class="n">avec</span> <span class="n">un</span> <span class="n">appareil</span> <span class="n">quelconque</span> <span class="n">d</span><span class="s1">&#39;une tolérance de 12% pour une mesure de 4,56V</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">exemple</span> <span class="n">avec</span> <span class="n">un</span> <span class="n">appareil</span> <span class="n">quelconque</span> <span class="n">d</span><span class="s1">&#39;une tolérance de 12% pour une mesure de 4,56V</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tolerance_donnee</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mf">4.56</span><span class="p">)</span>
 <span class="mf">0.6318521346011265</span>
 </code></pre></div>
@@ -960,8 +960,9 @@ Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1023,10 +1024,10 @@ Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       

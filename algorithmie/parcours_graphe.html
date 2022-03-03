@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -790,47 +790,47 @@
 <p>Développer l'algorithme en partant des noeuds H puis D.</p>
 </div>
 <p>L'algorithme en pseudocode :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nv">VARIABLE</span>
-<span class="nv">G</span> <span class="p">:</span> <span class="nv">un</span> <span class="nv">graphe</span>
-<span class="nv">s</span> <span class="p">:</span> <span class="nv">noeud</span> <span class="p">(</span><span class="nv">origine</span><span class="p">)</span>
-<span class="nv">u</span> <span class="p">:</span> <span class="nv">noeud</span>
-<span class="nv">v</span> <span class="p">:</span> <span class="nv">noeud</span>
-<span class="nv">f</span> <span class="p">:</span> <span class="nv">file</span> <span class="p">(</span><span class="nv">initialement</span> <span class="nv">vide</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>VARIABLE
+G : un graphe
+s : noeud (origine)
+u : noeud
+v : noeud
+f : file (initialement vide)
 
-<span class="c">//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine</span>
-<span class="k">DEBUT</span>
-<span class="nv">s</span><span class="o">.</span><span class="nv">couleur</span> <span class="o">←</span> <span class="nv">noir</span>
-<span class="nv">enfiler</span> <span class="p">(</span><span class="nv">s</span><span class="p">,</span><span class="nv">f</span><span class="p">)</span>
-<span class="k">tant que </span><span class="nv">f</span> <span class="o">non</span> <span class="nv">vide</span> <span class="p">:</span>
-    <span class="nv">u</span> <span class="o">←</span> <span class="nv">defiler</span><span class="p">(</span><span class="nv">f</span><span class="p">)</span>
-    <span class="k">pour </span><span class="nv">chaque</span> <span class="nv">sommet</span> <span class="nv">v</span> <span class="nv">adjacent</span> <span class="nv">au</span> <span class="nv">sommet</span> <span class="nv">u</span> <span class="p">:</span>
-        <span class="k">si </span><span class="nv">v</span><span class="o">.</span><span class="nv">couleur</span> <span class="nv">n</span><span class="err">&#39;</span><span class="nv">est</span> <span class="nv">pas</span> <span class="nv">noir</span> <span class="p">:</span>
-            <span class="nv">v</span><span class="o">.</span><span class="nv">couleur</span> <span class="o">←</span> <span class="nv">noir</span>
-            <span class="nv">enfiler</span><span class="p">(</span><span class="nv">v</span><span class="p">,</span><span class="nv">f</span><span class="p">)</span>
-        <span class="k">fin si</span>
-<span class="k">    fin pour</span>
-<span class="k">fin tant que</span>
-<span class="k">FIN</span>
+//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine
+DEBUT
+s.couleur ← noir
+enfiler (s,f)
+tant que f non vide :
+    u ← defiler(f)
+    pour chaque sommet v adjacent au sommet u :
+        si v.couleur n&#39;est pas noir :
+            v.couleur ← noir
+            enfiler(v,f)
+        fin si
+    fin pour
+fin tant que
+FIN
 </code></pre></div>
 </td></tr></table></p>
 <h2 id="parcours-en-profondeur-dabord-deep-first-search-dfs">Parcours en profondeur d'abord (Deep First Search - DFS)<a class="headerlink" href="#parcours-en-profondeur-dabord-deep-first-search-dfs" title="Permanent link">⚓︎</a></h2>
@@ -851,112 +851,112 @@ On démarre du noeud a, on explore b jusqu'au bout soit e puis f puis g puis h. 
 <p>Développer l'algorithme en partant des noeuds H puis D.</p>
 </div>
 <p>L'algorithme itéraif en pseudocode
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nv">VARIABLE</span>
-<span class="nv">s</span> <span class="p">:</span> <span class="nv">noeud</span> <span class="p">(</span><span class="nv">origine</span><span class="p">)</span>
-<span class="nv">G</span> <span class="p">:</span> <span class="nv">un</span> <span class="nv">graphe</span>
-<span class="nv">u</span> <span class="p">:</span> <span class="nv">noeud</span>
-<span class="nv">v</span> <span class="p">:</span> <span class="nv">noeud</span>
-<span class="nv">p</span> <span class="p">:</span> <span class="nv">pile</span> <span class="p">(</span><span class="nv">pile</span> <span class="nv">vide</span> <span class="nv">au</span> <span class="nv">départ</span><span class="p">)</span>
-<span class="c">//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine</span>
-<span class="k">DEBUT</span>
-<span class="nv">s</span><span class="o">.</span><span class="nv">couleur</span> <span class="o">←</span> <span class="nv">noir</span>
-<span class="nv">piler</span><span class="p">(</span><span class="nv">s</span><span class="p">,</span><span class="nv">p</span><span class="p">)</span>
-<span class="k">tant que </span><span class="nv">p</span> <span class="nv">n</span><span class="s1">&#39;est pas vide :</span>
-<span class="s1">u ← depiler(p)</span>
-<span class="s1">pour chaque sommet v adjacent au sommet u :</span>
-<span class="s1">    si v.couleur n&#39;</span><span class="nv">est</span> <span class="nv">pas</span> <span class="nv">noir</span> <span class="p">:</span>
-        <span class="nv">v</span><span class="o">.</span><span class="nv">couleur</span> <span class="o">←</span> <span class="nv">noir</span>
-        <span class="nv">piler</span><span class="p">(</span><span class="nv">v</span><span class="p">,</span><span class="nv">p</span><span class="p">)</span>
-    <span class="k">fin si</span>
-<span class="k">fin pour</span>
-<span class="k">fin tant que</span>
-<span class="k">FIN</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>VARIABLE
+s : noeud (origine)
+G : un graphe
+u : noeud
+v : noeud
+p : pile (pile vide au départ)
+//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine
+DEBUT
+s.couleur ← noir
+piler(s,p)
+tant que p n&#39;est pas vide :
+u ← depiler(p)
+pour chaque sommet v adjacent au sommet u :
+    si v.couleur n&#39;est pas noir :
+        v.couleur ← noir
+        piler(v,p)
+    fin si
+fin pour
+fin tant que
+FIN
 </code></pre></div>
 </td></tr></table></p>
 <p>L'algorithme récursif en pseudocode
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nv">VARIABLE</span>
-<span class="nv">G</span> <span class="p">:</span> <span class="nv">un</span> <span class="nv">graphe</span>
-<span class="nv">u</span> <span class="p">:</span> <span class="nv">noeud</span>
-<span class="nv">v</span> <span class="p">:</span> <span class="nv">noeud</span>
-<span class="c">//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine</span>
-<span class="k">DEBUT</span>
-<span class="nv">PARCOURS</span><span class="o">-</span><span class="nv">PROFONDEUR</span><span class="p">(</span><span class="nv">G</span><span class="p">,</span><span class="nv">u</span><span class="p">)</span> <span class="p">:</span>
-  <span class="nv">u</span><span class="o">.</span><span class="nv">couleur</span> <span class="o">←</span> <span class="nv">noir</span>
-  <span class="k">pour </span><span class="nv">chaque</span> <span class="nv">sommet</span> <span class="nv">v</span> <span class="nv">adjacent</span> <span class="nv">au</span> <span class="nv">sommet</span> <span class="nv">u</span> <span class="p">:</span>
-    <span class="k">si </span><span class="nv">v</span><span class="o">.</span><span class="nv">couleur</span> <span class="nv">n</span><span class="err">&#39;</span><span class="nv">est</span> <span class="nv">pas</span> <span class="nv">noir</span> <span class="p">:</span>
-      <span class="nv">PARCOURS</span><span class="o">-</span><span class="nv">PROFONDEUR</span><span class="p">(</span><span class="nv">G</span><span class="p">,</span><span class="nv">v</span><span class="p">)</span>
-    <span class="k">fin si</span>
-<span class="k">  fin pour</span>
-<span class="k">FIN</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>VARIABLE
+G : un graphe
+u : noeud
+v : noeud
+//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine
+DEBUT
+PARCOURS-PROFONDEUR(G,u) :
+  u.couleur ← noir
+  pour chaque sommet v adjacent au sommet u :
+    si v.couleur n&#39;est pas noir :
+      PARCOURS-PROFONDEUR(G,v)
+    fin si
+  fin pour
+FIN
 </code></pre></div>
 </td></tr></table></p>
 <h2 id="chercher-son-chemin">Chercher son chemin<a class="headerlink" href="#chercher-son-chemin" title="Permanent link">⚓︎</a></h2>
 <p>Chercher son chemin dans un graphe c'est parcourir le graphe en mémorisant les noeuds par lesquels on passe, en s'arrêtant dès que l'on a rencontré le noeud d'arrivée.</p>
 <div class="admonition hint">
 <p class="admonition-title">algorithme</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">Fonction </span><span class="nv">cherche_chemin</span><span class="p">(</span><span class="nv">graphe</span><span class="p">,</span><span class="nv">depart</span><span class="p">,</span><span class="nv">arrivee</span><span class="p">)</span>  
-    <span class="nv">P</span> <span class="o">←</span> <span class="nv">pile</span> <span class="nv">vide</span>  
-    <span class="nv">empiler</span> <span class="nv">le</span> <span class="nv">couple</span> <span class="p">(</span><span class="nv">depart</span><span class="p">,</span><span class="o">[</span><span class="nv">depart</span><span class="o">]</span><span class="p">)</span> <span class="nv">dans</span> <span class="nv">P</span>  
-    <span class="nv">chemin</span> <span class="o">←</span> <span class="nv">liste</span> <span class="nv">vide</span>  
-    <span class="k">Tant que </span><span class="nv">P</span> <span class="nv">n</span><span class="err">&#39;</span><span class="nv">est</span> <span class="nv">pas</span> <span class="nv">vide</span> <span class="k">faire</span>  
-        <span class="p">(</span><span class="nv">sommet</span><span class="p">,</span><span class="nv">chemin</span><span class="p">)</span> <span class="o">←</span> <span class="nv">on</span> <span class="nv">dépile</span> <span class="nv">P</span>  
-        <span class="nv">listes_nouveaux_sommets_voisins</span> <span class="o">←</span> <span class="nv">liste</span> <span class="nv">des</span> <span class="nv">sommets</span>   <span class="nv">adjacents</span> <span class="k">à </span><span class="nv">sommet</span> <span class="nv">qui</span> <span class="nv">ne</span> <span class="nv">sont</span> <span class="nv">pas</span> <span class="nv">dans</span> <span class="nv">chemin</span> <span class="p">(</span><span class="nv">liste</span> <span class="nv">réinitialisée</span> <span class="k">à </span><span class="nv">chaque</span> <span class="nv">tour</span><span class="p">)</span>  
-        <span class="k">Pour </span><span class="nv">un_sommet</span> <span class="nv">dans</span> <span class="nv">listes_nouveaux_sommets_voisins</span>  
-            <span class="k">Si </span><span class="nv">un_sommet</span> <span class="o">=</span> <span class="nv">arrivee</span> <span class="k">alors  </span>
-<span class="k">                retourner </span><span class="nv">chemin</span> <span class="o">+</span> <span class="o">[</span><span class="nv">un_sommet</span><span class="o">]</span>  
-            <span class="k">sinon  </span>
-<span class="k">                </span><span class="nv">empiler</span> <span class="p">(</span><span class="nv">un_sommet</span><span class="p">,</span><span class="nv">chemin</span> <span class="o">+</span> <span class="o">[</span><span class="nv">un_sommet</span><span class="o">]</span><span class="p">)</span>  
-            <span class="nv">FinSi</span>  
-        <span class="nv">FinPour</span>  
-    <span class="nv">FinTantQue</span>  
-<span class="nv">FinFonction</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Fonction cherche_chemin(graphe,depart,arrivee)  
+    P ← pile vide  
+    empiler le couple (depart,[depart]) dans P  
+    chemin ← liste vide  
+    Tant que P n&#39;est pas vide faire  
+        (sommet,chemin) ← on dépile P  
+        listes_nouveaux_sommets_voisins ← liste des sommets   adjacents à sommet qui ne sont pas dans chemin (liste réinitialisée à chaque tour)  
+        Pour un_sommet dans listes_nouveaux_sommets_voisins  
+            Si un_sommet = arrivee alors  
+                retourner chemin + [un_sommet]  
+            sinon  
+                empiler (un_sommet,chemin + [un_sommet])  
+            FinSi  
+        FinPour  
+    FinTantQue  
+FinFonction
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -965,41 +965,41 @@ On démarre du noeud a, on explore b jusqu'au bout soit e puis f puis g puis h. 
 On place les chemins trouvés dans une liste et on retourne cette liste.</p>
 <div class="admonition hint">
 <p class="admonition-title">algorithme</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">Fonction </span><span class="nv">cherche_chemin</span><span class="p">(</span><span class="nv">graphe</span><span class="p">,</span><span class="nv">depart</span><span class="p">,</span><span class="nv">arrivee</span><span class="p">)</span>  
-    <span class="nv">P</span> <span class="o">←</span> <span class="nv">pile</span> <span class="nv">vide</span>  
-    <span class="nv">L</span> <span class="o">←</span> <span class="nv">liste</span> <span class="nv">vide</span>
-    <span class="nv">empiler</span> <span class="nv">le</span> <span class="nv">couple</span> <span class="p">(</span><span class="nv">depart</span><span class="p">,</span><span class="o">[</span><span class="nv">depart</span><span class="o">]</span><span class="p">)</span> <span class="nv">dans</span> <span class="nv">P</span>  
-    <span class="nv">chemin</span> <span class="o">←</span> <span class="nv">liste</span> <span class="nv">vide</span>  
-    <span class="k">Tant que </span><span class="nv">P</span> <span class="nv">n</span><span class="err">&#39;</span><span class="nv">est</span> <span class="nv">pas</span> <span class="nv">vide</span> <span class="k">faire</span>  
-        <span class="p">(</span><span class="nv">sommet</span><span class="p">,</span><span class="nv">chemin</span><span class="p">)</span> <span class="o">←</span> <span class="nv">on</span> <span class="nv">dépile</span> <span class="nv">P</span>  
-        <span class="nv">listes_nouveaux_sommets_voisins</span> <span class="o">←</span> <span class="nv">liste</span> <span class="nv">des</span> <span class="nv">sommets</span>   <span class="nv">adjacents</span> <span class="k">à </span><span class="nv">sommet</span> <span class="nv">qui</span> <span class="nv">ne</span> <span class="nv">sont</span> <span class="nv">pas</span> <span class="nv">dans</span> <span class="nv">chemin</span> <span class="p">(</span><span class="nv">liste</span> <span class="nv">réinitialisée</span> <span class="k">à </span><span class="nv">chaque</span> <span class="nv">tour</span><span class="p">)</span>  
-        <span class="k">Pour </span><span class="nv">un_sommet</span> <span class="nv">dans</span> <span class="nv">listes_nouveaux_sommets_voisins</span>  
-            <span class="k">Si </span><span class="nv">un_sommet</span> <span class="o">=</span> <span class="nv">arrivee</span> <span class="k">alors  </span>
-<span class="k">                </span><span class="nv">ajouter</span> <span class="nv">chemin</span> <span class="o">+</span> <span class="o">[</span><span class="nv">un_sommet</span><span class="o">]</span>  <span class="k">à </span><span class="nv">L</span>
-            <span class="k">sinon  </span>
-<span class="k">                </span><span class="nv">empiler</span> <span class="p">(</span><span class="nv">un_sommet</span><span class="p">,</span><span class="nv">chemin</span> <span class="o">+</span> <span class="o">[</span><span class="nv">un_sommet</span><span class="o">]</span><span class="p">)</span>  
-            <span class="nv">FinSi</span>  
-        <span class="nv">FinPour</span>  
-    <span class="nv">FinTantQue</span>  
-    <span class="k">Retourner </span><span class="nv">L</span>
-<span class="nv">FinFonction</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Fonction cherche_chemin(graphe,depart,arrivee)  
+    P ← pile vide  
+    L ← liste vide
+    empiler le couple (depart,[depart]) dans P  
+    chemin ← liste vide  
+    Tant que P n&#39;est pas vide faire  
+        (sommet,chemin) ← on dépile P  
+        listes_nouveaux_sommets_voisins ← liste des sommets   adjacents à sommet qui ne sont pas dans chemin (liste réinitialisée à chaque tour)  
+        Pour un_sommet dans listes_nouveaux_sommets_voisins  
+            Si un_sommet = arrivee alors  
+                ajouter chemin + [un_sommet]  à L
+            sinon  
+                empiler (un_sommet,chemin + [un_sommet])  
+            FinSi  
+        FinPour  
+    FinTantQue  
+    Retourner L
+FinFonction
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1012,25 +1012,25 @@ On place les chemins trouvés dans une liste et on retourne cette liste.</p>
 <p>Si on veut chercher tous les cycles à partir d'un sommet on applique l'algorithme de recherche de tous les chemins. Et si on veut tous les ycles du graphe, on appique ce dernier à tous les sommets.</p>
 <div class="admonition hint">
 <p class="admonition-title">algorithme</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">Fonction </span><span class="nv">rechercher_cycle</span><span class="p">(</span><span class="nv">graphe</span><span class="p">,</span><span class="nv">sommet</span><span class="p">):</span>
-    <span class="nv">cycle</span><span class="o">←</span><span class="nv">liste</span> <span class="nv">vide</span>
-    <span class="k">Pour </span><span class="nv">tous</span> <span class="nv">les</span> <span class="nv">voisins</span> <span class="nv">de</span> <span class="nv">sommet</span>
-        <span class="nv">chercher</span> <span class="nv">tous</span> <span class="nv">les</span> <span class="nv">chemins</span> <span class="nv">entre</span> <span class="nv">sommet</span> <span class="o">et</span> <span class="nv">voisin</span>
-    <span class="k">FIN Pour</span>
-<span class="k">    Pour </span><span class="nv">chaque</span> <span class="nv">chemin</span> <span class="nv">trouvé</span> <span class="p">:</span>
-        <span class="nv">ajouter</span> <span class="k">à </span><span class="nv">cycle</span> <span class="p">(</span><span class="nv">chemin</span><span class="o">+</span><span class="nv">sommet</span><span class="p">)</span>  
-    <span class="k">FIN POUR</span>
-<span class="k">    </span><span class="nv">Revoyer</span> <span class="nv">cycle</span>
-<span class="k">FIN FONCTION</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Fonction rechercher_cycle(graphe,sommet):
+    cycle&lt;-liste vide
+    Pour tous les voisins de sommet
+        chercher tous les chemins entre sommet et voisin
+    FIN Pour
+    Pour chaque chemin trouvé :
+        ajouter à cycle (chemin+sommet)  
+    FIN POUR
+    Revoyer cycle
+FIN FONCTION
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1045,8 +1045,9 @@ On place les chemins trouvés dans une liste et on retourne cette liste.</p>
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1108,10 +1109,10 @@ On place les chemins trouvés dans une liste et on retourne cette liste.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       
