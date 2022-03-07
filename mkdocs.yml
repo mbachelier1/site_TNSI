@@ -22,6 +22,7 @@ nav:
     - 'Arbres Binaires de recherche' : 'algorithmie/ABR.md'
     - 'Diviser pour Régner' : 'algorithmie/diviser.md'
     - 'Algorithmes des graphes' : 'algorithmie/parcours_graphe.md'
+    - 'Recherche textuelle': 'algorithmie/recherche_textuelle.md'
   - 'Architecture et OS':
     -  'Sécurisation des communications' : 'archi/crypto.md'
     -  'Et si on codait Enigma?' : 'archi/enigma.md'
