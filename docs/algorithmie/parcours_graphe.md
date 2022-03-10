@@ -90,7 +90,7 @@ On démarre au noeud B, on explore son premier fils (A) et on met les autres en 
 	- On visite E et on met D en attente : `noeuds_traités=[B,A,E]` et `pile_attente=[C,D]`.  
 	- On viste G et on met F en attente : `noeuds_traités=[B,A,E,G]` et `pile_attente=[C,D,F]`.  
 	- On viste H qui n'a pas de fils non traité et non en attente : `noeuds_traités=[B,A,E,G,H]` et `pile_attente=[C,D,F]`.  
-	- On dépile la pile d'attente et on visite F `noeuds_traités=[B,A,E,G,H,F]` et `pile_attente=[C,D]`. 
+	- On dépile la pile d'attente et on visite F `noeuds_traités=[B,A,E,G,H,F]` et `pile_attente=[C,D]`.   
 	- puis D `noeuds_traités=[B,A,E,G,H,F,D]` et `pile_attente=[C]`.  
 	- et enfin C : `noeuds_traités=[B,A,E,G,H,F,D,C`] et `pile_attente=[]`.  
 	- la pile d'attente est vide et on a visité tous les noeuds.
