@@ -1,9 +1,17 @@
 # Algorithmes de parcours de Graphes
+On pourra utiliser un éditeur de graphes pour se simplifier la représentation en utilisant l'outil en ligne [Graphviz Editor](http://magjac.com/graphviz-visual-editor/)  
+
 ## Parcours en largeur d'abord (Breadth First Search - BFS)
 Le principe du parcoursen largeur d'abord est de choisir un sommet et de parcourir les noeuds en listant les noeuds de même profondeur par rapport au noeud de départ.
 ![anim BFS](img/bfs.gif)
 
-A partir de A on explorera d'abord les voisins directs (B et C) puis les voisins de profondeur 2 par rapport à A, soit D et E, puis les noeuds de profondeur 3 soit F et G et enfin H. 
+- On démarre au noeud B. On explore ses fils, puis les fils de ses fils, sans revenir sur les noeuds déjà traités. ce qui donne sur l'animation ci-dessus : B, A, C, D, E, F, G, H.  
+
+!!! note "Remarque"
+	Le "premier" ou "deuxieme" fils sera déterminé par la façon dont le graphe a été implémenté. En effet, on pour déterminer le parcours comme B, C, A, D, F, G, F et H.
+
+!!! faq "à partir d'autres noeuds"
+	Développer l'algorithme en partant des noeuds H puis D.
 
 !!! caution "Etapes de la procédure"
 	On crée une file vide
@@ -13,6 +21,23 @@ A partir de A on explorera d'abord les voisins directs (B et C) puis les voisins
 	3. On défile (c'est-à-dire on supprime la tête de file).  
 	4. Tant que la file n'est pas vide, on ré-itère les points 2 et 3.  
 	5. On affiche la liste des noeuds visités  
+
+
+!!! example "Procédure détaillée"
+	- On place les fils A et C en file d'attente.  
+	`file_attente=[A,C]` puis on considère que le noeud B a été traité, on le mémorise `noeuds_traités=[B]`.  
+	- On prend le premier élément en file d'attente (A) et on l'explore, c'est-à-dire que l'on met ses fils en file d'attente et que l'on mémorise le noeud comme traité. Il sort donc de la file d'attente : 
+	`file_attente=[C,D,E]` et `noeuds_traités=[B,A]`.  
+	- Même procédure avec le noeud C qui est le suivant dans la file d'attente, on traite C il sort de la file et entre dans les noeuds traités et son fils est placé en file d'attente :  le seul fils de C est déjà en file d'attente donc on ne l'ajoute pas : `file_attente=[D,E]` et `noeuds_traités=[B,A,C]`.  
+	- On traite le noeud D : E est déjà en file d'attente: `file_attente=[E]` et `noeuds_traités=[B,A,C,D]`.  
+	- Les fils du noeuds E sont placés en fils d'attente et E est déplacé de la file d'attente à la liste des noeuds traités : `file_attente=[F,G]` et `noeuds_traités=[B,A,C,D,E]`.  
+	- Noeud F : ses fils sont soit déjà traité soit en fils d'attente `file_attente=[G]` et `noeuds_traités=[B,A,C,D,E,F]`.  
+	- Noeud G : `file_attente=[H]` et `noeuds_traités=[B,A,C,D,E,F,G]`.
+	- Noeud H :   `file_attente=[]` et `noeuds_traités=[B,A,C,D,E,F,G,H]`   
+	Tous les noeuds ont été créés (on peut tester la taille de la liste avec une assertion pour être sûr) et la file d'attente est vide, le parcours s'arrête.
+
+
+
 
 
 !!! faq "à partir d'autres noeuds"
@@ -44,10 +69,13 @@ FIN
 ```
 
 ## Parcours en profondeur d'abord (Deep First Search - DFS)
-Pour ce parcours, on explore les voisins du noeuds de départ un par un et on explore les voisins du premier voisin, puis ceux du deuxième, ...
+Pour ce parcours, on explore les voisins du noeuds de départ un par un et on explore les voisins du premier voisin, puis ceux du deuxième, ... 
 ![anim DFS](img/dfs.gif)
-On démarre du noeud a, on explore b jusqu'au bout soit e puis f puis g puis h. En arrivant sur une feuille on remonte au deuxieme voisin de a, c qui n'a pas d'autres voisins non déjà visités.
 
+On démarre au noeud B, on explore son premier fils (A) et on met les autres en attente (C). On explore le premier fils de A (E) et on met l'autre (D) en attente. Le premier fils de E (G) est exploré alors que G est en mis en attente. Puis, on explore H. Une fois arrivé à un noeud qui n'a plus de fils non traités ou mis en attente, on remonte visiter les noeuds mis en attente. Ce qui donne : B, A, E, G, H, F, D, C. 
+
+!!! note "Remarque" 
+	Le "premier" ou "deuxieme" fils sera déterminé par la façon dont le graphe a été implémenté. Le résultat du parcours peut être différent.
 
 !!! caution "Etapes de la procédure"
 
@@ -56,11 +84,26 @@ On démarre du noeud a, on explore b jusqu'au bout soit e puis f puis g puis h. 
 	3. On empile chacun des voisins du sommet dépilé qui ne sont pas déjà dans la pile et qui n'ont pas été déjà été traités;  
 	4. On recommence à partir du point 2 tant que la pile n'est pas vide.  
 
+!!! example "Détails de la procédure"
+	Ici, la file d'attente est une pile et non une file. Donc c'est le dernier élément mis en attente qui sera traité en premier.  
+	- Le noeud B est visité en premier `noeuds_traités=[B]`. On viste A `noeuds_traités=[B,A]` et on place C en pile d'attente : `pile_attente=[C]`.  
+	- On visite E et on met D en attente : `noeuds_traités=[B,A,E]` et `pile_attente=[C,D]`.  
+	- On viste G et on met F en attente : `noeuds_traités=[B,A,E,G]` et `pile_attente=[C,D,F]`.  
+	- On viste H qui n'a pas de fils non traité et non en attente : `noeuds_traités=[B,A,E,G,H]` et `pile_attente=[C,D,F]`.  
+	- On dépile la pile d'attente et on visite F `noeuds_traités=[B,A,E,G,H,F]` et `pile_attente=[C,D]`. 
+	- puis D `noeuds_traités=[B,A,E,G,H,F,D]` et `pile_attente=[C]`.  
+	- et enfin C : `noeuds_traités=[B,A,E,G,H,F,D,C`] et `pile_attente=[]`.  
+	- la pile d'attente est vide et on a visité tous les noeuds.
+
+
 !!! faq "à partir d'autres noeuds"
 	Développer l'algorithme en partant des noeuds H puis D.
 
 
+
 L'algorithme itéraif en pseudocode
+
+On peut utiliser la coloration des noeuds : blanc pour non visité et noir pour visité. Mais on peut également mettre les éléments visités dans une liste.
 ```pseudocode
 VARIABLE
 s : noeud (origine)
