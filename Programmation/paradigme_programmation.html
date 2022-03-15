@@ -10,15 +10,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
-        <title>Paradigmes de programmation - NSI au Lycée Henri Avril</title>
+        <title>Paradigmes de Programmation - NSI au Lycée Henri Avril</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Paradigmes de programmation
+              Paradigmes de Programmation
             
           </span>
         </div>
@@ -213,13 +213,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="recursivite.html" class="md-tabs__link">
+      <a href="recursivite.html" class="md-tabs__link md-tabs__link--active">
         Programmation
       </a>
     </li>
@@ -456,12 +458,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Programmation
@@ -517,6 +521,84 @@
     <li class="md-nav__item">
       <a href="gestion_bug.html" class="md-nav__link">
         Gestion des Bugs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Paradigmes de Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="paradigme_programmation.html" class="md-nav__link md-nav__link--active">
+        Paradigmes de Programmation
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pragrammation-fonctionnelle-vs-programmation-imperative" class="md-nav__link">
+    Pragrammation fonctionnelle vs programmation impérative
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programmation-orientee-objet" class="md-nav__link">
+    Programmation orientée objet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-choisir-son-paradigme" class="md-nav__link">
+    Comment choisir son paradigme ?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projet_paradigme.html" class="md-nav__link">
+        Projet : construire un archipel
       </a>
     </li>
   
@@ -581,8 +663,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../algorithmie/parcours_graphe.html" class="md-nav__link">
-        Algorithmes des graphes
+      <a href="../algorithmie/recherche_textuelle.html" class="md-nav__link">
+        Recherche textuelle
       </a>
     </li>
   
@@ -593,8 +675,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../algorithmie/recherche_textuelle.html" class="md-nav__link">
-        Recherche textuelle
+      <a href="../Algorithmie/programmation_dynamique.html" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/parcours_graphe.html" class="md-nav__link">
+        Parcours de graphes
       </a>
     </li>
   
@@ -711,7 +805,7 @@
                 
                 <h1 id="paradigmes-de-programmation">Paradigmes de programmation<a class="headerlink" href="#paradigmes-de-programmation" title="Permanent link">⚓︎</a></h1>
 <p>Un paradigme de programmation est une méthode de programmation qui respecte certaines règles qu'il va falloir respecter.
-On distinque parmi ces paradigmes :
+On distinque parmi ces paradigmes :<br />
 - la programmation <a href="https://mbachelier1.github.io/site_TNSI/Structure/POO.html">orientée objet</a><br />
 - la programmation fonctionnelle<br />
 - la programmation impérative<br />
@@ -731,13 +825,13 @@ En respectant ces règles on s'affranchit des effets de bord.    </p>
 <div class="admonition example">
 <p class="admonition-title">Quelques exemples</p>
 <p>Exemple 1 : modification d'une variable globale
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">c</span><span class="o">=</span><span class="mi">1</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">c</span><span class="o">=</span><span class="mi">1</span>
 <span class="k">def</span> <span class="nf">augmenter</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">c</span>
     <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="o">+</span><span class="n">n</span>
@@ -748,24 +842,24 @@ En respectant ces règles on s'affranchit des effets de bord.    </p>
 </td></tr></table>
 Les deux appels, pourtant identiques, de cette fonction ne revnoient pas la même valeur (le premier renvoie 6 et le second 11). Cette fonction est donc <strong>impure</strong>.<br />
 Exemple 2 : utilisation d'une boucle<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#en impératif</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#en impératif</span>
 <span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcule la somme des éléments de la liste liste.</span>
@@ -831,10 +925,10 @@ def ajout(i):
 <div class="admonition faq">
 <p class="admonition-title">Programmation fonctionnelle ou non?</p>
 <p>Ce programme respecte-t-il le paradigme fonctionnel?
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mafonction</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mafonction</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">while</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
         <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
@@ -855,11 +949,11 @@ def ajout(i):
 <p>Pour toutes les fonctions qui ne respetaient pas le paradigme fonctionnel, vous aurez l'occasion de les modifier lors du TP.</p>
 <p>Il existe en python une fonction qui permet de passer une fonction en paramètre d'une autre. Il s'agit de la fonction <code>eval()</code>qui permet d'évaluer la valeur d'une chaîne de caractères à condition qu'elle soit évaluable.
 Pour une expression : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span> <span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;2 + 4&quot;</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span> <span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;2 + 4&quot;</span><span class="p">)</span>
 <span class="c1">#6</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span> <span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;a == 2&quot;</span><span class="p">)</span>
@@ -867,21 +961,21 @@ Pour une expression :
 </code></pre></div>
 </td></tr></table>
 Pour une fonction (tester ceci dans un bac à sable et prenez le temps de comprendre ce qu'il se passe) : <br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
     <span class="n">s</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
         <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">+</span><span class="n">elt</span>
@@ -984,14 +1078,50 @@ function AfficheQCU3(){
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="gestion_bug.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Gestion des Bugs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Gestion des Bugs
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="projet_paradigme.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Projet : construire un archipel" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Projet : construire un archipel
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1012,10 +1142,10 @@ function AfficheQCU3(){
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       

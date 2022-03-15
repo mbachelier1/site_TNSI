@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -641,6 +641,30 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="paradigme_programmation.html" class="md-nav__link">
+        Paradigmes de Programmation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projet_paradigme.html" class="md-nav__link">
+        Projet : construire un archipel
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -700,8 +724,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../algorithmie/parcours_graphe.html" class="md-nav__link">
-        Algorithmes des graphes
+      <a href="../algorithmie/recherche_textuelle.html" class="md-nav__link">
+        Recherche textuelle
       </a>
     </li>
   
@@ -712,8 +736,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../algorithmie/recherche_textuelle.html" class="md-nav__link">
-        Recherche textuelle
+      <a href="../Algorithmie/programmation_dynamique.html" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/parcours_graphe.html" class="md-nav__link">
+        Parcours de graphes
       </a>
     </li>
   
@@ -841,12 +877,12 @@ A l'origine de ce terme, on trouve un insecte :</p>
 <p>Selon le type de données, une opération peut avoir des comportements différents: <br />
 <img alt="operations sur les types" src="img/addition_types.PNG" width="50%" /></p>
 <p>Pour permettre à l'utilisateur de savoir quel type de données il doit utiliser, on peut préciser lors de la création des fonctions, les types d'entrées et de sortie : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">est_pair</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">est_pair</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="s2">&quot;Indique si un nombre est pair ou non&quot;</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
@@ -867,13 +903,13 @@ A l'origine de ce terme, on trouve un insecte :</p>
 <li>positive</li>
 <li>qui décroît strictement à chaque itération</li>
 </ul>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a : &quot;</span><span class="p">))</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a : &quot;</span><span class="p">))</span>
 <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;b : &quot;</span><span class="p">))</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -883,14 +919,14 @@ A l'origine de ce terme, on trouve un insecte :</p>
 </code></pre></div>
 </td></tr></table>
 Ici b est le variant de boucle, il décroit jusqu'à atteindre 0.</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a : &quot;</span><span class="p">))</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a : &quot;</span><span class="p">))</span>
 <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;b : &quot;</span><span class="p">))</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span>
@@ -904,14 +940,14 @@ Ici le variant sera b-i.</p>
 <h3 id="invariant-de-structure">Invariant de structure<a class="headerlink" href="#invariant-de-structure" title="Permanent link">⚓︎</a></h3>
 <p>Un invariant de structure est une propriété qui est toujours vérifiée lors du programme et qui peut détecter la présence d'erreur.
 On reprend les exemples ci-dessus :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a : &quot;</span><span class="p">))</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a : &quot;</span><span class="p">))</span>
 <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;b : &quot;</span><span class="p">))</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">c</span><span class="o">=</span><span class="n">b</span>
@@ -959,7 +995,7 @@ Si on déroule la boucle étape par étape : </p>
 </tbody>
 </table>
 <p>On constate ici une donnée commune dans l'évolution des variables (i) : en remplaçant i par m/a dans l'expression de b, on trouve b=c-m/a. Cette propriété est valable à chauqe boucle, elle constitue un invariant. On pourra ajouter l'assertion ci-dessous dans la boucle.<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">assert</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="n">c</span><span class="o">-</span><span class="n">m</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">assert</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="n">c</span><span class="o">-</span><span class="n">m</span><span class="o">/</span><span class="n">a</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
 <h2 id="pre-et-postconditions">Pré et postconditions<a class="headerlink" href="#pre-et-postconditions" title="Permanent link">⚓︎</a></h2>
@@ -968,13 +1004,13 @@ Si on déroule la boucle étape par étape : </p>
 <p class="admonition-title">exemple</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">code</label><div class="tabbed-content">
 <p>On étudie une fonction qui prend un entier en paramètre et renvoie le chiffre des unités.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_unite</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_unite</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    renvoie le chiffre des unités d&#39;un entier n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -985,12 +1021,12 @@ Si on déroule la boucle étape par étape : </p>
 </td></tr></table></p>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">sortie</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">get_unite</span><span class="p">(</span><span class="mi">4567</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">get_unite</span><span class="p">(</span><span class="mi">4567</span><span class="p">)</span>
 <span class="mi">7</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">get_unite</span><span class="p">(</span><span class="mf">45.67</span><span class="p">)</span>
 <span class="mf">5.670000000000002</span>
@@ -1002,15 +1038,15 @@ Si on déroule la boucle étape par étape : </p>
 </div>
 </div>
 <p>On peut voir que la fonction ne respecte pas la documentation puisqu'elle s'exécute même avec un flottant. Avant même l'éxécution du code, nous allons donc ajouter des assertions permettant de fixer les conditions suivantes : n doit être un entier, n doit être positif ou nul.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_unite</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_unite</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    renvoie le chiffre des unités d&#39;un entier n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1023,17 +1059,17 @@ Si on déroule la boucle étape par étape : </p>
 </td></tr></table></p>
 <h3 id="postconditions">Postconditions<a class="headerlink" href="#postconditions" title="Permanent link">⚓︎</a></h3>
 <p>Avant de renvoyer le résutat on vérifie sa validité avec une postcondition : le résultat retourné doit être strictement inférieur à 10 et supérieur à 0.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_unite</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_unite</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    renvoie le chiffre des unités d&#39;un entier n</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1049,15 +1085,15 @@ Si on déroule la boucle étape par étape : </p>
 <h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">⚓︎</a></h2>
 <p>On envisagera de réaliser des tests lors de l'exécution d'une fonction, qui prendra en compte des cas usuels mais surtout les cas limites.
 Par exemple lors de la création de la recherche du maximum dans un tableau :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">tab</span> <span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">tab</span> <span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Renvoie l&#39;index de la valeur maximale du tableau&#39;&#39;&#39;</span>
     <span class="n">maxi</span><span class="o">=</span><span class="mi">0</span>
     <span class="n">sortie</span><span class="o">=</span><span class="mi">0</span>
@@ -1069,30 +1105,30 @@ Par exemple lors de la création de la recherche du maximum dans un tableau :
 </code></pre></div>
 </td></tr></table>
 Cette fonction peut être testée ainsi :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">maximum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span><span class="o">==</span><span class="mi">2</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">maximum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span><span class="o">==</span><span class="mi">2</span>
 </code></pre></div>
 </td></tr></table>
 Mais que se passe-t-il avec :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">maximum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;toto&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">]))</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">maximum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;toto&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">maximum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">maximum</span><span class="p">([])</span>
 </code></pre></div>
 </td></tr></table>
 Ce sont ce que l'on appelle des cas limites, qui peuvent provoquer des effets de bords (effets non désirés). Il faudra donc dans le codage de la fonction envisager tous ces cas.</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">tab</span> <span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">tab</span> <span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Renvoie LE PREMIER l&#39;index de la valeur maximale du tableau&#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
@@ -1110,18 +1146,18 @@ Les tests peuvent être intégérés aux fonctions sous forme de préconditions 
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">main.py</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">tab</span> <span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">tab</span> <span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Renvoie LE PREMIER l&#39;index de la valeur maximale du tableau&#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
@@ -1137,11 +1173,11 @@ Les tests peuvent être intégérés aux fonctions sous forme de préconditions 
 </td></tr></table>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">test.py</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">main</span> <span class="kn">import</span> <span class="o">*</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">main</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="k">assert</span> <span class="n">maximum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span>
 <span class="k">assert</span> <span class="n">maximum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;toto&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span> <span class="o">==</span> <span class="mi">2</span>
 <span class="k">assert</span> <span class="n">maximum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span><span class="o">==</span><span class="mi">1</span>
@@ -1171,8 +1207,9 @@ Les tests peuvent être intégérés aux fonctions sous forme de préconditions 
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1199,13 +1236,13 @@ Les tests peuvent être intégérés aux fonctions sous forme de préconditions 
       
       
         
-        <a href="../algorithmie/ABR.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Arbres Binaires de recherche" rel="next">
+        <a href="paradigme_programmation.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Paradigmes de Programmation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Arbres Binaires de recherche
+              Paradigmes de Programmation
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1234,10 +1271,10 @@ Les tests peuvent être intégérés aux fonctions sous forme de préconditions 
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/config.js"></script>
       
