@@ -216,3 +216,67 @@ Si on veut chercher tous les cycles à partir d'un sommet on applique l'algorith
 	    Revoyer cycle
 	FIN FONCTION
 	```
+
+
+# Application : algorithme de Dijkstra (hors programme)
+![animation dijkstra](https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif)
+On affecte la marque $\infty$ à tous les sommets non visités. Le sommet de départ est affecté de la marque 0.
+
+|1|2|3|4|5|6| 
+|:--:|:--:|:--:|:--:|:--:|:--:| 
+|0 (1)|$\infty$|$\infty$|$\infty$|$\infty$|$\infty$|  
+
+Pour chaque voisin non visité du sommet courant (ici 1), on regarde la distance à laquelle il se trouve et on ajoute dans  le tableau la distance obtenue et le parent qui permet d'obtenir cette distance.  
+Par exemple, ici, pour aller au sommet 2 du sommet 1 la distance est de 7. On affecte la marque 7 au sommet 2 en précisant que l'on vient du sommet 1.  
+
+|1|2|3|4|5|6| 
+|:--:|:--:|:--:|:--:|:--:|:--:| 
+|0 (1)|$\infty$|$\infty$|$\infty$|$\infty$|$\infty$|
+|-|7 (1)|9 (1)|$\infty$|$\infty$|14 (1)|
+
+Un sommet est considéré comme traité quand tous ses successeurs ont été visités.  A ce stade, on considère le sommet 1 comme traité.
+
+Le minimum obtenu à partir du sommet 1 est le sommet 2, on va donc chercher les successeurs de 2. On peut aller à 3 et à 4 mais pas 1 car il est déjà traité.  
+A partir de 2, on atteint le noeud 3 avec un total de 17, ce qui est inférieur à 9 lamarque précédente de 3. On ne modifie pas la marque de 3. Pour atteindre 4, on parcourt une distance totale de 22. 
+
+|1|2|3|4|5|6| 
+|:--:|:--:|:--:|:--:|:--:|:--:| 
+|0 (1)|$\infty$|$\infty$|$\infty$|$\infty$|$\infty$|
+|-|7 (1)|9 (1)|$\infty$|$\infty$|14 (1)|
+|-|-|9 (1)|22 (2)|$\infty$|14 (1)|
+
+Le noeud 2 est considéré comme visité. On s'interesse au noeud visité ayant la marque la plus petite à savoir le noeud 3.   
+
+A  partir du noeud 3, on visite 4 et 6. On atteint le noeud 4 avec une distance de 22 et le noeud 6 avec une distance de 11. On voit qu'on améliore la marque pour 6 et pour 4.
+
+|1|2|3|4|5|6| 
+|:--:|:--:|:--:|:--:|:--:|:--:| 
+|0 (1)|$\infty$|$\infty$|$\infty$|$\infty$|$\infty$|
+|-|7 (1)|9 (1)|$\infty$|$\infty$|14 (1)|
+|-|-|9 (1)|22 (2)|$\infty$|14 (1)|
+|-|-|-|20 (3)|$\infty$|11 (3)|  
+
+Le noeud 3 est considéré comme visité.  
+
+On s'interesse au noeud 6 car c'est celui ayant la plus petite marque. On visite alors ses successeurs à savoir le noeud 5 car le 3 et le 1 sont dajà visités.
+
+|1|2|3|4|5|6| 
+|:--:|:--:|:--:|:--:|:--:|:--:| 
+|0 (1)|$\infty$|$\infty$|$\infty$|$\infty$|$\infty$|
+|-|7 (1)|9 (1)|$\infty$|$\infty$|14 (1)|
+|-|-|9 (1)|22 (2)|$\infty$|14 (1)|
+|-|-|-|20 (3)|$\infty$|11 (3)| 
+|-|-|-|20 (3)|20 (6)|-|  
+
+On a atteind ici le noeud d'arrivée (le 5) donc il faut maintenant remonter le tableau pour déterminer l'itinéraire. On vient du noeud 6, la dernière marque duu noeud 6 venait du noeud 3 et la dernière du noeud 3 venait du noeud 1.
+L'itinéraire le plus court pour joindre 5 à partir de 1 est donc 1, 3, 6, 5. 
+
+!!! hint "Les étapes de la procédure"
+	1. Créer un tableau donc la premiere ligne contient tous les noeuds à qui on affecte la valeur infini.
+	2. Initialiser une liste de noeuds visités.
+	3. Pour le noeud de départ, affecter le tuple (ou autre) (0,D) où D est le noeud de départ.
+	4. Pour chaque successeur de D qui n'est pas dans la liste des noeuds visités, affecter au noeud le tuple (distance,D) ou distance est la somme de la distance entre D et son successeur et de la distance déjà affectée à D.
+	5. Ajouter D dans les noeuds visités.
+	6. Choisir le noeud possédant la distance la plus petite, et répéter les opérations à partir de l'étape 4 jusqu'à ce que le noeud trouvé soit le noeud d'arrivée.
+	7. Remonter l'itinéaire en cherchant le noeud parent du noeud sélectionné, puis le parent du parent ...
+	

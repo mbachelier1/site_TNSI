@@ -18,6 +18,8 @@ nav:
     -  'Modularité' : 'Programmation/modularite.md'
     -  'Projet : Créer un module' : 'Programmation/projet_modularite.md'
     -  'Gestion des Bugs' : 'Programmation/gestion_bug.md'
+    -  'Paradigmes de Programmation' : 'Programmation/paradigme_programmation.md'
+    -  'Projet : construire un archipel' : 'Programmation/projet_paradigme.md'
 
   - 'Algorithmie' :
     - 'Arbres Binaires de recherche' : 'algorithmie/ABR.md'

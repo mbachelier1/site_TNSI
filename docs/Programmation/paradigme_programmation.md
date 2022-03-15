@@ -1,7 +1,7 @@
 # Paradigmes de programmation
 
 Un paradigme de programmation est une méthode de programmation qui respecte certaines règles qu'il va falloir respecter.
-On distinque parmi ces paradigmes :
+On distinque parmi ces paradigmes :  
 - la programmation [orientée objet](https://mbachelier1.github.io/site_TNSI/Structure/POO.html)  
 - la programmation fonctionnelle  
 - la programmation impérative  

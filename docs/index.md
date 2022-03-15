@@ -17,7 +17,7 @@ Le programme est découpé en 5 parties :
 [Gestion des processus](archi/processus.html){ .md-button} [Système sur puce](archi/soc.html){ .md-button} [Sécuriser les données](archi/crypto.html){ .md-button} [Enigma](archi/enigma.html){ .md-button}
 
 ## Programmation
-[Récursivité](Programmation/recursivite.html){ .md-button}  [Modularité](Programmation/modularite.html){ .md-button}  [Gestion des Bugs](Programmation/gestion_bug.html){ .md-button} 
+[Récursivité](Programmation/recursivite.html){ .md-button}  [Modularité](Programmation/modularite.html){ .md-button}  [Gestion des Bugs](Programmation/gestion_bug.html){ .md-button}  [Paradigmes de programamtion](Programmation/paradigme_programmation.html){ .md-button} 
  
 
 ## Algorithmie
