@@ -23,7 +23,7 @@ Le programme est découpé en 5 parties :
 ## Algorithmie
 
 [Les arbres binaires](Algorithmie/arbres.html){ .md-button} [Algorithmes sur les graphes](Algorithmie/parcours_graphe.html){ .md-button }    [Recherche textuelle](Algorithmie/recherche_textuelle.html){ .md-button } 
-
+[Calculabilité et décidabilité](Algorithmie/calculabilite.html){ .md-button }
 
 [Diviser pour régner](Algorithmie/diviser.html){ .md-button } [Programmation dynamique](Algorithmie/programmation_dynamique.html){ .md-button } 
     
