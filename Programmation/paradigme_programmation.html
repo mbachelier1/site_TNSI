@@ -675,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Algorithmie/programmation_dynamique.html" class="md-nav__link">
+      <a href="../Algorithmie/programmation_dynamique.md" class="md-nav__link">
         Programmation dynamique
       </a>
     </li>
@@ -689,6 +689,18 @@
     <li class="md-nav__item">
       <a href="../algorithmie/parcours_graphe.html" class="md-nav__link">
         Parcours de graphes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/calculabilite.html" class="md-nav__link">
+        Calculabilité et décidabilité
       </a>
     </li>
   
@@ -813,7 +825,7 @@ On distinque parmi ces paradigmes :<br />
 <h2 id="pragrammation-fonctionnelle-vs-programmation-imperative">Pragrammation fonctionnelle vs programmation impérative<a class="headerlink" href="#pragrammation-fonctionnelle-vs-programmation-imperative" title="Permanent link">⚓︎</a></h2>
 <p>Le principe de la programmation fonctionnelle est de placer la totalité du code dans des fonctions. Certaines règles sont cependant à respecter :
 - Une fonction ne doit pas modifier une variable, mais seulement les informations passées en argument<br />
-- Les fonctions doivent être <strong>pures</strong> c'est-à-dire qu'un appel à une fonction avec le même argument doit <strong>toujours</strong> donner le même résultat. 
+- Les fonctions doivent être <strong>pures</strong> c'est-à-dire qu'un appel à une fonction avec le même argument doit <strong>toujours</strong> donner le même résultat. <br />
 - Les fonctions peuvent appeler d'autres fonctions<br />
 - On limite les variables globales et il n'y a pas de "programme principal" le programme doit s'exécuter uniquement par appel de fonctions<br />
 - On ne fait pas de boucles, on utilise la récursivité à la place (nous n'irons peut etre pas aussi loin)<br />
@@ -882,12 +894,15 @@ Exemple 2 : utilisation d'une boucle<br />
 </div>
 <div class="admonition faq">
 <p class="admonition-title">Programmation fonctionnelle ou non?</p>
-<p>Ce programme respecte-t-il le paradigme fonctionnel?
-<code>python
-l = [4,7,3]
-def ajout(i):
-  l.append(i)</code>
- <div id="QCU">
+<p>Ce programme respecte-t-il le paradigme fonctionnel?<br />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">ajout</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+  <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<div id="QCU">
 <div id="enonce_question">
     Quelle est la bonne réponse ?
 </div><form id="test1">
@@ -901,7 +916,7 @@ def ajout(i):
 </div>
 <div class="admonition faq">
 <p class="admonition-title">Programmation fonctionnelle ou non?</p>
-<p>Ce programme respecte-t-il le paradigme fonctionnel?
+<p>Ce programme respecte-t-il le paradigme fonctionnel?<br />
 <code>python
     i = 5
     def fct():
@@ -979,7 +994,7 @@ Pour une fonction (tester ceci dans un bac à sable et prenez le temps de compre
     <span class="n">s</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
         <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">+</span><span class="n">elt</span>
-        <span class="k">return</span> <span class="n">s</span>
+    <span class="k">return</span> <span class="n">s</span>
 
 <span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">somme</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
