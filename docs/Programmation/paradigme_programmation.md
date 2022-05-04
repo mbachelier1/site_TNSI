@@ -11,7 +11,7 @@ On distinque parmi ces paradigmes :
 ## Pragrammation fonctionnelle vs programmation impérative
 Le principe de la programmation fonctionnelle est de placer la totalité du code dans des fonctions. Certaines règles sont cependant à respecter :
 - Une fonction ne doit pas modifier une variable, mais seulement les informations passées en argument  
-- Les fonctions doivent être **pures** c'est-à-dire qu'un appel à une fonction avec le même argument doit **toujours** donner le même résultat. 
+- Les fonctions doivent être **pures** c'est-à-dire qu'un appel à une fonction avec le même argument doit **toujours** donner le même résultat.   
 - Les fonctions peuvent appeler d'autres fonctions  
 - On limite les variables globales et il n'y a pas de "programme principal" le programme doit s'exécuter uniquement par appel de fonctions  
 - On ne fait pas de boucles, on utilise la récursivité à la place (nous n'irons peut etre pas aussi loin)  
@@ -56,13 +56,13 @@ En respectant ces règles on s'affranchit des effets de bord.
 
 
 !!! faq "Programmation fonctionnelle ou non?"
-	Ce programme respecte-t-il le paradigme fonctionnel?
+	Ce programme respecte-t-il le paradigme fonctionnel?  
 	```python
 	l = [4,7,3]
 	def ajout(i):
 	  l.append(i)
-	 ```
-	 <div id="QCU">
+	```
+	<div id="QCU">
 	<div id="enonce_question">
 	    Quelle est la bonne réponse ?
 	</div><form id="test1">
@@ -73,9 +73,9 @@ En respectant ces règles on s'affranchit des effets de bord.
 	</form></div>
 	        <div id="messageQCU1"></div>
 	        <div id="correctionQCU1" style="display:none;"> <p> La bonne réponse est Non car elle modifie une variable exterieure.</p></div>
-
+	   
 !!! faq "Programmation fonctionnelle ou non?"
-	Ce programme respecte-t-il le paradigme fonctionnel?
+	Ce programme respecte-t-il le paradigme fonctionnel?  
 	```python
 		i = 5
 		def fct():
@@ -135,7 +135,7 @@ def somme(liste):
     s=0
     for elt in liste:
         s=s+elt
-        return s
+    return s
 
 def moyenne(liste):
     return somme(liste)/len(liste)

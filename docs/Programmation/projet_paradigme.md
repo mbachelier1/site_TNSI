@@ -10,7 +10,7 @@ Un certain nombre d'îles isolées souhaient construire des ponts pour relier to
 |__ile 1__|10   |inf  |12   |15   |inf  |
 |__ile 2__|40   |12   |inf  |14   |20   |
 |__ile 3__|11   |15   |14   |inf  |15   |
-|__ile 4__|10   |inf  |20   |15   |inf  |
+|__ile 4__|18   |inf  |20   |15   |inf  |
 
 La notation `inf` est utilisée lorsque qla construction du pont n'est pas possible.
 
