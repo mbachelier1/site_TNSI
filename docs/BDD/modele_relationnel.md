@@ -7,7 +7,7 @@ Nous allons nous baser sur la table suivante pour définir le vocabulaire néces
 </div> 
 
 > **Relation**
->Dans le modèle relationnel, les données sont stockées dans des tables, aussi appelées relations.
+>Dans le modèle relationnel, les données sont stockées dans des tables, aussi appelées relations.  
 >!!! Example 'exemple' :
 		La relation présentée ci-dessus est appelée `voiture`. 
 
