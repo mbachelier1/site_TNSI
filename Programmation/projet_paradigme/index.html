@@ -1,0 +1,1654 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../paradigme_programmation/">
+      
+      
+        <link rel="next" href="../../algorithmie/ABR/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>Projet : construire un archipel - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#projet-construire-un-archipel-a-moindre-cout" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v3h2V5h18v14h-7v2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M1 18v3h3a3 3 0 0 0-3-3m0-4v2a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7m0-4v2a9 9 0 0 1 9 9h2c0-6.08-4.93-11-11-11m10 1.09v2L14.5 15l3.5-1.91v-2L14.5 13 11 11.09M14.5 6 9 9l5.5 3L20 9l-5.5-3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Projet : construire un archipel
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Structure/listes_piles_files/" class="md-tabs__link">
+          
+  
+  Structures de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../BDD/modele_relationnel/" class="md-tabs__link">
+          
+  
+  Bases de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../recursivite/" class="md-tabs__link">
+          
+  
+  Programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../algorithmie/ABR/" class="md-tabs__link">
+          
+  
+  Algorithmie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archi/crypto/" class="md-tabs__link">
+          
+  
+  Architecture et OS
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v3h2V5h18v14h-7v2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M1 18v3h3a3 3 0 0 0-3-3m0-4v2a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7m0-4v2a9 9 0 0 1 9 9h2c0-6.08-4.93-11-11-11m10 1.09v2L14.5 15l3.5-1.91v-2L14.5 13 11 11.09M14.5 6 9 9l5.5 3L20 9l-5.5-3Z"/></svg>
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Structures de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Structures de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/listes_piles_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listes piles et files 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/POO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation Orientée Objet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/graphes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/arbres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Bases de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Bases de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/modele_relationnel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modèle relationnel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/langageSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Langage SQL 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/projet_SQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet SQL 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Programmation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursivite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Récursivité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modularite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modularité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projet_modularite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet : Créer un module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion_bug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestion des Bugs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paradigme_programmation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmes de Programmation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Projet : construire un archipel
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Projet : construire un archipel
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#le-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le problème
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le problème">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-situation" class="md-nav__link">
+    <span class="md-ellipsis">
+      La situation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-regles-de-limplementaion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les règles de l'implémentaion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programmation-fonctionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmation fonctionnelle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmation fonctionnelle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-fonction-construire_un_pontilot_1ilot_2liste_ilotsile1ile2ponts" class="md-nav__link">
+    <span class="md-ellipsis">
+      La fonction construire_un_pont(ilot_1,ilot_2,liste_ilots,ile1,ile2,ponts)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-fonction-trouver_pontliste_ilotscoutsponts" class="md-nav__link">
+    <span class="md-ellipsis">
+      La fonction trouver_pont(liste_ilots,couts,ponts)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-fonction-equiper_archipelncouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      La fonction equiper_archipel(n,couts)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-programme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le programme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programmation-orientee-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmation Orientée Objet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmation Orientée Objet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-classe-ile" class="md-nav__link">
+    <span class="md-ellipsis">
+      La classe ile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-classe-construirearchipel" class="md-nav__link">
+    <span class="md-ellipsis">
+      La classe construireArchipel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-code-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le code principal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-rendre" class="md-nav__link">
+    <span class="md-ellipsis">
+      A rendre
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Algorithmie
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/ABR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbres Binaires de recherche
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/diviser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diviser pour Régner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/recherche_textuelle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recherche textuelle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/programmation_dynamique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation dynamique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/parcours_graphe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parcours de graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/calculabilite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculabilité et décidabilité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Architecture et OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture et OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/crypto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sécurisation des communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/enigma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Et si on codait Enigma?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/soc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Système sur puce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/routage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocoles de routage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/processus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestion ds processus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="projet-construire-un-archipel-a-moindre-cout">Projet : construire un archipel à moindre coût.<a class="headerlink" href="#projet-construire-un-archipel-a-moindre-cout" title="Permanent link">⚓︎</a></h1>
+<h2 id="le-probleme">Le problème<a class="headerlink" href="#le-probleme" title="Permanent link">⚓︎</a></h2>
+<h3 id="la-situation">La situation<a class="headerlink" href="#la-situation" title="Permanent link">⚓︎</a></h3>
+<p>Un certain nombre d'îles isolées souhaient construire des ponts pour relier toutes les îles par voie terrestre. L'objectif est de pouvoir passer d'une île à l'autre sans prendre le bateau. Nous allons donc étudier le cout minimal de liaison des îles. Les 5 iles de l'archipel sont numérotées de 0 à 4 et les coûts de construction des ponts sont les suivants :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>ile 0</strong></th>
+<th style="text-align: center;"><strong>ile 1</strong></th>
+<th style="text-align: center;"><strong>ile 2</strong></th>
+<th style="text-align: center;"><strong>ile 3</strong></th>
+<th style="text-align: center;"><strong>ile 4</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>ile 0</strong></td>
+<td style="text-align: center;">inf</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">18</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ile 1</strong></td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">inf</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">inf</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ile 2</strong></td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">inf</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ile 3</strong></td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">inf</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ile 4</strong></td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">inf</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">inf</td>
+</tr>
+</tbody>
+</table>
+<p>La notation <code>inf</code> est utilisée lorsque qla construction du pont n'est pas possible.</p>
+<p><img alt="archipel0" src="../img/iles0.png" /></p>
+<p>Nous allons donc créer des ilôts au fur et à mesure en reliant tout d'abord deux iles ensemble, puis un ilôt à une autre île et ainsi de suite en se posant la question du coût le plus faible à chauqe étape.  </p>
+<p><img alt="archipel1" src="../img/iles1.png" />
+Une fois des ponts construits nous obtenons des îlots : 
+<img alt="archipel2" src="../img/iles2.png" />
+Dans la situation ci-dessus par exemple, il y a 4 possibilités de relier les ilots 1 et 2. On peut créer un pont entre 0 et 1, entre 0 et 3, entre 3 et 4 ou entre 1 et 4. Si on regarde le tableau des co^ts, c'est le pont entre  0 et 1 qui sera choisi.
+<img alt="archipel3" src="../img/iles3.png" /></p>
+<p>Et ainsi de suite jusqu'à ce que toutes les îles soient reliées :
+<img alt="archipel4" src="../img/iles4.png" /></p>
+<h3 id="les-regles-de-limplementaion">Les règles de l'implémentaion<a class="headerlink" href="#les-regles-de-limplementaion" title="Permanent link">⚓︎</a></h3>
+<p>Les îles seront représentées par des listes contenant le numéro de l'île. Par exemple au départ, lorsque les îles sont isolées :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">]]</span>
+</code></pre></div></td></tr></table></div>
+Puis, si l'on suit l'évolution des exemples donnés, la liste évolue : 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+</code></pre></div></td></tr></table></div>
+jusqu'à ce que la liste des îlots isolés <strong>ne contienne plus qu'un seul élément</strong>.</p>
+<p>les ponts seront représentés par une liste de tuples représentant les iles à relier :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span>  <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div></p>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>Les ponts utlisés dans l'exemple ne sont pas ceux de la solution optimale.</p>
+</div>
+<h2 id="programmation-fonctionnelle">Programmation fonctionnelle<a class="headerlink" href="#programmation-fonctionnelle" title="Permanent link">⚓︎</a></h2>
+<p>On se rappellera ici que les fonctions ne doivent pas modifier de variables globales, ce qui necessitera de passer un peu plus d'arguments.
+Nous nous autoriserons cependant l'utilisation de boucles.</p>
+<h3 id="la-fonction-construire_un_pontilot_1ilot_2liste_ilotsile1ile2ponts">La fonction <code>construire_un_pont(ilot_1,ilot_2,liste_ilots,ile1,ile2,ponts)</code><a class="headerlink" href="#la-fonction-construire_un_pontilot_1ilot_2liste_ilotsile1ile2ponts" title="Permanent link">⚓︎</a></h3>
+<p>Cette fonction prend en paramètre deux îlots et deux îles entre lesquelles on doit construire le pont. Il n'est pas question ici de choisir les îles cela aura été fait en amont. <code>ile1</code> appartient à l'<code>ilot_1</code> et <code>ile2</code> appartient à <code>ilot_2</code>. ces îles ont été choisie car c'est le pont le moins cher pour relié les deux îlots d'après le tableaux <code>couts</code>.<br />
+Cette fonction aura donc pour but de modifier la liste <code>liste_ilots</code>pour fusionner les <code>ilot_1</code> et <code>ilot_2</code>et ajouter le tuple <code>(ile1,ile2)</code> dans la liste des ponts.<br />
+Elle retourne la <code>liste_ilots</code> et <code>ponts</code>.<br />
+Par exemple : 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">construire_un_pont</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">1</span><span class="p">],[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]],</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)])</span>
+<span class="c1">#la liste des îlots devient</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="c1">#la liste des ponts devient</span>
+<span class="p">[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">construire_pont</span><span class="p">(</span><span class="n">ilot_1</span><span class="p">,</span><span class="n">ilot_2</span><span class="p">,</span><span class="n">liste_ilots</span><span class="p">,</span><span class="n">ile1</span><span class="p">,</span><span class="n">ile2</span><span class="p">,</span><span class="n">ponts</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">liste_ilots</span><span class="p">,</span><span class="n">ponts</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="la-fonction-trouver_pontliste_ilotscoutsponts">La fonction <code>trouver_pont(liste_ilots,couts,ponts)</code><a class="headerlink" href="#la-fonction-trouver_pontliste_ilotscoutsponts" title="Permanent link">⚓︎</a></h3>
+<p>Cette fonction a pour but de trouver le pont idéal entre deux îlots. Elle doit parcourir tous els îlots afin de trouver le pont le moins cher entre deux îots. Imaginons qu'on ait les îlots <code>[0,1], [2,3] et [4]</code>. Le but est de trouver le pont le moins cher pour relier deux îlots quelqu'ils soient. Il faudra donc <strong>pour chaque ile</strong> de <strong>chaque ilot</strong> comparer les coûts et sélectionner les deux îles entre lesquelles on décidera de construire le pont.<br />
+Ici, nous allons donc comparer les coûts des ponts <code>(0,2),(0,3),(1,2),(1,3),(0,4),(1,4),(2,4) et (3,4)</code>. Le pont le moins cher est le pont <code>(0,3)</code> on exécute donc la fonction <code>contruire_pont</code> entre les îles 0 et 3 ce qui aura pour effet de relier le premier et le deuxieme îlot (mais ça c'est le job de la fonction <code>construire_pont</code>).    </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">trouver_pont</span><span class="p">(</span><span class="n">liste_ilots</span><span class="p">,</span><span class="n">couts</span><span class="p">,</span><span class="n">ponts</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    ENTREES : liste_ilots (type list) est la liste des îles ou îlots encore isolés.</span>
+<span class="sd">    au début liste_ilots=[[0], [1], [2], [3], [4]] et à la fin liste_ilots=[[0, 1, 2, 3, 4]]</span>
+<span class="sd">    couts est un tableau des côuts des ponts entre les îles.</span>
+<span class="sd">    ponts est une liste de tuples contenant les ponts déjà construits.</span>
+<span class="sd">    SORTIE : Execution de la fonction qui CONSTRUIT le pont entre les îles sélectionnées</span>
+<span class="sd">    cette fonction cherche le pont le moins cher pour relier  ilot_1 et ilot_2 en fonction des îles dont</span>
+<span class="sd">    ils sont composés.&quot;&quot;&quot;</span>
+    <span class="o">...</span>
+    <span class="k">return</span> <span class="n">construire_pont</span><span class="p">(</span><span class="n">ilot_1</span><span class="p">,</span><span class="n">ilot_2</span><span class="p">,</span><span class="n">liste_ilots</span><span class="p">,</span><span class="n">ile1_min</span><span class="p">,</span><span class="n">ile2_min</span><span class="p">,</span><span class="n">ponts</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="la-fonction-equiper_archipelncouts">La fonction <code>equiper_archipel(n,couts)</code><a class="headerlink" href="#la-fonction-equiper_archipelncouts" title="Permanent link">⚓︎</a></h3>
+<p>Cette fonction crée l'archipel (ici on créera une liste de 5 îles) et initialiser la liste des ponts. Elle va se charger de parourir les îlots et de créer les ponts jusqu'à ce que l'archipel ne contienne plus qu'un seul bloc.
+Elle renvoie la liste des ponts à construire.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">equiper_archipel</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">couts</span><span class="p">):</span>
+    <span class="n">liste_ilots</span><span class="o">=</span><span class="p">[[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+    <span class="n">ponts</span><span class="o">=</span><span class="p">[]</span>
+    <span class="o">...</span>
+    <span class="k">return</span> <span class="n">ponts</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="le-programme">Le programme<a class="headerlink" href="#le-programme" title="Permanent link">⚓︎</a></h3>
+<p>Il faudra malgré tout ici avoir une variable globale, celle des coûts. on pourrait initialiser le tout dans une fonction main() qui serait la seule à être exécutée mais comme nous ne somme qu'à la moitié du projet, on va simplifier.<br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">inf</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+    <span class="n">couts</span> <span class="o">=</span> <span class="p">[[</span><span class="n">inf</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">inf</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">inf</span><span class="p">]]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">equiper_archipel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">couts</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+Ces quelques lignes doivent permettre d'éxécuter le programme.  </p>
+<h2 id="programmation-orientee-objet">Programmation Orientée Objet<a class="headerlink" href="#programmation-orientee-objet" title="Permanent link">⚓︎</a></h2>
+<p>Nous allons créer deux classes. Une classe <code>ile</code> et une classe <code>construireArchipel</code>. </p>
+<h3 id="la-classe-ile">La classe <code>ile</code><a class="headerlink" href="#la-classe-ile" title="Permanent link">⚓︎</a></h3>
+<p>La classe <code>ile</code> permettra de créer les îles et les îlots une fois modifiés, et la la classe <code>construireArchipel</code> contiendra la liste des îles et îlots, des ponts et se chargera de trouver le pont idéal, de le construire et ce jusqu'à ce que toutes les îles soient reliées.<br />
+Au départ, une île ne sera composée que d'une île (par exemple [1] est un îlot ne contenant que l'île 1), mais au fur et à mesure des fusions des îlots, l'attribut <code>ile</code> de la classe <code>ile</code> peut en conenir plusieurs.  </p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ile</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">numero</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ile</span><span class="o">=...</span>
+
+    <span class="k">def</span> <span class="nf">get_ile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+On créera une fonction pour récupérer la liste des îles composant l'îlot et une fonction <code>__repr__(self)</code> afin de visualier la liste des îles composant les îlots pou débogger le code.  </p>
+<h3 id="la-classe-construirearchipel">La classe <code>construireArchipel</code><a class="headerlink" href="#la-classe-construirearchipel" title="Permanent link">⚓︎</a></h3>
+<p>Les fonctions de cette classe font la même chose que leurs homologies dans la partie programmation fonctionnelle. Cela dit, si la structure peut etre similaire, le fait de changer de paradigme vous obligera à en modifie les paramètres, les variables et les retours de fonctions. <strong>Soyez vigilants sur les copier-coller.</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">construireArchipel</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+        <span class="c1">#n est le nombre d&#39;îles que l&#39;on veut créer au départ</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ilots</span><span class="o">=...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ponts</span><span class="o">=...</span>
+
+    <span class="k">def</span> <span class="nf">relier_2_ilots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">ilot1</span><span class="p">,</span><span class="n">ilot2</span><span class="p">,</span><span class="n">ile1</span><span class="p">,</span><span class="n">ile2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;ilot1 et ilot2 sont des objets de la classe ile. cette fonction doit permettre de fusionner l&#39;ilot2 sur l&#39;ilot1 </span>
+<span class="sd">        (et donc de supprimer le 2 puis de créer le pont entre l&#39;ile1 et l&#39;ile2 (tuple (ile1,ile2) dans les ponts.&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+
+
+    <span class="k">def</span> <span class="nf">trouver_pont</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">couts</span><span class="p">):</span>
+        <span class="c1">#trouve le pont le moins cher parmis les ponts possibles entre les ilots existants</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">equiper_archipel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">couts</span><span class="p">):</span>
+        <span class="c1">#recherche les ponts les moins chers pour construire l&#39;archipel</span>
+        <span class="k">pass</span>
+
+
+    <span class="k">def</span> <span class="nf">get_ilots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">get_ponts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+   <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#permet d&#39;utiliser un print pour visualiser les ilots et les ponts</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">li</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ilots</span><span class="p">:</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">li</span><span class="o">.</span><span class="n">get_ile</span><span class="p">()))</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_ponts</span><span class="p">())</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="le-code-principal">Le code principal<a class="headerlink" href="#le-code-principal" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">inf</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+    <span class="n">couts</span> <span class="o">=</span> <span class="p">[[</span><span class="n">inf</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">inf</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">inf</span><span class="p">]]</span>
+    <span class="n">archipel</span><span class="o">=</span><span class="n">construireArchipel</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">archipel</span><span class="o">.</span><span class="n">equiper_archipel</span><span class="p">(</span><span class="n">couts</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">archipel</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="a-rendre">A rendre<a class="headerlink" href="#a-rendre" title="Permanent link">⚓︎</a></h2>
+<p>Vous devez rendre deux fichiers commentés dont le résultat de la situation doit être identique.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>

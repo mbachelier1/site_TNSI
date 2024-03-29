@@ -1,0 +1,1442 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../modularite/">
+      
+      
+        <link rel="next" href="../gestion_bug/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>Projet : Créer un module - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#projet-module-incertitude" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v3h2V5h18v14h-7v2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M1 18v3h3a3 3 0 0 0-3-3m0-4v2a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7m0-4v2a9 9 0 0 1 9 9h2c0-6.08-4.93-11-11-11m10 1.09v2L14.5 15l3.5-1.91v-2L14.5 13 11 11.09M14.5 6 9 9l5.5 3L20 9l-5.5-3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Projet : Créer un module
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Structure/listes_piles_files/" class="md-tabs__link">
+          
+  
+  Structures de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../BDD/modele_relationnel/" class="md-tabs__link">
+          
+  
+  Bases de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../recursivite/" class="md-tabs__link">
+          
+  
+  Programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../algorithmie/ABR/" class="md-tabs__link">
+          
+  
+  Algorithmie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archi/crypto/" class="md-tabs__link">
+          
+  
+  Architecture et OS
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v3h2V5h18v14h-7v2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M1 18v3h3a3 3 0 0 0-3-3m0-4v2a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7m0-4v2a9 9 0 0 1 9 9h2c0-6.08-4.93-11-11-11m10 1.09v2L14.5 15l3.5-1.91v-2L14.5 13 11 11.09M14.5 6 9 9l5.5 3L20 9l-5.5-3Z"/></svg>
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Structures de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Structures de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/listes_piles_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listes piles et files 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/POO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation Orientée Objet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/graphes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/arbres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Bases de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Bases de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/modele_relationnel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modèle relationnel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/langageSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Langage SQL 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/projet_SQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet SQL 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Programmation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursivite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Récursivité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modularite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modularité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Projet : Créer un module
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Projet : Créer un module
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principe-des-incertitudes-de-type-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principe des incertitudes de type A
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-contenues-dans-le-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions contenues dans le module.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tester-votre-programme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tester votre programme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-calcul-des-incertitudes-de-type-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bonus : calcul des incertitudes de type B
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion_bug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestion des Bugs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paradigme_programmation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmes de Programmation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projet_paradigme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet : construire un archipel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Algorithmie
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/ABR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbres Binaires de recherche
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/diviser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diviser pour Régner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/recherche_textuelle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recherche textuelle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/programmation_dynamique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation dynamique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/parcours_graphe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parcours de graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/calculabilite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculabilité et décidabilité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Architecture et OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture et OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/crypto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sécurisation des communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/enigma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Et si on codait Enigma?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/soc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Système sur puce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/routage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocoles de routage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/processus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestion ds processus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="projet-module-incertitude">Projet : Module incertitude<a class="headerlink" href="#projet-module-incertitude" title="Permanent link">⚓︎</a></h1>
+<p>L'objectif est de créer un module <code>incertitude</code> permettant à nos amis physicien de faire les calculs nécessaires à l'évaluation des erreurs de mesures. On ne s'interessera ici qu'aux incertitudes de type A c'est-à-dire issue d'une série de mesure.<br />
+En bonus, on pourra traiter les différentes incertitudes de type B, issue d'un mesure unique.  </p>
+<h2 id="principe-des-incertitudes-de-type-a">Principe des incertitudes de type A<a class="headerlink" href="#principe-des-incertitudes-de-type-a" title="Permanent link">⚓︎</a></h2>
+<p>Lorsque l'on fait une mesure en physique, il y a toujours une incertitude liée à l'appareil utilisé ou à la précision de la manipulation de l'opérateur. Il existe aussi une inceritude aléatoire, qui fait que si on repète la mesure un grand nombre de fois, on ne trouve pas toujours exactement la même valeur.
+Les incertitudes de types A sont ces dernières. On peut dire à l'aide d'une série de mesures que la valeur <em>vraie</em> est comprise dans un intervalle que l'on détermine grâce à des calculs sur la série de mesures.  </p>
+<p><strong>Incertitude</strong>
+<img align="left" alt="calcul incertitude" src="../img/calculincert.png" />
+Pour calculer l'incertitude, il faut déjà calculer l'écart type, le multiplier par un coeficient d'élargissement et diviser par la racine carré du nombre de mesures.  </p>
+<p><strong>Coefficient d'élargissement</strong>
+Un intervalle de confiance à 95% signifie que l'intervalle que l'on va calculer, contiendra à coup sûr 95% des mesures.<br />
+Ce coefficient k, dépend du nombre de mesures et de l'intervalle de confiance.
+<img align="right" alt="calcul incertitude" src="../img/k.png" />
+Par exemple, pour un intervalle de confiance de 95% (le plus couramment utilisé) avec 9 mesures réalisées, k vaudra 2,31. </p>
+<p><strong>Intervalle</strong>
+L'incertitude U trouvée par le calcul nous permet de dire que 95% des mesures se situent dans l'intervalle [moyenne-U ; moyenne+U].
+L'objectif de ce projet est de créer un module permettant de calculer cet intervalle à partir d'une série de mesures.</p>
+<div class="admonition example">
+<p class="admonition-title">Un exemple</p>
+<p>On mesure, dans les mêmes conditions plusieurs fois la même masse d'un échantillon et on trouve : 2,45g ; 2,34g ; 2,57g et 2,18g.
+La moyenne de ces mesures est de 2,39g et l'écart type est de  0,14361g. L'écart type correspond à la moyenne des écarts à la moyenne. c'est-à-dire que plus les mesures seront éloignées de la moyenne plus l'écart type sera grand. 
+On dispose de 4 mesures, donc pour un intervalle de confiance de 95% on a k = 3,18 (on aurait eu 5,84 pour un intervale de confiance de 98%). 
+En appliquant la formule ci-dessus on trouve une incertitude de :   </p>
+<div class="arithmatex">\[Um= \dfrac{3.18 \times 0.14361}{\sqrt{4}} = 0.228 g\]</div>
+<p>C'est à dire que la valeur vraie est inclue, à 95%, dans l'intervalle 2.16g (2,39-0,23) et 2.62g (2,39+0,23). 0,23g est l'incertitude absolue sur la mesure.    </p>
+<div class="arithmatex">\[Urel= \dfrac{0,23 \times 100}{2,39}\]</div>
+<p>Elle représente 9,6% de la moyenne. 9,6 % est appelée incertitude relative. </p>
+</div>
+<h2 id="fonctions-contenues-dans-le-module">Fonctions contenues dans le module.<a class="headerlink" href="#fonctions-contenues-dans-le-module" title="Permanent link">⚓︎</a></h2>
+<p>Dans une bibliothèque nommée <code>typeA.py</code> contenu dans le dossier <code>ìncertitude</code> on devra trouver les fonctions suivantes :    </p>
+<p><strong>fonction <code>moyenne()</code></strong><br />
+Cette fonction prend une liste de mesures en paramètre et retourne la moyenne des valeurs. </p>
+<div class="admonition error">
+<p class="admonition-title">DIY</p>
+<p>Ne pas importer de modules de calcul de moyenne ou autre, vous devez l'implémenter vous-même.<br />
+La seule tolérance sera pour la fonction <code>sqrt</code> mais qui peut être remplacé par une puissance 0,5.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
+<span class="mf">3.9583333333333326</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>fonction <code>ecart_type()</code></strong>  </p>
+<p><img alt="formule ecart type" src="../img/ecart-type.png" />
+La formule de l'écart type est donnée ci-contre. Cette fonction doit prendre en paramètre une liste de mesures et renvoyer la valeur de l'écart type.  </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ecart_type</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
+<span class="mf">0.18465433171800283</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>fonction <code>nb_mesures()</code></strong>  </p>
+<p>Cette fonction prend en paramètre une liste de mesures et renvoie le nombre de mesures dans la liste. 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_mesures</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
+<span class="mi">12</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>fonction <code>valeur_plus_proche(valeur,Tableau):</code></strong><br />
+Lorsque l'on regarde le tableau des coefficients d'élargissement, on peut voir que toutes les quantités de mesures n'y figurent pas. il y a trop peu de différence avec les valeurs données pour que cela soit significatif. On cherchera donc le nombre de mesures le plus proche que celui qu'on possède.
+Cette fonction prend en paramètre une valeur et un tableau, et renvoie la valeur du tableau la plus proche de la valeur <code>valeur</code>. En cas d'égalité pour deux valeurs on retournera la première rencontrée.  <br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_plus_proche</span><span class="p">(</span><span class="mi">20</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_plus_proche</span><span class="p">(</span><span class="mi">7</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+<span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_plus_proche</span><span class="p">(</span><span class="mi">3</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="mi">3</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>fonction <code>incertitude()</code></strong><br />
+Cette fonction utilisera les autres pour calculer l'incertitude telle qu'elle est expliqué plus haut. Elle prend en paramètre la liste de mesures et un booléen <code>confiance</code> qui par défaut vaudra False ce qui signifie que l'on se place dans un intervalle de confiance de 95%. Si on exécute la fonction avec <code>confiance=True</code> on aura un intervalle de confiance de 98%.
+Cette fonction devra retourner la valeur de l'incertitude calculée.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">incertitude</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">])</span>
+<span class="mf">0.11727125093686133</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">incertitude</span><span class="p">([</span><span class="mf">4.15</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">3.95</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.85</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">4.05</span><span class="p">,</span><span class="mf">3.55</span><span class="p">,</span><span class="mf">4.15</span><span class="p">],</span><span class="kc">True</span><span class="p">)</span>
+<span class="mf">0.16577890473347215</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>fonction <code>absolue(relative,mesure)</code></strong><br />
+Elle permet de passer de l'incertitude relative de la mesure à l'incertitude absolue.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">absolue</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mf">4.56</span><span class="p">)</span>
+<span class="mf">0.9119999999999999</span>
+<span class="c1">#une inertitude de 20% sur une mesure de 4.56V correspond à une incertitude de 0,91V.</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>fonction <code>relative(absolue,mesure)</code></strong><br />
+Elle permet de passer de l'incertitude absolue de la mesure à l'incertitude relative.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">relative</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">4.56</span><span class="p">)</span>
+<span class="mf">19.73684210526316</span>
+<span class="c1">#une inertitude de 0.9V sur une mesure de 4.56V correspond à une incertitude de 19,7%.</span>
+</code></pre></div></td></tr></table></div></p>
+<div class="admonition help">
+<p class="admonition-title">Quelques aides précieuses</p>
+<p>valeurs de k (1ere ligne contient le nombre de mesures, les deuxième et troisième lignes les valeurs de k pour 95% et 98%) :<br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#Tableau regroupant les valeurs de k</span>
+<span class="n">coeff_elargissement</span><span class="o">=</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">20</span><span class="p">],</span>
+                          <span class="p">[</span><span class="mf">12.7</span><span class="p">,</span><span class="mf">4.3</span><span class="p">,</span><span class="mf">3.18</span><span class="p">,</span><span class="mf">2.78</span><span class="p">,</span><span class="mf">2.57</span><span class="p">,</span><span class="mf">2.45</span><span class="p">,</span><span class="mf">2.37</span><span class="p">,</span><span class="mf">2.31</span><span class="p">,</span><span class="mf">2.26</span><span class="p">,</span><span class="mf">2.20</span><span class="p">,</span><span class="mf">2.16</span><span class="p">,</span><span class="mf">2.13</span><span class="p">,</span><span class="mf">2.11</span><span class="p">,</span><span class="mf">2.09</span><span class="p">],</span>
+                          <span class="p">[</span><span class="mf">63.7</span><span class="p">,</span><span class="mf">9.93</span><span class="p">,</span><span class="mf">5.84</span><span class="p">,</span><span class="mf">4.60</span><span class="p">,</span><span class="mf">4.03</span><span class="p">,</span><span class="mf">3.71</span><span class="p">,</span><span class="mf">3.50</span><span class="p">,</span><span class="mf">3.36</span><span class="p">,</span><span class="mf">3.25</span><span class="p">,</span><span class="mf">3.11</span><span class="p">,</span><span class="mf">3.01</span><span class="p">,</span><span class="mf">2.95</span><span class="p">,</span><span class="mf">2.90</span><span class="p">,</span><span class="mf">2.86</span><span class="p">]]</span>
+</code></pre></div></td></tr></table></div>
+Comment fixer une valeur de paramètre par défaut :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">incertitude</span> <span class="p">(</span><span class="n">Liste</span><span class="p">,</span> <span class="n">confiance</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">pass</span>
+<span class="c1"># si on exécute la fonction sans préciser la valeur de confiance elle vaudra False;</span>
+<span class="n">incertitude</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="c1">#ou si on ne veut pas de la valeur par défaut</span>
+<span class="n">incertitude</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<h2 id="tester-votre-programme">Tester votre programme<a class="headerlink" href="#tester-votre-programme" title="Permanent link">⚓︎</a></h2>
+<p>Pour ne pas dénaturer votre code, vous pouvez créer un fichier <code>tests.py</code> qui contiendra tous les tests que vous avez fait pour tester toutes les situations de vos fonctions.<br />
+Vous pouvez aussi <a href="https://mbachelier1.github.io/site_1NSI/Programmation/fonction.html#tester-une-fonction">ajouter des doctest et ou des assertions</a> dans vos fonctions.
+Cela permet de s'y retrouver plus facilement et d'organiser son travail. Cela permet aussi à la personne qui utilise (ndlr : corrige) votre travail de gagner du temps et de la lisibilité.<br />
+Vous structurerez votre code comme un module en créant le fichier <code>__init__</code> et en l'appelant dans un programme principal, comme un module normal. Vous rendrez donc un dossier (zippé) contenant le fichier principal, le fichier nommé <code>typeA.py</code> éventuellement <code>typeB.py</code> et si il existe le fichier de tests. </p>
+<h2 id="bonus-calcul-des-incertitudes-de-type-b">Bonus : calcul des incertitudes de type B<a class="headerlink" href="#bonus-calcul-des-incertitudes-de-type-b" title="Permanent link">⚓︎</a></h2>
+<p>Les incertitudes de type B sont des incertitudes issues d'une mesure unique. Elles sont calculées d'une manière particulière en fonction de la situation.</p>
+<p><strong>Cas de la lecture double graduation</strong><br />
+Lorsqu'on lit une graduation à l'aide d'une règle l'erreur peut venir de la lecture de la graduation mais aussi du positionnement du zéro. On a donc plus de chance de faire une mesure imprécise.
+L'incertitude se calcule ainsi :  </p>
+<div class="arithmatex">\[U= \dfrac{2 \times UnitéDeGraduation}{\sqrt{6}}\]</div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#exemple pour une règle graduée en mm l&#39;incertitude est de 0,81mm</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">double_lecture</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="mf">0.8164965809277261</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Cas de la lecture simple graduation</strong><br />
+Une lecture à simple graduation serait celle d'un baromètre à aiguille ou d'un thermomètre analogique. L'utilisation d'une burette en est aussi un bon exemple. Voici comment se calcule l'incertitude :  </p>
+<div class="arithmatex">\[U= \dfrac{2 \times UnitéDeGraduation}{\sqrt{12}}\]</div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#exemple pour un thermomètre avec une graduation pour 1°C l&#39;incertitude est de 1,41°C</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">simple_lecture</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="mf">1.414213562373095</span>
+</code></pre></div></td></tr></table></div>
+<strong>Cas d'un appareil numérique</strong><br />
+Le constructeur d'un appareil donne au minimum la tolérance de la mesure. C'est le pourcentage d'erreur sur la mesure. Un appareil numérique possède également une incertitude liée au dernier chiffre. On l'appelle le digit.
+Pour une mesure donnant 4,586V le dernier digit sera la plus petite unité mesurée soit 0,001V.<br />
+Le pourcentage de la mesure correspondant à celui de la tolérance donnée. Par exemple une mesure de 4,6V avec une tolérence de 5%, le pourcentage sera de 5% de 4,6 soit 0,23.  </p>
+<div class="arithmatex">\[U= \dfrac{2 \times PourcentageDeLaMesure + 2 \times digit}{\sqrt{3}}\]</div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">exemple</span> <span class="n">avec</span> <span class="n">une</span> <span class="n">mesure</span> <span class="n">de</span> <span class="mf">4.56</span><span class="n">V</span> <span class="n">avec</span> <span class="n">une</span> <span class="n">tolérance</span> <span class="n">de</span> <span class="mi">12</span><span class="o">%</span> <span class="n">et</span> <span class="n">une</span> <span class="n">incertitude</span> <span class="n">de</span> <span class="mi">0</span><span class="p">,</span><span class="mi">01</span><span class="n">digit</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">appareil_numerique</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mf">4.56</span><span class="p">)</span>
+<span class="mf">0.6549461453687115</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Cas d'un appareil quelconque</strong><br />
+On calculera l'incertitude par la formule :  </p>
+<div class="arithmatex">\[U= \dfrac{PourcentageDeLaMesure}{\sqrt{3}}\]</div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">exemple</span> <span class="n">avec</span> <span class="n">un</span> <span class="n">appareil</span> <span class="n">quelconque</span> <span class="n">d</span><span class="s1">&#39;une tolérance de 12% pour une mesure de 4,56V</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tolerance_donnee</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mf">4.56</span><span class="p">)</span>
+<span class="mf">0.6318521346011265</span>
+</code></pre></div></td></tr></table></div>
+Vous devez créer le fichier <code>typeB.py</code> contenant les fonctions <code>double_lecture(graduation)</code>, <code>simple_lecture(graduation)</code>, <code>tolerance_donnee(tolerance,mesure)</code> pour un appareil quelconque, et <code>appareil_numerique(digit,tolerance,mesure)</code> .
+Il est important que les paramètres <code>digit</code> et <code>graduation</code> soient renseignés dans la même unité que la mesure. Cette information pourra être donnée à l'utilsation de la fonciton et/ou dans la documentation.</p>
+<p>Vous créerez ensuite le module <code>incertitudes</code> contenant les fichiers <code>typeA.py</code> et <code>typeB.py</code> qui pourront être utilisés comme un module.</p>
+<hr />
+<p style="text-align: center; color:gray; font-size: 10px;">
+Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>

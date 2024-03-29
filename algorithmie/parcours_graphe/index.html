@@ -1,0 +1,1796 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../programmation_dynamique/">
+      
+      
+        <link rel="next" href="../calculabilite/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>Parcours de graphes - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#algorithmes-de-parcours-de-graphes" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v3h2V5h18v14h-7v2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M1 18v3h3a3 3 0 0 0-3-3m0-4v2a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7m0-4v2a9 9 0 0 1 9 9h2c0-6.08-4.93-11-11-11m10 1.09v2L14.5 15l3.5-1.91v-2L14.5 13 11 11.09M14.5 6 9 9l5.5 3L20 9l-5.5-3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parcours de graphes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Structure/listes_piles_files/" class="md-tabs__link">
+          
+  
+  Structures de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../BDD/modele_relationnel/" class="md-tabs__link">
+          
+  
+  Bases de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Programmation/recursivite/" class="md-tabs__link">
+          
+  
+  Programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ABR/" class="md-tabs__link">
+          
+  
+  Algorithmie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archi/crypto/" class="md-tabs__link">
+          
+  
+  Architecture et OS
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v3h2V5h18v14h-7v2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M1 18v3h3a3 3 0 0 0-3-3m0-4v2a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7m0-4v2a9 9 0 0 1 9 9h2c0-6.08-4.93-11-11-11m10 1.09v2L14.5 15l3.5-1.91v-2L14.5 13 11 11.09M14.5 6 9 9l5.5 3L20 9l-5.5-3Z"/></svg>
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Structures de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Structures de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/listes_piles_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listes piles et files 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/POO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation Orientée Objet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/graphes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structure/arbres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Bases de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Bases de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/modele_relationnel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modèle relationnel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/langageSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Langage SQL 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/projet_SQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet SQL 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Programmation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/recursivite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Récursivité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/modularite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modularité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/projet_modularite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet : Créer un module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/gestion_bug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestion des Bugs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/paradigme_programmation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmes de Programmation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/projet_paradigme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet : construire un archipel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Algorithmie
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ABR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbres Binaires de recherche
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diviser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diviser pour Régner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recherche_textuelle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recherche textuelle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programmation_dynamique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation dynamique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Parcours de graphes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Parcours de graphes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parcours-en-largeur-dabord-breadth-first-search-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parcours en largeur d'abord (Breadth First Search - BFS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parcours-en-profondeur-dabord-deep-first-search-dfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parcours en profondeur d'abord (Deep First Search - DFS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chercher-son-chemin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chercher son chemin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chercher-tous-les-chemins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chercher tous les chemins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detection-de-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Détection de cycle
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calculabilite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculabilité et décidabilité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Architecture et OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture et OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/crypto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sécurisation des communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/enigma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Et si on codait Enigma?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/soc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Système sur puce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/routage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocoles de routage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/processus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestion ds processus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="algorithmes-de-parcours-de-graphes">Algorithmes de parcours de Graphes<a class="headerlink" href="#algorithmes-de-parcours-de-graphes" title="Permanent link">⚓︎</a></h1>
+<p>On pourra utiliser un éditeur de graphes pour se simplifier la représentation en utilisant l'outil en ligne <a href="http://magjac.com/graphviz-visual-editor/">Graphviz Editor</a>  </p>
+<h2 id="parcours-en-largeur-dabord-breadth-first-search-bfs">Parcours en largeur d'abord (Breadth First Search - BFS)<a class="headerlink" href="#parcours-en-largeur-dabord-breadth-first-search-bfs" title="Permanent link">⚓︎</a></h2>
+<p>Le principe du parcoursen largeur d'abord est de choisir un sommet et de parcourir les noeuds en listant les noeuds de même profondeur par rapport au noeud de départ.
+<img alt="anim BFS" src="../img/bfs.gif" /></p>
+<ul>
+<li>On démarre au noeud B. On explore ses fils, puis les fils de ses fils, sans revenir sur les noeuds déjà traités. ce qui donne sur l'animation ci-dessus : B, A, C, D, E, F, G, H.  </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>Le "premier" ou "deuxieme" fils sera déterminé par la façon dont le graphe a été implémenté. En effet, on pour déterminer le parcours comme B, C, A, D, F, G, F et H.</p>
+</div>
+<div class="admonition faq">
+<p class="admonition-title">à partir d'autres noeuds</p>
+<p>Développer l'algorithme en partant des noeuds H puis D.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Etapes de la procédure</p>
+<p>On crée une file vide</p>
+<ol>
+<li>On enfile le nœud de départ.  </li>
+<li>On enfile les nœuds adjacents s'ils ne sont pas déjà présents dans la file et qu'ils n'ont pas déjà été visités (on créera une liste pour y stocker les noeuds visités)  </li>
+<li>On défile (c'est-à-dire on supprime la tête de file).  </li>
+<li>Tant que la file n'est pas vide, on ré-itère les points 2 et 3.  </li>
+<li>On affiche la liste des noeuds visités  </li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Procédure détaillée</p>
+<ul>
+<li>On place les fils A et C en file d'attente.<br />
+<code>file_attente=[A,C]</code> puis on considère que le noeud B a été traité, on le mémorise <code>noeuds_traités=[B]</code>.  </li>
+<li>On prend le premier élément en file d'attente (A) et on l'explore, c'est-à-dire que l'on met ses fils en file d'attente et que l'on mémorise le noeud comme traité. Il sort donc de la file d'attente : 
+<code>file_attente=[C,D,E]</code> et <code>noeuds_traités=[B,A]</code>.  </li>
+<li>Même procédure avec le noeud C qui est le suivant dans la file d'attente, on traite C il sort de la file et entre dans les noeuds traités et son fils est placé en file d'attente :  le seul fils de C est déjà en file d'attente donc on ne l'ajoute pas : <code>file_attente=[D,E]</code> et <code>noeuds_traités=[B,A,C]</code>.  </li>
+<li>On traite le noeud D : E est déjà en file d'attente: <code>file_attente=[E]</code> et <code>noeuds_traités=[B,A,C,D]</code>.  </li>
+<li>Les fils du noeuds E sont placés en fils d'attente et E est déplacé de la file d'attente à la liste des noeuds traités : <code>file_attente=[F,G]</code> et <code>noeuds_traités=[B,A,C,D,E]</code>.  </li>
+<li>Noeud F : ses fils sont soit déjà traité soit en fils d'attente <code>file_attente=[G]</code> et <code>noeuds_traités=[B,A,C,D,E,F]</code>.  </li>
+<li>Noeud G : <code>file_attente=[H]</code> et <code>noeuds_traités=[B,A,C,D,E,F,G]</code>.</li>
+<li>Noeud H :   <code>file_attente=[]</code> et <code>noeuds_traités=[B,A,C,D,E,F,G,H]</code> <br />
+Tous les noeuds ont été créés (on peut tester la taille de la liste avec une assertion pour être sûr) et la file d'attente est vide, le parcours s'arrête.</li>
+</ul>
+</div>
+<div class="admonition faq">
+<p class="admonition-title">à partir d'autres noeuds</p>
+<p>Développer l'algorithme en partant des noeuds H puis D.</p>
+</div>
+<p>L'algorithme en pseudocode :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">VARIABLE</span>
+<span class="nv">G</span> <span class="p">:</span> <span class="nv">un</span> <span class="nv">graphe</span>
+<span class="nv">s</span> <span class="p">:</span> <span class="nv">noeud</span> <span class="p">(</span><span class="nv">origine</span><span class="p">)</span>
+<span class="nv">u</span> <span class="p">:</span> <span class="nv">noeud</span>
+<span class="nv">v</span> <span class="p">:</span> <span class="nv">noeud</span>
+<span class="nv">f</span> <span class="p">:</span> <span class="nv">file</span> <span class="p">(</span><span class="nv">initialement</span> <span class="nv">vide</span><span class="p">)</span>
+
+<span class="c">//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine</span>
+<span class="k">DEBUT</span>
+<span class="nv">s</span><span class="o">.</span><span class="nv">couleur</span> <span class="o">←</span> <span class="nv">noir</span>
+<span class="nv">enfiler</span> <span class="p">(</span><span class="nv">s</span><span class="p">,</span><span class="nv">f</span><span class="p">)</span>
+<span class="k">tant que </span><span class="nv">f</span> <span class="o">non</span> <span class="nv">vide</span> <span class="p">:</span>
+    <span class="nv">u</span> <span class="o">←</span> <span class="nv">defiler</span><span class="p">(</span><span class="nv">f</span><span class="p">)</span>
+    <span class="k">pour </span><span class="nv">chaque</span> <span class="nv">sommet</span> <span class="nv">v</span> <span class="nv">adjacent</span> <span class="nv">au</span> <span class="nv">sommet</span> <span class="nv">u</span> <span class="p">:</span>
+        <span class="k">si </span><span class="nv">v</span><span class="o">.</span><span class="nv">couleur</span> <span class="nv">n</span><span class="err">&#39;</span><span class="nv">est</span> <span class="nv">pas</span> <span class="nv">noir</span> <span class="p">:</span>
+            <span class="nv">v</span><span class="o">.</span><span class="nv">couleur</span> <span class="o">←</span> <span class="nv">noir</span>
+            <span class="nv">enfiler</span><span class="p">(</span><span class="nv">v</span><span class="p">,</span><span class="nv">f</span><span class="p">)</span>
+        <span class="k">fin si</span>
+<span class="k">    fin pour</span>
+<span class="k">fin tant que</span>
+<span class="k">FIN</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="parcours-en-profondeur-dabord-deep-first-search-dfs">Parcours en profondeur d'abord (Deep First Search - DFS)<a class="headerlink" href="#parcours-en-profondeur-dabord-deep-first-search-dfs" title="Permanent link">⚓︎</a></h2>
+<p>Pour ce parcours, on explore les voisins du noeuds de départ un par un et on explore les voisins du premier voisin, puis ceux du deuxième, ... 
+<img alt="anim DFS" src="../img/dfs.gif" /></p>
+<p>On démarre au noeud B, on explore son premier fils (A) et on met les autres en attente (C). On explore le premier fils de A (E) et on met l'autre (D) en attente. Le premier fils de E (G) est exploré alors que G est en mis en attente. Puis, on explore H. Une fois arrivé à un noeud qui n'a plus de fils non traités ou mis en attente, on remonte visiter les noeuds mis en attente. Ce qui donne : B, A, E, G, H, F, D, C. </p>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>Le "premier" ou "deuxieme" fils sera déterminé par la façon dont le graphe a été implémenté. Le résultat du parcours peut être différent.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Etapes de la procédure</p>
+<ol>
+<li>On part d'un sommet que l'on empile;  </li>
+<li>On dépile et on marque le sommet dépilé comme traité (il faudrait créer une liste pour les sommets déjà traités)  </li>
+<li>On empile chacun des voisins du sommet dépilé qui ne sont pas déjà dans la pile et qui n'ont pas été déjà été traités;  </li>
+<li>On recommence à partir du point 2 tant que la pile n'est pas vide.  </li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Détails de la procédure</p>
+<p>Ici, la file d'attente est une pile et non une file. Donc c'est le dernier élément mis en attente qui sera traité en premier.<br />
+- Le noeud B est visité en premier <code>noeuds_traités=[B]</code>. On viste A <code>noeuds_traités=[B,A]</code> et on place C en pile d'attente : <code>pile_attente=[C]</code>.<br />
+- On visite E et on met D en attente : <code>noeuds_traités=[B,A,E]</code> et <code>pile_attente=[C,D]</code>.<br />
+- On viste G et on met F en attente : <code>noeuds_traités=[B,A,E,G]</code> et <code>pile_attente=[C,D,F]</code>.<br />
+- On viste H qui n'a pas de fils non traité et non en attente : <code>noeuds_traités=[B,A,E,G,H]</code> et <code>pile_attente=[C,D,F]</code>.<br />
+- On dépile la pile d'attente et on visite F <code>noeuds_traités=[B,A,E,G,H,F]</code> et <code>pile_attente=[C,D]</code>. <br />
+- puis D <code>noeuds_traités=[B,A,E,G,H,F,D]</code> et <code>pile_attente=[C]</code>.<br />
+- et enfin C : <code>noeuds_traités=[B,A,E,G,H,F,D,C</code>] et <code>pile_attente=[]</code>.<br />
+- la pile d'attente est vide et on a visité tous les noeuds.</p>
+</div>
+<div class="admonition faq">
+<p class="admonition-title">à partir d'autres noeuds</p>
+<p>Développer l'algorithme en partant des noeuds H puis D.</p>
+</div>
+<p>L'algorithme itéraif en pseudocode</p>
+<p>On peut utiliser la coloration des noeuds : blanc pour non visité et noir pour visité. Mais on peut également mettre les éléments visités dans une liste.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">VARIABLE</span>
+<span class="nv">s</span> <span class="p">:</span> <span class="nv">noeud</span> <span class="p">(</span><span class="nv">origine</span><span class="p">)</span>
+<span class="nv">G</span> <span class="p">:</span> <span class="nv">un</span> <span class="nv">graphe</span>
+<span class="nv">u</span> <span class="p">:</span> <span class="nv">noeud</span>
+<span class="nv">v</span> <span class="p">:</span> <span class="nv">noeud</span>
+<span class="nv">p</span> <span class="p">:</span> <span class="nv">pile</span> <span class="p">(</span><span class="nv">pile</span> <span class="nv">vide</span> <span class="nv">au</span> <span class="nv">départ</span><span class="p">)</span>
+<span class="c">//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine</span>
+<span class="k">DEBUT</span>
+<span class="nv">s</span><span class="o">.</span><span class="nv">couleur</span> <span class="o">←</span> <span class="nv">noir</span>
+<span class="nv">piler</span><span class="p">(</span><span class="nv">s</span><span class="p">,</span><span class="nv">p</span><span class="p">)</span>
+<span class="k">tant que </span><span class="nv">p</span> <span class="nv">n</span><span class="s1">&#39;est pas vide :</span>
+<span class="s1">u ← depiler(p)</span>
+<span class="s1">pour chaque sommet v adjacent au sommet u :</span>
+<span class="s1">    si v.couleur n&#39;</span><span class="nv">est</span> <span class="nv">pas</span> <span class="nv">noir</span> <span class="p">:</span>
+        <span class="nv">v</span><span class="o">.</span><span class="nv">couleur</span> <span class="o">←</span> <span class="nv">noir</span>
+        <span class="nv">piler</span><span class="p">(</span><span class="nv">v</span><span class="p">,</span><span class="nv">p</span><span class="p">)</span>
+    <span class="k">fin si</span>
+<span class="k">fin pour</span>
+<span class="k">fin tant que</span>
+<span class="k">FIN</span>
+</code></pre></div></td></tr></table></div></p>
+<p>L'algorithme récursif en pseudocode
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">VARIABLE</span>
+<span class="nv">G</span> <span class="p">:</span> <span class="nv">un</span> <span class="nv">graphe</span>
+<span class="nv">u</span> <span class="p">:</span> <span class="nv">noeud</span>
+<span class="nv">v</span> <span class="p">:</span> <span class="nv">noeud</span>
+<span class="c">//On part du principe que pour tout sommet u du graphe G, u.couleur = blanc à l&#39;origine</span>
+<span class="k">DEBUT</span>
+<span class="nv">PARCOURS</span><span class="o">-</span><span class="nv">PROFONDEUR</span><span class="p">(</span><span class="nv">G</span><span class="p">,</span><span class="nv">u</span><span class="p">)</span> <span class="p">:</span>
+  <span class="nv">u</span><span class="o">.</span><span class="nv">couleur</span> <span class="o">←</span> <span class="nv">noir</span>
+  <span class="k">pour </span><span class="nv">chaque</span> <span class="nv">sommet</span> <span class="nv">v</span> <span class="nv">adjacent</span> <span class="nv">au</span> <span class="nv">sommet</span> <span class="nv">u</span> <span class="p">:</span>
+    <span class="k">si </span><span class="nv">v</span><span class="o">.</span><span class="nv">couleur</span> <span class="nv">n</span><span class="err">&#39;</span><span class="nv">est</span> <span class="nv">pas</span> <span class="nv">noir</span> <span class="p">:</span>
+      <span class="nv">PARCOURS</span><span class="o">-</span><span class="nv">PROFONDEUR</span><span class="p">(</span><span class="nv">G</span><span class="p">,</span><span class="nv">v</span><span class="p">)</span>
+    <span class="k">fin si</span>
+<span class="k">  fin pour</span>
+<span class="k">FIN</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="chercher-son-chemin">Chercher son chemin<a class="headerlink" href="#chercher-son-chemin" title="Permanent link">⚓︎</a></h2>
+<p>Chercher son chemin dans un graphe c'est parcourir le graphe en mémorisant les noeuds par lesquels on passe, en s'arrêtant dès que l'on a rencontré le noeud d'arrivée.</p>
+<div class="admonition hint">
+<p class="admonition-title">algorithme</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">Fonction </span><span class="nv">cherche_chemin</span><span class="p">(</span><span class="nv">graphe</span><span class="p">,</span><span class="nv">depart</span><span class="p">,</span><span class="nv">arrivee</span><span class="p">)</span>  
+    <span class="nv">P</span> <span class="o">←</span> <span class="nv">pile</span> <span class="nv">vide</span>  
+    <span class="nv">empiler</span> <span class="nv">le</span> <span class="nv">couple</span> <span class="p">(</span><span class="nv">depart</span><span class="p">,</span><span class="o">[</span><span class="nv">depart</span><span class="o">]</span><span class="p">)</span> <span class="nv">dans</span> <span class="nv">P</span>  
+    <span class="nv">chemin</span> <span class="o">←</span> <span class="nv">liste</span> <span class="nv">vide</span>  
+    <span class="k">Tant que </span><span class="nv">P</span> <span class="nv">n</span><span class="err">&#39;</span><span class="nv">est</span> <span class="nv">pas</span> <span class="nv">vide</span> <span class="k">faire</span>  
+        <span class="p">(</span><span class="nv">sommet</span><span class="p">,</span><span class="nv">chemin</span><span class="p">)</span> <span class="o">←</span> <span class="nv">on</span> <span class="nv">dépile</span> <span class="nv">P</span>  
+        <span class="nv">listes_nouveaux_sommets_voisins</span> <span class="o">←</span> <span class="nv">liste</span> <span class="nv">des</span> <span class="nv">sommets</span>   <span class="nv">adjacents</span> <span class="k">à </span><span class="nv">sommet</span> <span class="nv">qui</span> <span class="nv">ne</span> <span class="nv">sont</span> <span class="nv">pas</span> <span class="nv">dans</span> <span class="nv">chemin</span> <span class="p">(</span><span class="nv">liste</span> <span class="nv">réinitialisée</span> <span class="k">à </span><span class="nv">chaque</span> <span class="nv">tour</span><span class="p">)</span>  
+        <span class="k">Pour </span><span class="nv">un_sommet</span> <span class="nv">dans</span> <span class="nv">listes_nouveaux_sommets_voisins</span>  
+            <span class="k">Si </span><span class="nv">un_sommet</span> <span class="o">=</span> <span class="nv">arrivee</span> <span class="k">alors  </span>
+<span class="k">                retourner </span><span class="nv">chemin</span> <span class="o">+</span> <span class="o">[</span><span class="nv">un_sommet</span><span class="o">]</span>  
+            <span class="k">sinon  </span>
+<span class="k">                </span><span class="nv">empiler</span> <span class="p">(</span><span class="nv">un_sommet</span><span class="p">,</span><span class="nv">chemin</span> <span class="o">+</span> <span class="o">[</span><span class="nv">un_sommet</span><span class="o">]</span><span class="p">)</span>  
+            <span class="nv">FinSi</span>  
+        <span class="nv">FinPour</span>  
+    <span class="nv">FinTantQue</span>  
+<span class="nv">FinFonction</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="chercher-tous-les-chemins">Chercher tous les chemins<a class="headerlink" href="#chercher-tous-les-chemins" title="Permanent link">⚓︎</a></h2>
+<p>Le principe est le même que précédemment mais on ne s'arrête pas dès que le noeud est rencontré. On mémorise le chemin et on continue de parcourir le graphe de façon à rencontrer encore le noeud d'arrivée.
+On place les chemins trouvés dans une liste et on retourne cette liste.</p>
+<div class="admonition hint">
+<p class="admonition-title">algorithme</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">Fonction </span><span class="nv">cherche_chemin</span><span class="p">(</span><span class="nv">graphe</span><span class="p">,</span><span class="nv">depart</span><span class="p">,</span><span class="nv">arrivee</span><span class="p">)</span>  
+    <span class="nv">P</span> <span class="o">←</span> <span class="nv">pile</span> <span class="nv">vide</span>  
+    <span class="nv">L</span> <span class="o">←</span> <span class="nv">liste</span> <span class="nv">vide</span>
+    <span class="nv">empiler</span> <span class="nv">le</span> <span class="nv">couple</span> <span class="p">(</span><span class="nv">depart</span><span class="p">,</span><span class="o">[</span><span class="nv">depart</span><span class="o">]</span><span class="p">)</span> <span class="nv">dans</span> <span class="nv">P</span>  
+    <span class="nv">chemin</span> <span class="o">←</span> <span class="nv">liste</span> <span class="nv">vide</span>  
+    <span class="k">Tant que </span><span class="nv">P</span> <span class="nv">n</span><span class="err">&#39;</span><span class="nv">est</span> <span class="nv">pas</span> <span class="nv">vide</span> <span class="k">faire</span>  
+        <span class="p">(</span><span class="nv">sommet</span><span class="p">,</span><span class="nv">chemin</span><span class="p">)</span> <span class="o">←</span> <span class="nv">on</span> <span class="nv">dépile</span> <span class="nv">P</span>  
+        <span class="nv">listes_nouveaux_sommets_voisins</span> <span class="o">←</span> <span class="nv">liste</span> <span class="nv">des</span> <span class="nv">sommets</span>   <span class="nv">adjacents</span> <span class="k">à </span><span class="nv">sommet</span> <span class="nv">qui</span> <span class="nv">ne</span> <span class="nv">sont</span> <span class="nv">pas</span> <span class="nv">dans</span> <span class="nv">chemin</span> <span class="p">(</span><span class="nv">liste</span> <span class="nv">réinitialisée</span> <span class="k">à </span><span class="nv">chaque</span> <span class="nv">tour</span><span class="p">)</span>  
+        <span class="k">Pour </span><span class="nv">un_sommet</span> <span class="nv">dans</span> <span class="nv">listes_nouveaux_sommets_voisins</span>  
+            <span class="k">Si </span><span class="nv">un_sommet</span> <span class="o">=</span> <span class="nv">arrivee</span> <span class="k">alors  </span>
+<span class="k">                </span><span class="nv">ajouter</span> <span class="nv">chemin</span> <span class="o">+</span> <span class="o">[</span><span class="nv">un_sommet</span><span class="o">]</span>  <span class="k">à </span><span class="nv">L</span>
+            <span class="k">sinon  </span>
+<span class="k">                </span><span class="nv">empiler</span> <span class="p">(</span><span class="nv">un_sommet</span><span class="p">,</span><span class="nv">chemin</span> <span class="o">+</span> <span class="o">[</span><span class="nv">un_sommet</span><span class="o">]</span><span class="p">)</span>  
+            <span class="nv">FinSi</span>  
+        <span class="nv">FinPour</span>  
+    <span class="nv">FinTantQue</span>  
+    <span class="k">Retourner </span><span class="nv">L</span>
+<span class="nv">FinFonction</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>Le chemin le plus court sera celui contenant le moins de noeuds rencontrés.</p>
+</div>
+<h2 id="detection-de-cycle">Détection de cycle<a class="headerlink" href="#detection-de-cycle" title="Permanent link">⚓︎</a></h2>
+<p>Un cycle dans un graphe est un chemin dont le neoud de départ et le noeud d'arrivée sont identique. le principe étant de ne JAMAIS faire demi tour donc de ne pas revenir sur des noeuds déjà visités.</p>
+<p>Si on veut chercher tous les cycles à partir d'un sommet on applique l'algorithme de recherche de tous les chemins. Et si on veut tous les ycles du graphe, on appique ce dernier à tous les sommets.</p>
+<div class="admonition hint">
+<p class="admonition-title">algorithme</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">Fonction </span><span class="nv">rechercher_cycle</span><span class="p">(</span><span class="nv">graphe</span><span class="p">,</span><span class="nv">sommet</span><span class="p">):</span>
+    <span class="nv">cycle</span><span class="o">←</span><span class="nv">liste</span> <span class="nv">vide</span>
+    <span class="k">Pour </span><span class="nv">tous</span> <span class="nv">les</span> <span class="nv">voisins</span> <span class="nv">de</span> <span class="nv">sommet</span>
+        <span class="nv">chercher</span> <span class="nv">tous</span> <span class="nv">les</span> <span class="nv">chemins</span> <span class="nv">entre</span> <span class="nv">sommet</span> <span class="o">et</span> <span class="nv">voisin</span>
+    <span class="k">FIN Pour</span>
+<span class="k">    Pour </span><span class="nv">chaque</span> <span class="nv">chemin</span> <span class="nv">trouvé</span> <span class="p">:</span>
+        <span class="nv">ajouter</span> <span class="k">à </span><span class="nv">cycle</span> <span class="p">(</span><span class="nv">chemin</span><span class="o">+</span><span class="nv">sommet</span><span class="p">)</span>  
+    <span class="k">FIN POUR</span>
+<span class="k">    </span><span class="nv">Revoyer</span> <span class="nv">cycle</span>
+<span class="k">FIN FONCTION</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h1 id="application-algorithme-de-dijkstra-hors-programme">Application : algorithme de Dijkstra (hors programme)<a class="headerlink" href="#application-algorithme-de-dijkstra-hors-programme" title="Permanent link">⚓︎</a></h1>
+<p><img alt="animation dijkstra" src="https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif" />
+On affecte la marque <span class="arithmatex">\(\infty\)</span> à tous les sommets non visités. Le sommet de départ est affecté de la marque 0.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0 (1)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Pour chaque voisin non visité du sommet courant (ici 1), on regarde la distance à laquelle il se trouve et on ajoute dans  le tableau la distance obtenue et le parent qui permet d'obtenir cette distance.<br />
+Par exemple, ici, pour aller au sommet 2 du sommet 1 la distance est de 7. On affecte la marque 7 au sommet 2 en précisant que l'on vient du sommet 1.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0 (1)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">7 (1)</td>
+<td style="text-align: center;">9 (1)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;">14 (1)</td>
+</tr>
+</tbody>
+</table>
+<p>Un sommet est considéré comme traité quand tous ses successeurs ont été visités.  A ce stade, on considère le sommet 1 comme traité.</p>
+<p>Le minimum obtenu à partir du sommet 1 est le sommet 2, on va donc chercher les successeurs de 2. On peut aller à 3 et à 4 mais pas 1 car il est déjà traité.<br />
+A partir de 2, on atteint le noeud 3 avec un total de 17, ce qui est inférieur à 9 lamarque précédente de 3. On ne modifie pas la marque de 3. Pour atteindre 4, on parcourt une distance totale de 22. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0 (1)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">7 (1)</td>
+<td style="text-align: center;">9 (1)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;">14 (1)</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">9 (1)</td>
+<td style="text-align: center;">22 (2)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;">14 (1)</td>
+</tr>
+</tbody>
+</table>
+<p>Le noeud 2 est considéré comme visité. On s'interesse au noeud visité ayant la marque la plus petite à savoir le noeud 3.   </p>
+<p>A  partir du noeud 3, on visite 4 et 6. On atteint le noeud 4 avec une distance de 22 et le noeud 6 avec une distance de 11. On voit qu'on améliore la marque pour 6 et pour 4.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0 (1)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">7 (1)</td>
+<td style="text-align: center;">9 (1)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;">14 (1)</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">9 (1)</td>
+<td style="text-align: center;">22 (2)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;">14 (1)</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">20 (3)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;">11 (3)</td>
+</tr>
+</tbody>
+</table>
+<p>Le noeud 3 est considéré comme visité.  </p>
+<p>On s'interesse au noeud 6 car c'est celui ayant la plus petite marque. On visite alors ses successeurs à savoir le noeud 5 car le 3 et le 1 sont dajà visités.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0 (1)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">7 (1)</td>
+<td style="text-align: center;">9 (1)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;">14 (1)</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">9 (1)</td>
+<td style="text-align: center;">22 (2)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;">14 (1)</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">20 (3)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;">11 (3)</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">20 (3)</td>
+<td style="text-align: center;">20 (6)</td>
+<td style="text-align: center;">-</td>
+</tr>
+</tbody>
+</table>
+<p>On a atteind ici le noeud d'arrivée (le 5) donc il faut maintenant remonter le tableau pour déterminer l'itinéraire. On vient du noeud 6, la dernière marque duu noeud 6 venait du noeud 3 et la dernière du noeud 3 venait du noeud 1.
+L'itinéraire le plus court pour joindre 5 à partir de 1 est donc 1, 3, 6, 5. </p>
+<div class="admonition hint">
+<p class="admonition-title">Les étapes de la procédure</p>
+<ol>
+<li>Créer un tableau donc la premiere ligne contient tous les noeuds à qui on affecte la valeur infini.</li>
+<li>Initialiser une liste de noeuds visités.</li>
+<li>Pour le noeud de départ, affecter le tuple (ou autre) (0,D) où D est le noeud de départ.</li>
+<li>Pour chaque successeur de D qui n'est pas dans la liste des noeuds visités, affecter au noeud le tuple (distance,D) ou distance est la somme de la distance entre D et son successeur et de la distance déjà affectée à D.</li>
+<li>Ajouter D dans les noeuds visités.</li>
+<li>Choisir le noeud possédant la distance la plus petite, et répéter les opérations à partir de l'étape 4 jusqu'à ce que le noeud trouvé soit le noeud d'arrivée.</li>
+<li>Remonter l'itinéaire en cherchant le noeud parent du noeud sélectionné, puis le parent du parent ...</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>
