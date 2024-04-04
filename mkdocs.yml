@@ -1,5 +1,5 @@
 site_name: NSI au Lycée Henri Avril
-
+use_directory_urls: false
 
 nav:
   - 'Accueil': 'index.md'
@@ -39,8 +39,8 @@ nav:
   
   
 theme:
-  icon :
-    logo: material/cast-education
+  logo: icones/logo4blanc.png
+  favicon: icones/logo4.png
   name: material
   font: false
   language: fr
@@ -56,7 +56,7 @@ theme:
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: deep purple
       accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
@@ -65,7 +65,7 @@ theme:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
+      primary: purple
       accent: blue
       toggle:
         icon: material/toggle-switch
