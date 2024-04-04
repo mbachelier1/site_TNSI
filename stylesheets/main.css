@@ -17,7 +17,7 @@ li,a {
 
 }
 p,td {
-	color:black;
+	/*color:black;*/
 	font-size: 13px;
 	font-family:Verdana, sans-serif;
 	text-align: justify;
@@ -76,3 +76,4 @@ footer{
 	font-family: verdana;
 	font-size: 10px;
 }
+

@@ -1,0 +1,1752 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="crypto.html">
+      
+      
+        <link rel="next" href="soc.html">
+      
+      
+      <link rel="icon" href="../icones/logo4.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>Et si on codait Enigma? - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#et-si-on-codait-enigma" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../index.html" title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  <img src="../icones/logo4blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Et si on codait Enigma?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Structure/listes_piles_files.html" class="md-tabs__link">
+          
+  
+  Structures de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../BDD/modele_relationnel.html" class="md-tabs__link">
+          
+  
+  Bases de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Programmation/recursivite.html" class="md-tabs__link">
+          
+  
+  Programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../algorithmie/ABR.html" class="md-tabs__link">
+          
+  
+  Algorithmie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="crypto.html" class="md-tabs__link">
+          
+  
+  Architecture et OS
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  <img src="../icones/logo4blanc.png" alt="logo">
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Structures de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Structures de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Structure/listes_piles_files.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listes piles et files 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Structure/POO.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation Orientée Objet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Structure/graphes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Structure/arbres.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Bases de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Bases de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BDD/modele_relationnel.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modèle relationnel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BDD/langageSQL.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Langage SQL 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BDD/projet_SQL.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet SQL 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Programmation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/recursivite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Récursivité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/modularite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modularité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/projet_modularite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet : Créer un module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/gestion_bug.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestion des Bugs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/paradigme_programmation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmes de Programmation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/projet_paradigme.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet : construire un archipel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Algorithmie
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/ABR.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbres Binaires de recherche
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/diviser.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diviser pour Régner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/recherche_textuelle.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recherche textuelle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/programmation_dynamique.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation dynamique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/parcours_graphe.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parcours de graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/calculabilite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculabilité et décidabilité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Architecture et OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture et OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="crypto.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sécurisation des communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Et si on codait Enigma?
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="enigma.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Et si on codait Enigma?
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quest-ce-que-enigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qu’est-ce que Enigma ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-fonctionne-t-elle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comment fonctionne-t-elle ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quels-sont-les-reglages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quels sont les réglages ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-a-ete-craque-enigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comment a été craqué Enigma ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quallons-nous-faire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qu’allons nous faire ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mise-en-place-du-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mise en place du problème
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mise en place du problème">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-principe-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le principe de base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decryptage-du-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Décryptage du message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cablages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Câblages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-des-rotors-et-des-reflecteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implémentation des rotors et des réflecteurs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choix-du-niveau-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choix du niveau du projet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choix du niveau du projet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation-de-la-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implémentation de la machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="soc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Système sur puce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="routage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocoles de routage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="processus.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestion ds processus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="et-si-on-codait-enigma">Et si on codait Enigma?<a class="headerlink" href="#et-si-on-codait-enigma" title="Permanent link">⚓︎</a></h1>
+<p><img align="right" alt="enigma" src="img/enigma.png" width="30%" /></p>
+<h2 id="quest-ce-que-enigma">Qu’est-ce que Enigma ?<a class="headerlink" href="#quest-ce-que-enigma" title="Permanent link">⚓︎</a></h2>
+<p>Enigma a été inventée et utilisée par les NAZIS lors de la deuxième guerre mondiale pour transmettre des messages aux troupes sans que personne ne puisse les comprendre. La machine permettait de crypter les messages en utilisant une clé qui changeait chaque jour. 
+Le décryptage se faisait par la même machine à condition qu’elle soit configurée de la même façon.  </p>
+<p></br></p>
+<h2 id="comment-fonctionne-t-elle">Comment fonctionne-t-elle ?<a class="headerlink" href="#comment-fonctionne-t-elle" title="Permanent link">⚓︎</a></h2>
+<p><img align="left" alt="principe enigma" src="img/principe_enigma.png" />
+Un clavier permettait à l’utilisateur de saisir une lettre, qui en passant dans un réseau de câblage pouvait être modifiée. Chaque jour 6 paires de lettres étaient inversée (soit 12 lettres modifiées) mais pas les autres.<br />
+Ensuite, le signal électrique passait dans un premier rotor qui modifiait la lettre à l’aide d’une connexion électrique. Le signal passe ensuite dans deux autres rotors qui modifient chacun la lettre, puis dans un réflecteur, qui en plus de modifier la lettre renvoie le signal dans les rotors en sens inverse. 
+La lettre de départ est alors modifiée 9 fois. La lettre en sortie s’allume sur un panneau lumineux.<br />
+La fréquence d’apparition des lettres dans une langue pourrait permettre de trouver rapidement la lettre de remplacement, c’est pourquoi la machine permettait de ne pas coder deux fois la même lettre de la même façon. Pour cela, à chaque appui sur le clavier, le premier rotor tourne d’un cran. Quand il a fait un tour, le second rotor tourne d’un cran.  </p>
+<h2 id="quels-sont-les-reglages">Quels sont les réglages ?<a class="headerlink" href="#quels-sont-les-reglages" title="Permanent link">⚓︎</a></h2>
+<p><img align="left" alt="rotors" src="img/animation_rotor.gif" />
+<img align="right" alt="rotors" src="img/rotor.jpg" />
+Les rotors contiennent les lettres de l’alphabet dans le désordre et sont tous différents. Les réglages nécessitent de choisir 3 rotors parmi 5, d’en déterminer l’ordre et le réglage de départ, c’est-à-dire la lettre qui correspondra au « A » lors de la première frappe. 
+On fait de même en sélectionnant un réflecteur parmi deux. Ici le positionnement sera fixe.<br />
+Le dernier réglage consiste à choisir 6 paires de lettres dans l’alphabet et de les inverser par câblage électrique.<br />
+<strong>Comment décrypter ?</strong> <br />
+Si le réglage initial est le même il suffit de saisir au clavier la lettre à décoder et sur le panneau lumineux s’affiche la lettre en clair.</p>
+<h2 id="comment-a-ete-craque-enigma">Comment a été craqué Enigma ?<a class="headerlink" href="#comment-a-ete-craque-enigma" title="Permanent link">⚓︎</a></h2>
+<p><a href="https://interstices.info/turing-a-lassaut-denigma/">Un petit tour par ici</a></p>
+<h2 id="quallons-nous-faire">Qu’allons nous faire ?<a class="headerlink" href="#quallons-nous-faire" title="Permanent link">⚓︎</a></h2>
+<p>Nous allons créer un programme permettant de configurer la machine avec des réglages donnés et crypter et décrypter des messages.<br />
+Nous allons simplifier l’utilisation en n’utilisant que les 26 lettres en majuscules de l’alphabet. Pas de minuscules, pas d’espaces et pas de caractères spéciaux. Nous n’utiliserons que 3 rotors, mais les dernières versions en utilisaient davantage.  </p>
+<h2 id="mise-en-place-du-probleme">Mise en place du problème<a class="headerlink" href="#mise-en-place-du-probleme" title="Permanent link">⚓︎</a></h2>
+<h3 id="le-principe-de-base">Le principe de base<a class="headerlink" href="#le-principe-de-base" title="Permanent link">⚓︎</a></h3>
+<p>Nous allons prendre un exmple avec le schéma ci-dessous : <br />
+<img alt="trouver la lettre" src="img/tableau_rotors.gif" />
+La lettre A en passant par le rotor III devient B. Le B devient K en passant par le rotor I et le D devient S en passant par le rotor V.
+A ce stade, la lettre a déjà  changé 3 fois et on en est même pas à la moitié.
+En passant par le réflecteur, le S devient X et on repart dans le rotor V.<br />
+<strong>Attention, ici le raisonnement se fait dans l'autre sens.</strong><br />
+En repassant par le rotor V, la lettre X se transforme en P. Il faut chercher X dans la liste du rotor V et voir à quelle lettre de l'alphabet à coder cela correspond.<br />
+En cherchant P dans le rotor I, on voit qu'il devient T et T devient J dans le rotor III.</p>
+<p>La lettre A est alors codée en J.  </p>
+<p>Une fois la première lettre codée, le premier rotor (le III) tourne d'un cran :</p>
+<p>Si on cherche à recoder la lettre 'A' on trouve alors un 'V'.<br />
+A va devenir D dans le premier rotor puis D deviendra F en passant par le second rotor, F devient  I dans le troisième rotor puis V dans le réflecteur. V va devenir A, A deviendra U et U deviendra V.<br />
+<img alt="trouver la lettre" src="img/2e_lettre.PNG" /></p>
+<h3 id="decryptage-du-message">Décryptage du message<a class="headerlink" href="#decryptage-du-message" title="Permanent link">⚓︎</a></h3>
+<p>Le génie de cette machine réside dans la simplificité d'utilisation. En effet, si les réglages sont identiques le décryptage du message se fait de la même façon que le cryptage. Ainsi, quelqu'un qui reçoit les lettres 'JV' en les entrant dans la machine doit pouvoir lire le message en clair de départ à savoir 'AA'.  </p>
+<div class="admonition question">
+<p class="admonition-title">Faites le test</p>
+<p>En utilisant le tableau donné, vérifier le décrryptage.
+<img align="left" alt="trouver la lettre" src="img/tableau_rotors.PNG" /></p>
+</div>
+<h3 id="cablages">Câblages<a class="headerlink" href="#cablages" title="Permanent link">⚓︎</a></h3>
+<p>Pour augmenter le brouillage, avant même de rentrer dans les rotors, 6 paires de lettres étaient inversées.
+Le principe est le même que le cryptage précédent mais avant même de passer par les rotors, certaines lettre sont transformées en une autre. Dans l'exemple ci-dessous vous pouvez voir que pour A cela ne change rien puisqu'elle ne fait pas partie des lettres inversées.</p>
+<div class="admonition question">
+<p class="admonition-title">avec le cablâge</p>
+<p>A l'aide du nouveau tableau contenant le cablâge,  essayer de crypter deux fois de suite la lettre C.
+<img align="left" alt="trouver la lettre" src="img/rotor_avec_cablage.PNG" /></p>
+</div>
+<details class="danger">
+<summary>Faites le avant pour être sur d'avoir compris</summary>
+<p>Premier C : I dans le cablage, devient R par le premier rotor, R devient U par le deuxieme rotor, U devient Q par le 3e rotor, et Q devient Z dans le réflecteur.<br />
+Le Z du réflecteur devient un B dans le rotor V, puis le B devient W, le W devient R et le R par l'inversion du câblage devient un S.<br />
+Le premier rotor tourne d'un cran et le O passe en 1er et tout se décale vers la droite.<br />
+Deuxième C : I dans le cablage, devient T par le premier rotor (attention le rotor a tourné), T devient P par le deuxieme rotor, P devient X par le 3e rotor, et X devient S dans le réflecteur.<br />
+Le S du réflecteur devient un K dans le rotor V, puis le K devient B, le B devient Z (le rotor a tourné) et le Z par l'inversion du câblage devient un O.  </p>
+</details>
+<h3 id="implementation-des-rotors-et-des-reflecteurs">Implémentation des rotors et des réflecteurs<a class="headerlink" href="#implementation-des-rotors-et-des-reflecteurs" title="Permanent link">⚓︎</a></h3>
+<p>Les rotors que nous utiliserons seront ceux d'origine. Pour cela nous aurons une variable globale <code>rotors</code> qui sera un tuple contenant les chaînes de 26 caractères, dans l'ordre dans lequel elles apparaissaient sur les rotors d'Enigma.
+Même chose pour les réflecteurs. Voici les variables globales utilisées dans le programme :<br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">alphabet</span><span class="o">=</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+<span class="n">rotors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;EKMFLGDQVZNTOWYHXUSPAIBRCJ&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;AJDKSIRUXBLHWTMCQGZNPYFVOE&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;BDFHJLCPRTXVZNYEIWGAKMUSQO&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ESOVPZJAYQUIRHXLNFTGKDCMWB&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;VZBRGITYUPSDNHLXAWMJQOFECK&#39;</span><span class="p">)</span>
+<span class="n">REFLECTEURS</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;YRUHQSLDPXNGOKMIEBFZCWVJAT&#39;</span><span class="p">,</span> <span class="s1">&#39;RDOBJNTKVEHMLFCWZAXGYIPSUQ&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="choix-du-niveau-du-projet">Choix du niveau du projet<a class="headerlink" href="#choix-du-niveau-du-projet" title="Permanent link">⚓︎</a></h2>
+<p>Vous allez pouvoir choisir le niveau du projet que vous allez traiter. Le but est de rendre un programme qui crypte les messages à la manière d'Enigma même si toutes les particularités de la machine ne sont pas respectées. Bien sûr plus le niveau choisi sera élevé plus la note sera élevée mais la note sera meilleure avec un projet de niveau 2 qui fonctionne qu'avec un projet de niveau trois qui ne fonctionne pas.<br />
+Il sera plus facile de passer en cours de route d'un niveau plus faible à un niveau plus élevé que l'inverse.  </p>
+<p><strong>Niveau 1</strong> : Pas de rotation des rotors et pas de câblage (note maximale 12/20 avec le Bonus)<br />
+<strong>Niveau 2</strong> : Rotation des rotors mais pas de câblage (note maximale 16/20)<br />
+<strong>Niveau 3</strong> : Programmation complète avec rotation des rotors et cablâge (note maximale 20/20)<br />
+<strong>Bonus</strong> : On pourra prévoir de faire entrer les valeurs de régalges par l'utilisateur et de gérer les entrées éronnées avec des blocs <code>try ... except...</code>.  </p>
+<h3 id="implementation-de-la-machine">Implémentation de la machine<a class="headerlink" href="#implementation-de-la-machine" title="Permanent link">⚓︎</a></h3>
+<p>On créera une classe <code>enigma</code> qui créera une machine avec les réglages donnés par votre Furher. 
+Cette classe permettra de calculer la lettre sortant d'un rotor, des cablâges et du reflecteur et fera tourner les rotors après avoir crypter une lettre.<br />
+Cette classe prendra en paramètres les trois rotors choisis par le Furher dans l'ordre, les réglages initiaux de chacun des trois rotors, le choix du réflecteur et dans le cas du niveau 3, la liste de lettres à inverser par câblage.<br />
+<strong>Niveau 1 et 2</strong>:<br />
+La création de l'objet <code>machine</code>de la classe <code>enigma</code> doit se faire de cette façon:<br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">machine</span><span class="o">=</span><span class="n">enigma</span><span class="p">(</span><span class="n">premier_rotor</span><span class="p">,</span><span class="n">deuxieme_rotor</span><span class="p">,</span><span class="n">troisieme_rotor</span><span class="p">,</span><span class="n">reglage_premier_rotor</span><span class="p">,</span><span class="n">reglage_deuxieme_rotor</span><span class="p">,</span>
+               <span class="n">reglage_troisieme_rotor</span><span class="p">,</span><span class="n">choix_reflecteur</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<div class="admonition caution">
+<p class="admonition-title">Type des paramètres</p>
+<p><code>premier_rotor</code>,<code>deuxieme_rotor</code> , <code>troisieme_rotor</code> et <code>choix_reflecteur</code> sont des chaînes de 26 caractères contenant les lettres du rotor. Il faudra utiliser la variable globale <code>rotors</code> pour les récupérer.<br />
+<code>reglage_premier_rotor</code>,<code>reglage_deuxieme_rotor</code> et <code>reglage_troisieme_rotor</code>  sont des chaînes de 1 caractère. il s'agit de la lettre apparaissant en premier.  </p>
+</div>
+<p><strong>Niveau 3</strong> : <br />
+La création de l'objet <code>machine</code>de la classe <code>enigma</code> doit se faire de cette façon:<br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">machine</span><span class="o">=</span><span class="n">enigma</span><span class="p">(</span><span class="n">premier_rotor</span><span class="p">,</span><span class="n">deuxieme_rotor</span><span class="p">,</span><span class="n">troisieme_rotor</span><span class="p">,</span><span class="n">reglage_premier_rotor</span><span class="p">,</span><span class="n">reglage_deuxieme_rotor</span><span class="p">,</span>
+               <span class="n">reglage_troisieme_rotor</span><span class="p">,</span><span class="n">choix_reflecteur</span><span class="p">,</span><span class="n">suite_cablage</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<div class="admonition caution">
+<p class="admonition-title">Type des paramètres</p>
+<p><code>premier_rotor</code>,<code>deuxieme_rotor</code> , <code>troisieme_rotor</code> et <code>choix_reflecteur</code> sont des chaînes de 26 caractères contenant les lettres du rotor. Il faudra utiliser la variable globale <code>rotors</code> pour les récupérer.<br />
+<code>reglage_premier_rotor</code>,<code>reglage_deuxieme_rotor</code> , <code>reglage_troisieme_rotor</code> et<code>reglage_reflecteur</code> sont des chaînes de 1 caractère. il s'agit de la lettre apparaissant en premier.<br />
+<code>suite_cablage</code> est une chaîne de 6 paires caractères à inverser.</p>
+</div>
+<h3 id="fonctions">Fonctions<a class="headerlink" href="#fonctions" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#variables globales</span>
+<span class="n">alphabet</span><span class="o">=</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+<span class="n">rotors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;EKMFLGDQVZNTOWYHXUSPAIBRCJ&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;AJDKSIRUXBLHWTMCQGZNPYFVOE&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;BDFHJLCPRTXVZNYEIWGAKMUSQO&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ESOVPZJAYQUIRHXLNFTGKDCMWB&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;VZBRGITYUPSDNHLXAWMJQOFECK&#39;</span><span class="p">)</span>
+<span class="n">REFLECTEURS</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;YRUHQSLDPXNGOKMIEBFZCWVJAT&#39;</span><span class="p">,</span> <span class="s1">&#39;RDOBJNTKVEHMLFCWZAXGYIPSUQ&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">enigma</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="o">...</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;initilisation de la classe en utilisant les paramètres donnés dans le détail du projet&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotor1</span><span class="o">=...</span> <span class="c1">#str contenant 26 caractères</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotor2</span><span class="o">=...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotor3</span><span class="o">=...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reflecteur</span><span class="o">=...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cablage</span><span class="o">=...</span>  <span class="c1">#str contenant les lettres à inverser dans l&#39;ordre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alphabet_cable</span><span class="o">=</span><span class="s1">&#39;&#39;</span>  <span class="c1">#str de 26 lettres contenant l&#39;aphabet cablé</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos_rotor1</span><span class="o">=...</span> <span class="c1">#premiere lettre du rotor dans la position initiale</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos_rotor2</span><span class="o">=...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos_rotor3</span><span class="o">=...</span>
+
+
+    <span class="k">def</span> <span class="nf">inversion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span class="c1">#niveau 3 uniquement</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;cette fonction renvoi les lettre de l&#39;alphabet dont l&#39;ordre</span>
+<span class="sd">        est modifié par la chaine de cablage.</span>
+<span class="sd">        avec un cablage =&#39;ABCDEFGHIJKL&#39;</span>
+<span class="sd">        la fonction doit renvoyer &#39;BADCFEHGJILKMNOPQRSTUVWXYZ&#39;&#39;&#39;</span>
+
+
+    <span class="k">def</span> <span class="nf">positionner_rotors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span class="c1">#tous les niveaux</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;cette fonction ne retourne aucune valeur mais modifie les chaines de caracteres représentant les rotors.</span>
+<span class="sd">        par exemple un rotor &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39; avec un réglage de &#39;L&#39; devrait etre</span>
+<span class="sd">        modifié par la fonction en &#39;LMNOPQRSTUVWXYZABCDEFGHIJK&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>    
+
+    <span class="k">def</span> <span class="nf">configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span class="c1">#tous les niveaux</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;cette fonction ne renvoie rien mais execute la configuration de la</span>
+<span class="sd">        machine, à savoir la modification du cablage de l&#39;alphabet, le positionnement des rotors</span>
+<span class="sd">        et mémorise dans de nouveaux attribut la derniere lettre de chaque rotor afin que</span>
+<span class="sd">        lors de la rotation on puisse savoir si on est à la fin du tour&#39;&#39;&#39;</span>
+
+
+    <span class="k">def</span> <span class="nf">tourner_rotor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">rotor</span><span class="p">):</span><span class="c1">#niveaux 2 et 3</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;cette fonction renvoie le rotor une fois sa position modifiée de un cran&#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">rotation_rotors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span class="c1">#niveaux 2 et 3</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;cette fonction programme la rotation des rotors. Elle ne renvoie rien mais permet</span>
+<span class="sd">        la rotation de un cran en tenant compte du fait que lorsque le premier a fait un tour le deuxieme tourne d&#39;un cran et ainsi de suite.</span>
+<span class="sd">        On modifie les attributs liés au rotor en appliquant la fonction de rotation et on vérifie si on a atteint la fin du tour</span>
+<span class="sd">        avec les attributs lié à la lettre de fin créé dans la fonction de configuration&#39;&#39;&#39;</span>
+
+
+    <span class="k">def</span> <span class="nf">passage_rotor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lettre</span><span class="p">,</span> <span class="n">rotor</span><span class="p">):</span><span class="c1">#tous niveaux</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;prend en paramètre une lettre et un rotor dans une certaine position</span>
+<span class="sd">        et renvoie la lettre transformée par le passage dans le rotor&#39;&#39;&#39;</span>
+
+
+    <span class="k">def</span> <span class="nf">passage_inverse_rotor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lettre</span><span class="p">,</span><span class="n">rotor</span><span class="p">):</span><span class="c1">#tous niveaux</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Prend en paramètre une lettre et un rotor dans une certaine position</span>
+<span class="sd">        et renvoie la lettre transformée par le passage en SENS INVERSE dans le</span>
+<span class="sd">        rotor&#39;&#39;&#39;</span>
+
+
+    <span class="k">def</span> <span class="nf">passage_reflecteur</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lettre</span><span class="p">):</span><span class="c1">#tous niveaux</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Prend en paramètre une lettre  </span>
+<span class="sd">        et renvoie la lettre transformée par le reflecteur&#39;&#39;&#39;</span>
+
+
+    <span class="k">def</span> <span class="nf">passage_cablage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lettre</span><span class="p">):</span><span class="c1">#niveau 3</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Prend en paramètre une lettre  </span>
+<span class="sd">        et renvoie la lettre transformée par le cablage&#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">passage_cablage_inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lettre</span><span class="p">):</span><span class="c1">#niveau 3</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Prend en paramètre une lettre  </span>
+<span class="sd">        et renvoie la lettre transformée par le passage en sens inverse par le câblage</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">crypter_lettre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lettre</span><span class="p">):</span><span class="c1">#tous niveaux</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Prend en paramètre une lettre à coder etrenvoie la lettre après avoir</span>
+<span class="sd">        subi toute les étapes de traitement cablage, 3 rotors, reflecteur,</span>
+<span class="sd">        3 rotors en sens inverse&#39;&#39;&#39;</span>
+        <span class="o">...</span>
+        <span class="k">return</span> <span class="n">lettre</span>
+
+
+<span class="c1">#niveau 2 et 3 vous penserez à caser quelque part la rotation des rotors mais je vous laisse réfléchir à l&#39;endroit</span>
+
+<span class="k">class</span> <span class="nc">message</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;cette classe va prendre en argument un message et une</span>
+<span class="sd">    instance de la classe enigma pour traiter le message&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">message</span><span class="p">,</span><span class="n">machine</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;initialisation de la classe&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">=...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">=...</span>
+
+    <span class="k">def</span> <span class="nf">crypter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;cette fonction va appliquer les reglages de la machine créée par la classe</span>
+<span class="sd">        Enigma à une chaine de caracteres correspondant au message. Chaque lettre</span>
+<span class="sd">        du message devra être cryptée&#39;&#39;&#39;</span>
+        <span class="o">...</span>
+        <span class="k">return</span> <span class="n">msg_crypte</span>
+
+<span class="c1">####### programme principal ##############</span>
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="c1">##choix des réglages</span>
+    <span class="c1">#choix des rotors das l&#39;ordre que l&#39;on veut parmi les 5</span>
+    <span class="n">premier_rotor</span><span class="o">=...</span>
+    <span class="n">deuxieme_rotor</span><span class="o">=...</span>
+    <span class="n">troisieme_rotor</span><span class="o">=...</span>
+    <span class="c1">#choix du réflecteur entre le premier et le deuxieme</span>
+    <span class="n">choix_reflecteur</span><span class="o">=...</span>
+    <span class="c1">#choix de la lettre placée en premiere position pour chaque rotor</span>
+    <span class="n">reglage_premier_rotor</span><span class="o">=...</span>
+    <span class="n">reglage_deuxieme_rotor</span><span class="o">=...</span>
+    <span class="n">reglage_troisieme_rotor</span><span class="o">=...</span>
+
+    <span class="c1">#niveaux 1 et 2</span>
+    <span class="n">machine</span><span class="o">=</span><span class="n">enigma</span><span class="p">(</span><span class="n">premier_rotor</span><span class="p">,</span><span class="n">deuxieme_rotor</span><span class="p">,</span><span class="n">troisieme_rotor</span><span class="p">,</span><span class="n">reglage_premier_rotor</span><span class="p">,</span><span class="n">reglage_deuxieme_rotor</span><span class="p">,</span>
+                   <span class="n">reglage_troisieme_rotor</span><span class="p">,</span><span class="n">choix_reflecteur</span><span class="p">)</span>
+    <span class="n">machine</span><span class="o">.</span><span class="n">configuration</span><span class="p">()</span>
+
+    <span class="c1">#niveau 3</span>
+    <span class="c1">#suite de lettres à inverser deux à deux (on inverse la premiere et la deuxieme, la troisieme et la quatrième ...</span>
+    <span class="n">suite_cablage</span><span class="o">=...</span>
+    <span class="n">machine</span><span class="o">=</span><span class="n">enigma</span><span class="p">(</span><span class="n">premier_rotor</span><span class="p">,</span><span class="n">deuxieme_rotor</span><span class="p">,</span><span class="n">troisieme_rotor</span><span class="p">,</span><span class="n">reglage_premier_rotor</span><span class="p">,</span><span class="n">reglage_deuxieme_rotor</span><span class="p">,</span>
+                   <span class="n">reglage_troisieme_rotor</span><span class="p">,</span><span class="n">choix_reflecteur</span><span class="p">,</span><span class="n">suite_cablage</span><span class="p">)</span>
+    <span class="n">machine</span><span class="o">.</span><span class="n">configuration</span><span class="p">()</span>
+
+    <span class="c1">#vous completerez le programe de façon à afficher un message crypté et à tester son</span>
+    <span class="c1">#décryptage</span>
+    <span class="n">msg</span><span class="o">=</span><span class="n">message</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition faq">
+<p class="admonition-title">Décrypter ceci</p>
+<p>Pour tester votre machine votre Furher vous demande d'utiliser les réglages suivants :<br />
+rotors dans l'ordre, IV (réglage D), II (réglage A) et III (réglage C)
+rélecteur A  et câblage 'ENIGMATURING'.
+Décrypter le message<br />
+<strong>Niveau 1</strong> : XITDETNCISCDTYERRI.<br />
+<strong>Niveau 2</strong> : XQAXREIANLYOWWANWV.<br />
+<strong>Niveau 3</strong> : SFLSXGGNNQPLUJDYZF.  </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>

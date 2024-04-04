@@ -1,0 +1,1516 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="soc.html">
+      
+      
+        <link rel="next" href="processus.html">
+      
+      
+      <link rel="icon" href="../icones/logo4.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>Protocoles de routage - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#protocole-de-routage" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../index.html" title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  <img src="../icones/logo4blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Protocoles de routage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Structure/listes_piles_files.html" class="md-tabs__link">
+          
+  
+  Structures de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../BDD/modele_relationnel.html" class="md-tabs__link">
+          
+  
+  Bases de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Programmation/recursivite.html" class="md-tabs__link">
+          
+  
+  Programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../algorithmie/ABR.html" class="md-tabs__link">
+          
+  
+  Algorithmie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="crypto.html" class="md-tabs__link">
+          
+  
+  Architecture et OS
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  <img src="../icones/logo4blanc.png" alt="logo">
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Structures de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Structures de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Structure/listes_piles_files.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listes piles et files 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Structure/POO.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation Orientée Objet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Structure/graphes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Structure/arbres.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Bases de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Bases de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BDD/modele_relationnel.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modèle relationnel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BDD/langageSQL.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Langage SQL 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BDD/projet_SQL.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet SQL 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Programmation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/recursivite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Récursivité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/modularite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modularité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/projet_modularite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet : Créer un module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/gestion_bug.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestion des Bugs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/paradigme_programmation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmes de Programmation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/projet_paradigme.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projet : construire un archipel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Algorithmie
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/ABR.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbres Binaires de recherche
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/diviser.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diviser pour Régner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/recherche_textuelle.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recherche textuelle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/programmation_dynamique.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation dynamique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/parcours_graphe.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parcours de graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/calculabilite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculabilité et décidabilité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Architecture et OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture et OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="crypto.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sécurisation des communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="enigma.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Et si on codait Enigma?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="soc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Système sur puce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Protocoles de routage
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="routage.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Protocoles de routage
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quelques-rappels-de-1ere-avant-de-commencer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quelques rappels de 1ère avant de commencer …
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adressage-ip-dune-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adressage IP d’une machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principe-du-routage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principe du routage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyse-simplifiee-dun-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyse simplifiée d'un réseau
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notion-de-tables-de-routage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notion de tables de routage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-algorithmes-de-routage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les algorithmes de routage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les algorithmes de routage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-protocole-rip-routing-information-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le protocole RIP (Routing Information Protocol)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="processus.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestion ds processus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="protocole-de-routage">Protocole de routage<a class="headerlink" href="#protocole-de-routage" title="Permanent link">⚓︎</a></h1>
+<p>Dans un réseau, les routeurs jouent un rôle essentiel dans la transmission des paquets sur Internet : les paquets sont routés individuellement par des algorithmes. Les pertes logiques peuvent être compensées par des protocoles reposant sur des accusés de réception ou des demandes de renvoi, comme TCP. </p>
+<h2 id="quelques-rappels-de-1ere-avant-de-commencer">Quelques rappels de 1ère avant de commencer …<a class="headerlink" href="#quelques-rappels-de-1ere-avant-de-commencer" title="Permanent link">⚓︎</a></h2>
+<p>Revoir si nécessaire l’activité sur <a href="https://mbachelier1.github.io/site_1NSI/archi/reseaux/reseau.html">les réseaux</a> de la partie «Architectures matérielles et OS » du programme de 1ère spécialité NSI. </p>
+<h2 id="adressage-ip-dune-machine">Adressage IP d’une machine<a class="headerlink" href="#adressage-ip-dune-machine" title="Permanent link">⚓︎</a></h2>
+<p>Chaque « objet IP » est identifié par une adresse IP qui contient : <br />
+- l’adresse du réseau IP local (extraite grâce au « netmask » ou « masque de sous réseau ») ; <br />
+- le numéro de la machine dans le réseau IP local.<br />
+Une adresse IPv4 est un identifiant numérique à 32 bits (4 octets). <br />
+Chaque « objet IP » est physiquement connecté à un réseau local de niveau 2 par ethernet, wifi ou bluetooth. <br />
+La communication avec d’autres « objets IP » appartenant au même réseau se fait directement via le réseau local de niveau 2 par l’intermédiaire d’un « switch » ou « commutateur ». <br />
+La communication avec d’autres « objets IP » d’autres réseaux IP distants se fait via des passerelles de niveau 3 ou routeurs.   </p>
+<p><img alt="adressage" src="img/image1.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Remarques</p>
+<p>Grâce à des adresses de 128 bits au lieu de 32 bits, IPv6 dispose d'un espace d'adressage bien plus important qu'IPv4 (près de 7,9 × 1028 de fois plus) et résout donc le problème de pénurie d’adresses IPv4 publiques liée à la multiplication des objets connectés dans la vie quotidienne. 
+Les commutateurs (« switchs » en anglais) construisent une table d’adresses MAC des machines IP connectées à eux. Ils se basent sur les adresses MAC pour commuter les trames. Contrairement aux commutateurs, le routeur se basent quant à eux sur les adresses IP pour transporter les données. 
+La forme de l’adresse MAC ne permet pas de localiser le destinataire distant c’est la raison pour laquelle elle est utilisée seulement dans les réseaux locaux, contrairement à l’adresse IP dont la partie réseau et la partie Hôte permettent de localiser l’ordinateur d’une façon précise quel que soit son emplacement dans le monde. </p>
+</div>
+<h2 id="principe-du-routage">Principe du routage<a class="headerlink" href="#principe-du-routage" title="Permanent link">⚓︎</a></h2>
+<p>Si l'hôte de destination se trouve sur le même réseau que l'hôte source, les paquets de données sont acheminés entre les deux hôtes sur le support local de niveau 2 via des commutateurs (« switchs ») sans nécessiter la présence d’un routeur. Les commutateurs (« switchs ») construisent une table d’adresses MAC des machines IP connectées à eux. Ils se basent sur ces adresses MAC enregistrées pour commuter les trames.  <br />
+Cependant, si l'hôte de destination et l'hôte source ne se trouvent pas sur le même réseau, le réseau local achemine le paquet de la source vers son routeur de passerelle de niveau 3. Le routeur examine la partie réseau de l'adresse de destination du paquet et achemine le paquet à l'interface appropriée. Si le réseau de destination est connecté directement à ce routeur, le paquet est transféré directement vers cet hôte. Si le réseau de destination n'est pas connecté directement, le paquet est acheminé vers un second routeur qui constitue le routeur de tronçon suivant.  <br />
+Le transfert du paquet devient alors la responsabilité de ce second routeur. De nombreux routeurs ou sauts tout au long du chemin peuvent traiter le paquet avant qu'il n'atteigne sa destination. Contrairement aux commutateurs (« switchs »), les routeurs se basent quant à eux sur les adresses IP pour transporter les données.   </p>
+<p>Aucun paquet ne peut être acheminé sans route. Que le paquet provienne d'un hôte ou qu'il soit acheminé par un routeur intermédiaire, le routeur a besoin d'une route pour savoir où l'acheminer. S'il n'existe aucune route vers un réseau de destination, le paquet ne peut pas être transféré. Les routeurs utilisent des tables de routage qui contiennent les routes qu'ils connaissent. Ces tables peuvent être construites manuellement (routage statique) ou automatiquement (routage dynamique). Dans ce cas, les routeurs s'appuient sur des protocoles spécifiques comme le protocole RIP (Routing Information Protocol) ou OSPF (Open Shortest Path First) par exemple.   </p>
+<p>Le réseau de destination peut être éloigné de la passerelle par un certain nombre de routeurs ou de sauts. La route vers ce réseau n'indique que le routeur de tronçon suivant vers lequel le paquet doit être transféré, et non le routeur final. Le processus de routage utilise une route de la table de routage pour « mapper » l'adresse du réseau de destination au tronçon suivant, puis transfère le paquet à cette adresse de tronçon suivant.   </p>
+<p><img alt="principe routage" src="img/protocole2.PNG" /></p>
+<h2 id="analyse-simplifiee-dun-reseau">Analyse simplifiée d'un réseau<a class="headerlink" href="#analyse-simplifiee-dun-reseau" title="Permanent link">⚓︎</a></h2>
+<p><img alt="réseau" src="img/protocole3.jpg" /></p>
+<div class="admonition faq">
+<p class="admonition-title">Questions</p>
+<p>1.Identifier les 3 grandes familles d’éléments interconnectés constituant ce réseau. Donner la composition de chacune d’entre elle. <br />
+2.Rappeler les symboles normalisés d’un commutateur et d’un routeur (voir schéma).  <br />
+3.Quel est le rôle d’un commutateur (ou switch) ?<br />
+4.Quel est le rôle d’un routeur ? <br />
+5.A minima, combien d’interfaces réseau doit comporter un routeur ?<br />
+6.Identifier les réseaux qualifiés de locaux.   </p>
+</div>
+<p><strong>Quelques exemples de communication entre machine de ce réseau sont donnés ci-après.</strong>
+ <strong>Cas n° 1 : M1 veut communiquer avec M3</strong><br />
+Le paquet est envoyé de M1 vers le switch R1, R1 "constate" que M3 se trouve bien dans le réseau local 1, le paquet est donc envoyé directement vers M3. On peut résumer le trajet du paquet par : <br />
+M1→R1→M3 </p>
+<p><strong>Cas n° 2 : M1 veut communiquer avec M6</strong><br />
+Le paquet est envoyé de M1 vers le switch R1, R1 « constate » que M6 n’est pas sur le réseau local 1, R1 envoie donc le paquet vers le routeur A. Le routeur A n'est pas connecté directement au réseau local R2 (réseau local de la machine M6), mais il "sait" que le routeur B est connecté au réseau local 2. Le routeur A envoie le paquet vers le routeur B. Le routeur B est connecté au réseau local 2, il envoie le paquet au Switch R2. Le Switch R2 envoie le paquet à la machine M6. <br />
+M1 → R1 → Routeur A → Routeur B → R2 → M6 </p>
+<p><strong>Cas n° 3 : M1 veut communiquer avec M9</strong> 
+Il existe souvent plusieurs chemins possibles pour relier 2 ordinateurs : <br />
+M1 → R1 → Routeur A → Routeur B → Routeur D → Routeur E → R4 → M9 OU <br />
+M1 → R1 → Routeur A → Routeur H → Routeur F → Routeur E → R4 → M9   </p>
+<p><strong>Cas n°4 : M13 veut communiquer avec M9</strong><br />
+M13 → R6 → Routeur G → Routeur F → Routeur E → R4 → M9 <br />
+OU <br />
+M13 → R6 → Routeur G → Routeur F → Routeur H → Routeur C → Routeur D → Routeur E → R4 → M9   </p>
+<p>Le chemin n° 1  "Routeur F → Routeur E" est vraisemblablement plus rapide et donc préférable au chemin n° 2 "Routeur F → Routeur H". Cependant s’il y avait un problème technique entre le Routeur F et le Routeur E, l’existence du chemin "Routeur F → Routeur H" permettrait tout de même d’établir une communication entre M13 et M9. C’est l’existence de très nombreuses interconnexions et donc de routes possibles entre les différentes infrastructures qui rendent internet particulièrement peu sensible à des pannes localisées.   </p>
+<div class="admonition faq">
+<p class="admonition-title">Questions</p>
+<p>7.Déterminer un chemin possible permettant d’établir une connexion entre la machine M4 et M14. Existe-t-il plusieurs chemins possibles ? </p>
+</div>
+<h2 id="notion-de-tables-de-routage">Notion de tables de routage<a class="headerlink" href="#notion-de-tables-de-routage" title="Permanent link">⚓︎</a></h2>
+<p>Comment les commutateurs ou les routeurs procèdent-ils pour amener les paquets de données à bon port ? Vous savez déjà que 2 machines appartenant au même réseau local doivent avoir la même adresse réseau. Dans le schéma du paragraphe précédent, les machines M1 et M4 n'ont pas la même adresse réseau car elles n'appartiennent pas au même réseau local. Si M1 cherche à entrer en communication avec M4 alors le switch R1 va constater que M4 n'appartient pas au réseau local (grâce à son adresse IP) et R1 va donc envoyer le paquet de données vers le routeur A. Cela sera donc au routeur A de gérer le "problème" : comment atteindre M4 ? <br />
+Chaque routeur possède une table de routage. Une table de routage peut être vue comme un tableau qui va contenir des informations permettant au routeur d'envoyer le paquet de données dans la "bonne direction".   </p>
+<p><img alt="table" src="img/protocole4.png" /></p>
+<div class="admonition faq">
+<p class="admonition-title">Question</p>
+<p>8.Identifier les adresses IP réseau des routeurs de l’infrastructure ci-dessus. </p>
+</div>
+<p>La table de routage du routeur A doit contenir les informations suivantes : <br />
+• le routeur A est directement relié au réseau 172.168.0.0/16 par l'intermédiaire de son interface eth0 <br />
+• le routeur A est directement relié au réseau 172.169.0.0/16 par l'intermédiaire de son interface eth2 <br />
+• le routeur A est directement relié au réseau 192.168.7.0/24 par l'intermédiaire de son interface eth1 (le réseau 192.168.7.0/24 est un peu particulier car il est uniquement composé des routeurs A et G)   <br />
+• le routeur A n'est pas directement relié au réseau 10.0.0.0/8 mais par contre il "sait" que les paquets à destination de ce réseau doivent être envoyé à la machine d'adresse IP 192.168.7.2/24 (c'est à dire le routeur G qui lui est directement relié au réseau 10.0.0.0/8)  </p>
+<p>On peut résumer les informations précédentes dans la table de routage simplifiée de A : 
+<img align="left" alt="table" src="img/protocole5.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">remarque</p>
+<p>Dans un protocole de routage, la métrique est une mesure de la « distance » qui sépare un routeur d'un réseau de destination. En première approche on l’assimilera au nombre de sauts IP nécessaires pour atteindre le réseau destination. Ainsi, un réseau directement lié à un routeur aura une métrique de 0. </p>
+</div>
+<div class="admonition faq">
+<p class="admonition-title">Question</p>
+<p>9.Déterminez la table de routage du routeur G, en précisant pour chaque réseau à atteindre, l'interface du routeur à utiliser (et0,eth1, eth2) la passerelle (IP du routeur suivant) si le chemin n'est pas direct et le nombre de sauts.</p>
+</div>
+<p>Dans des réseaux très complexes, chaque routeur aura une table de routage qui comportera de très nombreuses lignes (plusieurs milliers...). En effet chaque routeur devra savoir vers quelle interface réseau il faudra envoyer un paquet afin qu'il puisse atteindre sa destination. On peut trouver dans une table de routage plusieurs lignes pour une même destination, il peut en effet, à partir d'un routeur donné, exister plusieurs chemins possibles pour atteindre la destination. Dans le cas où il existe plusieurs chemins possibles pour atteindre la même destination, le routeur va choisir le "chemin le plus court". Pour choisir ce chemin le plus court, le routeur va utiliser la métrique : plus la valeur de la métrique est petite, plus le chemin pour atteindre le réseau est "court".   </p>
+<p><strong>Comment un routeur arrive à remplir sa table de routage ?</strong> <br />
+La réponse est simple pour les réseaux qui sont directement reliés au routeur (métrique = 0), mais comment cela se passe-t-il pour les autres réseaux (métrique supérieure à zéro) ? <br />
+Il existe 2 méthodes : <br />
+• le routage statique : chaque ligne doit être renseignée "à la main". Cette solution est seulement envisageable pour des très petits réseaux de réseaux.<br />
+• le routage dynamique : tout se fait "automatiquement", on utilise des protocoles qui vont permettre de "découvrir" les différentes routes automatiquement afin de pouvoir remplir la table de routage tout aussi automatiquement.   </p>
+<h2 id="les-algorithmes-de-routage">Les algorithmes de routage<a class="headerlink" href="#les-algorithmes-de-routage" title="Permanent link">⚓︎</a></h2>
+<h3 id="principe">Principe<a class="headerlink" href="#principe" title="Permanent link">⚓︎</a></h3>
+<p>Un réseau de réseaux comportant des routeurs peut être modélisé par un graphe : chaque routeur est un sommet et chaque liaison entre les routeurs ou entre un routeur et un switch est une arête. Les algorithmes utilisés par les protocoles de routages sont donc des algorithmes issus de la théorie de graphes. Un exemple de graphe est donné sur le schéma ci-dessous.   </p>
+<p><img alt="Algorithme" src="img/protocole6.jpg" /></p>
+<p><em>Dans la table de routage de D on lit que pour atteindre le routeur H il faut passer par G avec un saut de 1.</em><br />
+Le but d’un algorithme de routage est de trouver un chemin dans ce graphe qui relie l'émetteur au destinataire. Il existe de nombreux algorithmes pour trouver le chemin le plus court entre deux points d'un graphe. Cependant ceux-ci sont rarement utilisés tels quels par les algorithmes de routage. 
+Les algorithmes de routage peuvent aussi tenir compte des performances des différents chemins entre deux routeurs. La mise à jour des tables routage permet alors de trouver des chemins plus courts ou plus rapides pour acheminer une donnée à une IP précise. Il suffit pour cela de tenir compte des temps de transferts entre routeurs. Pour cela il suffit d'associer à chaque arrête, c’est-à-dire à chaque chemin entre deux routeurs, un poids (pondération) qui indique sa rapidité. Plus la vitesse de transfert est faible entre ces deux routeurs, plus ce nombre sera fort. Pour chaque chemin identifié, l'algorithme additionne le temps de transfert de chaque flèche. Le but de l'algorithme est de trouver le chemin qui minimise le temps de transfert total.  </p>
+<div class="admonition faq">
+<p class="admonition-title">Question</p>
+<p>10.Quel est l’objectif d’un algorithme de routage ? <br />
+11.Comment modélise-t-on un réseau d’un point de vue mathématique ?   </p>
+</div>
+<h3 id="le-protocole-rip-routing-information-protocol">Le protocole RIP (Routing Information Protocol)<a class="headerlink" href="#le-protocole-rip-routing-information-protocol" title="Permanent link">⚓︎</a></h3>
+<p>Le protocole RIP s'appuie sur l'algorithme de <a href="https://fr.wikipedia.org/wiki/Algorithme_de_Bellman-Ford">Bellman-Ford</a>, algorithme permettant de calculer les plus courts chemins dans un graphe. <br />
+<img alt="RIP" src="img/protocole7.png" /></p>
+<p>Lors de son initialisation, la table de routage d’un routeur appliquant le protocole RIP contient uniquement les réseaux qui sont directement reliés à lui. <br />
+Ainsi le routeur A du schéma ci-dessus contient initialement dans sa table de routage uniquement les réseaux suivants:<br />
+• 172.168.0.0/16  <br />
+• 172.169.0.0/16 <br />
+• 192.168.7.0/24<br />
+et le routeur G : <br />
+• 192.168.7.0/24 <br />
+• 10.0.0.0/8 <br />
+Chaque routeur du réseau qui applique le protocole RIP envoie périodiquement (toutes les 30 secondes) à tous ses voisins (routeurs adjacents) un message. Ce message contient la liste de tous les réseaux qu'il connait. A chaque échange de messages, les routeurs adjacents mettent à jour leur table de routage :   </p>
+<p><img alt="RIP" src="img/protocole8.png" />
+<img alt="RIP" src="img/protocole9.png" /></p>
+<p>Pour renseigner la colonne "métrique", le protocole utilise le nombre de sauts, autrement dit, le nombre de routeurs qui doivent être traversés pour atteindre le réseau cible (dans la table de routage de A, on aura donc une métrique de 1 pour le réseau 10.0.0.0/8 car depuis A il est nécessaire de traverser le routeur G pour atteindre le réseau 10.0.0.0/8) </p>
+<p><img alt="RIP" src="img/protocole10.PNG" /></p>
+<p><strong>Notion de protocole à vecteur de distance</strong> <br />
+RIP appartient à la famille des protocoles à vecteur de distance.  Avec ce type de protocole, les routeurs envoient régulièrement l'ensemble de leur table de routage aux routeurs voisins, auxquels il est directement connecté. Ceux-ci mettent alors à jour leur propre table de routage en tenant compte des informations envoyées. Évidemment, cela consomme beaucoup de débit réseau, ce qui est un défaut majeur. C'est la raison principale pour laquelle il ne peuvent pas être utilisés sur des réseaux trop importants : les envois prendraient beaucoup trop de temps avec des grosses tables de routage. De plus, les tables de routage mettent beaucoup de temps avant de se stabiliser, ce qui rend le routage très inefficace au début de l'utilisation du réseau.   </p>
+<p><strong>Message RIP v2</strong> <br />
+Un message RIP comprend un en-tête suivi de 1 à 25 enregistrement(s) de route (24 si un message d'authentification est requis). Un message RIP v2 est envoyé en <a href="https://www.techno-science.net/definition/3782.html">multicast</a> à l’IP 224.0.0.9.  </p>
+<p><img alt="RIP v2" src="img/protocole11.PNG" /></p>
+<p><strong>Les limitations du protocole RIP :</strong><br />
+• Pour éviter les boucles de routage, le nombre de sauts est limité à 15. Au-delà, les paquets sont supprimés. Au-delà de 15 sauts, le protocole RIP affecte une métrique  à la liaison.   <br />
+• RIP ne prend en compte que la distance entre deux machines en ce qui concerne le saut, mais il ne considère pas l'état de la liaison afin de choisir la meilleure bande passante possible. Si l'on considère un réseau composé de trois routeurs A, B et C, reliés en triangle, RIP préférera passer par la liaison directe A-B même si la bande passante n'est que de 56 kbit/s alors qu'elle est de 10 Gbit/s entre A et C et C et B. <br />
+De facto, le protocole RIP est aujourd'hui très rarement utilisé dans les grandes infrastructures. En effet, il génère, du fait de l'envoi périodique de message, un trafic réseau important (surtout si les tables de routages contiennent beaucoup d'entrées). On lui préfère donc souvent le protocole OSPF qui corrige les limitations évoquées précédemment. <br />
+<a href="https://youtu.be/eRl0an-a3m0">EN SAVOIR PLUS SUR LE PROTOCOLE RIP</a></p>
+<div class="admonition faq">
+<p class="admonition-title">Questions</p>
+<p>12.Quel est le principe du protocole RIP ?   <br />
+13.Quels sont ses principaux inconvénients ? <br />
+14.En vous basant sur le protocole RIP (métrique = nombre de sauts), déterminez la table de routage du routeur A appartenant au réseau ci-dessous. <br />
+<img alt="RIP" src="img/protocole12.jpg" /><br />
+15.Quel est, d'après la table de routage construite du routeur A, le chemin qui sera emprunté par un paquet pour aller d'une machine ayant pour adresse IP 172.18.1.1/16 à une machine ayant pour adresse IP 172.16.5.3/16 ? </p>
+</div>
+<p><br>
+<strong>Le protocole OSFP (Open Shortest Path First)</strong>
+Les routeurs OSPF doivent établir une relation de voisinage avant d’échanger des mises à jour de routage. Les voisins OSPF sont dynamiquement découverts en envoyant des paquets Hello sur chaque interface OSPF sur un routeur. Les paquets Hello sont envoyés à l’adresse IP de multicast 224.0.0.5.   </p>
+<p><img alt="OSFP" src="img/protocole13.PNG" />  </p>
+<p>Chaque routeur OSPF reçoit un identifiant de routeur afin qu’il puisse être reconnu. 
+<br>
+<strong>Contenu d’un paquet HELLO</strong><br />
+<img align="right" alt="contenu" src="img/protocole14.PNG" />
+Les champs suivants dans les paquets Hello doivent être identiques sur les deux routeurs afin que les routeurs<br />
+deviennent voisins : <br />
+• sous-réseau (subnet) <br />
+• id de zone (area ID) <br />
+• minuteurs d’intervalle morts (dead-interval) et hello <br />
+• authentification <br />
+• drapeau de bout de zone (area stub flag) <br />
+• MTU (Maximum Transmit Unit) <br />
+Par défaut, OSPF envoie des paquets hello toutes les 10 secondes sur un réseau Ethernet (intervalle Hello). Une minuterie morte (dead timer) correspond à quatre fois la valeur de l’intervalle Hello, donc si un routeur sur un réseau Ethernet ne reçoit pas au moins un paquet Hello d’un voisin OSPF pendant 40 secondes, les routeurs déclarent que ce dernier est “non fonctionnel” (down).</p>
+<p><br>
+<strong>Quels sont les états possibles des voisins OSFP ?</strong><br />
+Avant d’établir une relation de voisinage, les routeurs OSPF doivent passer par plusieurs changements d’état : <br />
+1. État init – un routeur a reçu un message Hello de l’autre routeur OSPF. <br />
+2. État 2-way – le voisin a reçu le message Hello et a répondu avec un message Hello 
+3. État Exstart – début de l’échange LSDB (Link-State Database) entre les deux routeurs. Les routeurs commencent à échanger des informations sur l’état des liens. <br />
+4. État Exchange – Les paquets DBD (Database Descriptor) sont échangés. Les DBD contiennent des en-têtes LSA (Link-state Advertisements). Les routeurs utiliseront cette information pour voir quels LSA doivent être échangés. <br />
+5. État Loading – un voisin envoie des LSR (Link State Requests) pour chaque réseau qu’il ne connaît pas. L’autre voisin répond avec les LSU (Link State Updates) qui contiennent des informations sur les réseaux demandés. Après que toutes les informations demandées ont été reçues, l’autre voisin passe par le même processus <br />
+6. État Full – les deux routeurs ont la base de données synchronisée et sont complètement adjacents l’un à l’autre. <br />
+<br>
+<br>
+<strong>En résumé :</strong> chaque routeur communique la liste des réseaux auxquels il est connecté par des messages Link-state advertisements (LSA) propagés de proche en proche à tous les routeurs du réseau. L'ensemble des LSA forme une base de données de l'état des liens Link-State Database (LSDB) pour chaque zone (area), qui est identique pour tous les routeurs de cette zone. Chaque routeur utilise ensuite l'algorithme de Dijkstra, Shortest Path First (SPF) pour déterminer la route la plus rapide vers chacun des réseaux connus dans la LSDB.<br />
+<br>
+<br>
+<strong>Notion de zone / area OSFP</strong><br />
+<img align="left" alt="" src="img/protocole15.PNG" />
+OSPF utilise le concept de zone (area). Une zone est un regroupement logique de réseaux et de routeurs contigus. Tous les routeurs dans la même zone ont la même table de topologie, mais ils ne connaissent pas les routeurs dans les autres zones. Le principal avantage de la création de zones est que la taille de la topologie et la table de routage d’un routeur sont réduites, qu’il faut moins de temps pour exécuter l’algorithme OSPF et que les mises à jour de routage sont également réduites. 
+Chaque zone (area) du réseau OSPF doit se connecter à la zone de backbone (area 0) : toutes les autres zones y sont connectées. Tous les routeurs à l’intérieur d’une zone doivent avoir le même ID de zone pour devenir des voisins OSPF. Un routeur qui a des interfaces dans plus d’une zone (zone 0 et zone 1, par exemple) s’appelle Area Border Router (ABR). Un routeur qui connecte un réseau OSPF à d’autres domaines de routage (réseau EIGRP, par exemple) s’appelle Autonomous System Border Routers (ASBR). 
+Remarque : le rôle d’un routeur ABR consiste à annoncer des résumés de routes aux zones voisines. Le rôle d’un ASBR est de connecter un domaine de routage OSPF à un autre réseau externe (par exemple Internet, EIGRP …). 
+<br>
+<br>
+<strong>Messages LSA, LSU et LSR</strong>  </p>
+<p><img align="left" alt="" src="img/protocole16.PNG" /></p>
+<p>Les messages LSA (Link-State Advertisments) sont utilisées par les routeurs OSPF pour échanger des informations de topologie. Chaque LSA contient des informations de routage et de topologie pour décrire une partie d’un réseau OSPF. Lorsque deux voisins décident d’échanger des routes, ils envoient mutuellement une liste de tous les LSA de leur base de données de topologie respective. Chaque routeur vérifie ensuite sa base de données de topologie et envoie un message LSR (Link State Request) demandant tous les LSA introuvables dans sa table de topologie. L’autre routeur répond avec la LSU (Link State Update) qui contient tous les LSA demandés par l’autre voisin.    </p>
+<p><br></p>
+<p><img align="right" alt="" src="img/protocole17.PNG" width="50%" /></p>
+<p>Sur l’exemple ci-contre, après avoir initialisé OSPF sur les deux routeurs, ceux-ci échangent des LSA pour décrire leur base de données de topologie respective. <br />
+1. Le routeur R1 envoie un en-tête LSA pour son réseau directement connecté 10.0.1.0/24. <br />
+2. Le routeur R2 vérifie sa base de données de topologie et détermine qu’il ne dispose pas d’informations sur ce réseau. Le routeur R2 envoie alors un message de demande d’état de liaison LSR demandant des informations supplémentaires sur ce réseau. <br />
+3. Le routeur R1 répond avec Link State Update LSU qui contient des informations sur le sous-réseau 10.0.1.0/24 (adresse hop suivant, coût …).   </p>
+<p><strong>Notion de protocole à état de lien</strong><br />
+OSFP appartient à la famille des protocoles à état de lien Ces protocoles sont plus efficaces en termes de débit et de stabilisation des tables de routage. Au lieu d'envoyer la table de routage complète, ils envoient des messages courts, qui donnent des indications sur la connectivité du réseau. De manière générale, ces messages sont de simples tests qui vérifient que le voisin est toujours accessible, connecté. Au bout de plusieurs tentatives échouées, le routeur contacté est considéré comme inaccessible et le routeur envoie une indication aux autres voisins comme quoi il ne peut plus communiquer avec lui. En clair, chaque routeur indique quel est l'état des liens qu'il entretient avec les autres routeurs : il dit qu'il est connecté à tel ou tel routeur, que telle connexion a été déconnectée, etc. Avec ces protocoles, le volume de données transmises est plus faible. Pas besoin d'envoyer une table de routage complète, juste quelques messages courts. Outre la forte réduction de débit utilisé, la vitesse de convergence est plus rapide.   </p>
+<p><strong>Métrique</strong>  <br />
+Le protocole OSPF, contrairement à RIP, n'utilise pas le "nombre nécessaire de sauts" pour établir la métrique, mais la notion de "coût des routes". Dans les messages échangés par les routeurs on trouve le coût de chaque liaison (plus le coût est grand et moins la liaison est intéressante). Quand on parle de "liaison" on parle simplement du câble qui relie un routeur à un autre routeur. Le protocole OSPF permet de connaitre le coût de chaque liaison entre routeurs, et donc, de connaitre le coût d'une route (en ajoutant le coût de chaque liaison traversée). On notera que pour effectuer ces calculs, le protocole OSPF s'appuie sur l'algorithme de Dijkstra. <br />
+La notion de coût est directement liée au débit des liaisons entre les routeurs. Le débit correspond au nombre de bits de données qu'il est possible de faire passer dans un réseau par seconde. Le débit est donc donné en bits par seconde (bps), mais on trouve souvent des kilo bits par seconde (kbps) ou encore des méga bits par seconde (Mbps) =&gt; 1 kbps = 1000 bps et 1 M  bps = 1000 kbps. Connaissant le débit d'une liaison, il est possible de calculer le coût d'une liaison à l'aide de la formule suivante : 
+<br><br>
+<strong>Coût (en bits / s)  = 10<sup>8</sup> / débit (en bps)</strong>
+<br></p>
+<p>Pour obtenir la métrique d'une route, il suffit d'additionner les coûts de chaque liaison (par exemple si pour aller d'un réseau 1 à un réseau 2 on doit traverser une liaison de coût 1, puis une liaison de coût 10 et enfin une liaison de coût 1, la métrique de cette route sera de 1 + 10 + 1 = 12). Comme dans le cas du protocole RIP, les routes ayant les métriques les plus faibles sont privilégiées. <br />
+<a href="https://youtu.be/6FeNi1djwc8">EN SAVOIR PLUS SUR LE PROTOCOLE OSFP</a></p>
+<div class="admonition faq">
+<p class="admonition-title">Questions</p>
+<p>16.Quel est le principe du protocole OSFP ? <br />
+17.Quel est son principal avantage par rapport au protocole RIP ? <br />
+18.En vous basant sur le protocole OSPF (métrique = somme des coûts), déterminez la table de routage du routeur A présent dans le réseau de la question 13. On donne les débits suivants : <br />
+• liaison routeur A - routeur B : 1 Mbps <br />
+• liaison routeur A - routeur C : 10 Mbps <br />
+• liaison routeur C - routeur B : 10 Mbps <br />
+19.Quel est, d'après la table de routage construite ci-dessus, le chemin qui sera emprunté par un paquet pour aller d'une machine ayant pour adresse IP 172.18.1.1/16 à une machine ayant pour adresse IP 172.16.5.3/16 ?     </p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">A retenir</p>
+<p>Faites vous un résumé de cours sachant que vous devez savoir :<br />
+Ce qu'est un routeur, ce qu'est une table de routage, comment est remplie cette table, ce qui différencie RIP de OSPF et comment ils fonctionnent.<br />
+Identifier la route empruntée par un paquet suivant le protocole de routage utilisé (RIP ou OSPF).
+Une fiche, une carte mentale, des schémas, …<br />
+Vous pouvez vous aider de cette vidéo :
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bslQLLzzxcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>
