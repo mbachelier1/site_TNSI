@@ -571,27 +571,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../BDD/projet_SQL.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Projet SQL 
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1393,7 +1372,9 @@ Si on déroule la boucle étape par étape : </p>
 <h3 id="preconditions">préconditions<a class="headerlink" href="#preconditions" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
 <p class="admonition-title">exemple</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">code</label><div class="tabbed-content">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">code</label><label for="__tabbed_1_2">sortie</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>On étudie une fonction qui prend un entier en paramètre et renvoie le chiffre des unités.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1410,7 +1391,7 @@ Si on déroule la boucle étape par étape : </p>
     <span class="k">return</span> <span class="n">n</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">sortie</label><div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1423,6 +1404,7 @@ Si on déroule la boucle étape par étape : </p>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">get_unite</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">)</span>
 <span class="o">-</span><span class="mi">6</span>
 </code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -1528,7 +1510,9 @@ Ce sont ce que l'on appelle des cas limites, qui peuvent provoquer des effets de
 Les tests peuvent être intégérés aux fonctions sous forme de préconditions ou postconditions ou dans une autre fonction, voire même dans un autre programme.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">main.py</label><div class="tabbed-content">
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">main.py</label><label for="__tabbed_2_2">test.py</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1554,7 +1538,7 @@ Les tests peuvent être intégérés aux fonctions sous forme de préconditions 
         <span class="k">return</span> <span class="n">sortie</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">test.py</label><div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1565,6 +1549,7 @@ Les tests peuvent être intégérés aux fonctions sous forme de préconditions 
 <span class="k">assert</span> <span class="n">maximum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span><span class="o">==</span><span class="mi">1</span>
 <span class="k">assert</span> <span class="n">maximum</span><span class="p">([])</span> <span class="o">==</span> <span class="n">none</span>
 </code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>

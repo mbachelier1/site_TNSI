@@ -569,27 +569,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../BDD/projet_SQL.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Projet SQL 
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1258,7 +1237,9 @@
 <p>Dans un système monotâche (processeur simple coeur pour simplifier) une seule tâche peut être exécutée à la fois.</p>
 <div class="admonition example">
 <p class="admonition-title">Un exemple concret</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Etapes de mes recettes</label><div class="tabbed-content">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Etapes de mes recettes</label><label for="__tabbed_1_2">Ordre de réalisation</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Imaginons que je doive préparer seule le repas comprenant des boulettes de viande en plat et un gâteau en dessert Je pourrai choisir de faire l'un d'abord et l'autre ensuite, mais il y aura des temps de latence qui me ferai perdre mon temps. Par exemple pendant que le beurre fond j'attends au lieu de faire autre chose.<br />
 Voici les étapes de la préparation de mes boulettes :</p>
 <ol>
@@ -1278,7 +1259,7 @@ Voici les étapes de la préparation de mes boulettes :</p>
 </ol>
 <p>Certaines ressources vont devoir être partagées et certaines étapes vont devoir attendre que la ressource se libère. Je ne ferai pas fondre le chocolat en meme temps que le beurre (mon microonde est extrèmement petit).</p>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Ordre de réalisation</label><div class="tabbed-content">
+<div class="tabbed-block">
 <p>Je vais donc choisir de faire les choses dans cet ordre :</p>
 <ol>
 <li>émincer l'oignon (nécessite le mixeur)</li>
@@ -1292,6 +1273,7 @@ Voici les étapes de la préparation de mes boulettes :</p>
 <li>mélanger le tout (mains) *pendant que les boulettes cuisent je finis le gâteau</li>
 <li>cuire (four)</li>
 </ol>
+</div>
 </div>
 </div>
 </div>
