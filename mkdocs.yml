@@ -12,7 +12,7 @@ nav:
   - 'Bases de données':
     -  'Modèle relationnel': 'BDD/modele_relationnel.md'
     -  'Langage SQL ' : 'BDD/langageSQL.md'
-    -  'Projet SQL ' : 'BDD/projet_SQL.md'
+
   - 'Programmation':
     -  'Récursivité' : 'Programmation/recursivite.md'
     -  'Modularité' : 'Programmation/modularite.md'
@@ -92,7 +92,8 @@ markdown_extensions:
         clickable_checkbox: true    #   et cliquables.
   - pymdownx.inlinehilite
   - pymdownx.keys
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.emoji:

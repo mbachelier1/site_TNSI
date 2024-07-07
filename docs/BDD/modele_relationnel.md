@@ -56,7 +56,7 @@ Une **clé secondaire** ou **clé étrangère** est une clé utilisée dans une 
 	<img src="img/Relation.png" atl="clé etrangere" >
 </div> 
 
-##Représentaion des relations
+## Représentaion des relations
 
 On peut représenter le lien entre plusieurs tables de données ainsi :
 <div id="center">
@@ -75,7 +75,7 @@ On peut également préciser les domaines des différents attributs :
 </div> 
 
 
-##Contraintes
+## Contraintes
 Pour éviter au maximum les erreurs on s'assurera que:  
 
 - la clé primaire est unique et non nulle.  
@@ -88,7 +88,7 @@ Dans l'exemple ci-dessous, on préfère mettre deux tables en relation plutôt q
 	<img src="img/Relations-et-cles.png" >
 </div> 
 
-##Anomalies
+## Anomalies
 On peut relever différents types d'anomalies qui seront source d'erreur. On fera donc en sorte de les éviter au maximum.
 <div id="center">
 	<img src="img/anomalies.png" alt="anomalies" >
@@ -100,8 +100,10 @@ Il aurait mieux valut une relation séparée concernant les réalisateurs, et qu
 - **Anomalie de suppression** : La suppression de l'unique film d'un réalisateur supprime automatiquement les informations du réalisateur.  
 - **Anomalie de mise à jour** : La modification de l'année de naissance d'un réalisateur oblige à faire la mise à jour sur plusieurs lignes.  
 
+## Gestionnaire de base de données
+Un  système SGBD (service de gestion de base de données) est tenu d'assurer l'accès à la base de données, à son stockage sans pertes (résilience), ainsi que l'efficacité des réquêtes que l'on souhaite réaliser sur la base de données. 
 
-##Un petit résumé vidéo :   
+## Un petit résumé vidéo :   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bhtzximjwk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
