@@ -32,5 +32,5 @@ Un arbre est généralement orienté de la racine aux feuilles. Il est considér
 
 ![exemple3](img/example3.jpg)
 
-!!! note "arbre binaire"
+!!! warning "arbre binaire"
 	Seul le deuxième est un arbre binaire

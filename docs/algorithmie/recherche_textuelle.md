@@ -20,7 +20,7 @@ On commence par créer une table appelée la table de décalage qui reprend la p
 On crée une table de décalage :
 ![algo Horspool](img/horspool.png)
 
-!!! important "procédure"
+!!! danger "procédure"
 	1. On compare la dernière lettre du motif avec la lettre avec laquelle il est aligné (au départ position N-1 du texte oùN est la longueur du motif)
 	2. Si la lettre correspond, on regarde la lettre précédente.
 	3. Si la lettre ne correspond pas on décale le motif de façon à aligner la lettre du texte ne correspondant pas à la premiere occurrence de cette meme lettre du motif (ci-dessus, le a ne correspond pas au d, on aligne le premier a du motif sur le a du texte (soit un décalage de 3 comme indiqué dans la table))

@@ -23,14 +23,14 @@ Le programme que l’on a créé est donc rangé comme une donnée dans une vari
 
 **LE PROGRAMME EST DONC AUSSI UNE DONNEE**  
 
-!!! faq "Question"
+!!! question "Question"
 	1.Trouver une ou des situations où le programme est considéré comme  une donnée.
 
 ## Calculabilité
 Un problème est considéré comme calculable si on peut le coder dans un langage de programmation usuel.  
 Certaines choses ne se calculent pas avec un ordinateur. Par exemple on ne peut pas calculer si une fonction va s'arréter, ni si un programme va provoquer une erreur.  
 
-!!! faq "Question"
+!!! question "Question"
 	2.Chercher outre le probleme de l'arrêt un problème célèbre non calculable. 
 
 
@@ -44,7 +44,7 @@ Un problème de décision est dit décidable s'il existe un algorithme, une proc
 	- un nombre est un nombre premier ou non
 
 
-!!! caution "Attention"
+!!! warning "Attention"
 	Un problème peut être théoriquement décidable sans l’être en pratique. parce que celle-ci nécessiterait trop de temps (plus que l'âge de l'univers) ou trop de ressources (plus que le nombre d'atomes de l'univers).
 
 
@@ -56,7 +56,7 @@ Un autre exemple plus connu: le problème de l'arrêt d'un programme est-il déc
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/13O1qhX4Bqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-!!! faq "Question"
+!!! question "Question"
 	3.Pourquoi le problème de l'arrêt est dit indécidable?  
 	4.En quoi la phrase "je suis un menteur" illustre bien le problème du paradoxe?  
 
@@ -64,7 +64,7 @@ Etudiez le script suivant :
 
 <iframe src="https://trinket.io/embed/python3/354bd83c3d" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-!!! faq "Question"
+!!! question "Question"
 	5.Que se passe-t-il?
 
 
@@ -85,7 +85,7 @@ def fonction2(n):
     print("False")
 ```
 
-!!! faq "Question"
+!!! question "Question"
 	6.Que renverront les appels suivants ?  
 	`termine(function1, 7)`  
 	 	`termine(function1, 9)`  
@@ -100,7 +100,7 @@ def test_sur_soi(programme):
         while True: pass # boucle infinie
 ```  
 
-!!! faq "Question"
+!!! question "Question"
 	7.Que se passe-t-il si on appelle `test_sur_soi` sur elle-même: `test_sur_soi(test_sur_soi)` ?
 
 !!! info "En complément pour ceux qui n'ont pas encore les neurones qui chauffent..."

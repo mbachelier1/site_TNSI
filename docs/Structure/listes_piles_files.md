@@ -29,7 +29,7 @@ Quelques opérations que l'on peut faire avec les listes chaînées :
 On les implémentera en python en utilisant des dictionnaires plus tard.
 
 
-!!! done "Question"
+!!! question "Question"
 
      A votre avis de quelle nature sont les listes en python.
 
@@ -42,7 +42,7 @@ On les implémentera en python en utilisant des dictionnaires plus tard.
         - ❌ `des listes chaînées`
 
 
-??? attention "attention"
+??? warning "attention"
     Ne pas confondre la notion abstraite de liste chaînée en programmation et la liste en phyton.   
     En python quand on insère un élément dans uns liste, il faut décaler les index de tous les autres éléments.
 
@@ -77,7 +77,7 @@ Voici une illustration en vidéo de l'utilisation de la calculatrice HP-45 (1974
 <div id="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rXRMFTRtA4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-!!! done " Quel calcul est saisi?"
+!!! question " Quel calcul est saisi?"
 
     === "Question"
     	Quel calcul est effectué si je rentre la séquence :
@@ -87,13 +87,13 @@ Voici une illustration en vidéo de l'utilisation de la calculatrice HP-45 (1974
         4*3+12 = 24
 
 
-??? faq "Pourquoi?"
+??? question "Pourquoi?"
 	Le chiffre 3 est dans le registre x, 4 dans le Y et 12 dans le Z.
 	Le premier signe multiplie les registres X et Y et range le résultat dans X (=3x4) 12 est alors redescendu dans le registre Y.
 	Le deuxième signe a pour but d'additionner les registre X et Y.   
 
 
-!!! done "Quelle séquence saisir? "
+!!! question "Quelle séquence saisir? "
 
     === "Question"
     	On souhaite effectuer le calculer (12-4)*3. Quelle séquence faudra-t-il écrire ?"
@@ -102,7 +102,7 @@ Voici une illustration en vidéo de l'utilisation de la calculatrice HP-45 (1974
         3 ENTER 4 ENTER 12 - *
 
 
-??? faq "Pourquoi?"
+??? question "Pourquoi?"
 	*Il faut empiler les nombres de façon à ce que les nombres prioritaires soient dans les registres X et Y. 
 	On fait en 1er l'opération 12-4 donc 4 doit être dans Y et 12 dans X. On commence donc par empiler le nombre 3 puis 4 puis 12.  
 	Une fois la première opération effectuée, 8 se trouve dans le registre X et 3 est descendu dans Y.*  
@@ -135,7 +135,7 @@ Sur une file, on peut :
 - savoir si la liste est vide
 - connaitre le nombre d'éléments qu'elle contient
 
-!!! done "acronyme pour les files"
+!!! tip "acronyme pour les files"
 
 		=== "Question"
 			En comparant avec l'acronyme FILO utilisé pour les piles, quel serait celui concernant les piles ?
@@ -148,6 +148,3 @@ Sur une file, on peut :
 
 
 ---
-<p style="text-align: center; color:gray; font-size: 10px;">
-Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
-</p>

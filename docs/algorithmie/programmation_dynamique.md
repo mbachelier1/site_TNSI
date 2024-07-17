@@ -13,7 +13,7 @@ Une méthode consiste à inscrire près de l'intersection le nobre de chemin y m
 Une méthode consiste à inscrire près de l'intersection le nobre de chemin y menant. ainsi on pas besoin de recompter à chaque fois que l'on veut repartir de ce coin. On montre aisément que pour aller du coin inférieur droit au coin de la case immédiatement situé dans sa diagonale, on peut emprunter deux chemins, le orange et le noir. On inscrit alors "2" à l'intersection concernée.  
 ![grille](img/progdyn2.png)  
 
-!!! faq "pour un carré de 5 par 5"
+!!! Question "pour un carré de 5 par 5"
 	A la main, évaluer le nombre de chemins pour un carré de 5 par 5.  
 	Et pour un carré de 10 par 10.  
 

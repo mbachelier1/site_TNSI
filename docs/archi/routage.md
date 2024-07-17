@@ -36,7 +36,7 @@ Le réseau de destination peut être éloigné de la passerelle par un certain n
 
 ![réseau](img/protocole3.jpg)
 
-!!! faq "Questions"
+!!! question "Questions"
 	1.Identifier les 3 grandes familles d’éléments interconnectés constituant ce réseau. Donner la composition de chacune d’entre elle.   
 	2.Rappeler les symboles normalisés d’un commutateur et d’un routeur (voir schéma).    
 	3.Quel est le rôle d’un commutateur (ou switch) ?  
@@ -65,7 +65,7 @@ M13 → R6 → Routeur G → Routeur F → Routeur H → Routeur C → Routeur D
 
 Le chemin n° 1  "Routeur F → Routeur E" est vraisemblablement plus rapide et donc préférable au chemin n° 2 "Routeur F → Routeur H". Cependant s’il y avait un problème technique entre le Routeur F et le Routeur E, l’existence du chemin "Routeur F → Routeur H" permettrait tout de même d’établir une communication entre M13 et M9. C’est l’existence de très nombreuses interconnexions et donc de routes possibles entre les différentes infrastructures qui rendent internet particulièrement peu sensible à des pannes localisées.   
 
-!!! faq "Questions"
+!!! question "Questions"
 	7.Déterminer un chemin possible permettant d’établir une connexion entre la machine M4 et M14. Existe-t-il plusieurs chemins possibles ? 
 
 ## Notion de tables de routage 
@@ -75,7 +75,7 @@ Chaque routeur possède une table de routage. Une table de routage peut être vu
 
 ![table](img/protocole4.png)
 
-!!! faq "Question"
+!!! question "Question"
 	8.Identifier les adresses IP réseau des routeurs de l’infrastructure ci-dessus. 
 
 La table de routage du routeur A doit contenir les informations suivantes :   
@@ -91,7 +91,7 @@ On peut résumer les informations précédentes dans la table de routage simplif
 	Dans un protocole de routage, la métrique est une mesure de la « distance » qui sépare un routeur d'un réseau de destination. En première approche on l’assimilera au nombre de sauts IP nécessaires pour atteindre le réseau destination. Ainsi, un réseau directement lié à un routeur aura une métrique de 0. 
 
 
-!!! faq "Question"
+!!! question "Question"
 	9.Déterminez la table de routage du routeur G, en précisant pour chaque réseau à atteindre, l'interface du routeur à utiliser (et0,eth1, eth2) la passerelle (IP du routeur suivant) si le chemin n'est pas direct et le nombre de sauts.
 
 Dans des réseaux très complexes, chaque routeur aura une table de routage qui comportera de très nombreuses lignes (plusieurs milliers...). En effet chaque routeur devra savoir vers quelle interface réseau il faudra envoyer un paquet afin qu'il puisse atteindre sa destination. On peut trouver dans une table de routage plusieurs lignes pour une même destination, il peut en effet, à partir d'un routeur donné, exister plusieurs chemins possibles pour atteindre la destination. Dans le cas où il existe plusieurs chemins possibles pour atteindre la même destination, le routeur va choisir le "chemin le plus court". Pour choisir ce chemin le plus court, le routeur va utiliser la métrique : plus la valeur de la métrique est petite, plus le chemin pour atteindre le réseau est "court".   
@@ -112,7 +112,7 @@ Un réseau de réseaux comportant des routeurs peut être modélisé par un grap
 Le but d’un algorithme de routage est de trouver un chemin dans ce graphe qui relie l'émetteur au destinataire. Il existe de nombreux algorithmes pour trouver le chemin le plus court entre deux points d'un graphe. Cependant ceux-ci sont rarement utilisés tels quels par les algorithmes de routage. 
 Les algorithmes de routage peuvent aussi tenir compte des performances des différents chemins entre deux routeurs. La mise à jour des tables routage permet alors de trouver des chemins plus courts ou plus rapides pour acheminer une donnée à une IP précise. Il suffit pour cela de tenir compte des temps de transferts entre routeurs. Pour cela il suffit d'associer à chaque arrête, c’est-à-dire à chaque chemin entre deux routeurs, un poids (pondération) qui indique sa rapidité. Plus la vitesse de transfert est faible entre ces deux routeurs, plus ce nombre sera fort. Pour chaque chemin identifié, l'algorithme additionne le temps de transfert de chaque flèche. Le but de l'algorithme est de trouver le chemin qui minimise le temps de transfert total.  
 
-!!! faq "Question"
+!!! question "Question"
 	10.Quel est l’objectif d’un algorithme de routage ?   
 	11.Comment modélise-t-on un réseau d’un point de vue mathématique ?   
 
@@ -153,7 +153,7 @@ Un message RIP comprend un en-tête suivi de 1 à 25 enregistrement(s) de route 
 De facto, le protocole RIP est aujourd'hui très rarement utilisé dans les grandes infrastructures. En effet, il génère, du fait de l'envoi périodique de message, un trafic réseau important (surtout si les tables de routages contiennent beaucoup d'entrées). On lui préfère donc souvent le protocole OSPF qui corrige les limitations évoquées précédemment.   
 [EN SAVOIR PLUS SUR LE PROTOCOLE RIP](https://youtu.be/eRl0an-a3m0)
 
-!!! faq "Questions"
+!!! question "Questions"
 	12.Quel est le principe du protocole RIP ?     
 	13.Quels sont ses principaux inconvénients ?   
 	14.En vous basant sur le protocole RIP (métrique = nombre de sauts), déterminez la table de routage du routeur A appartenant au réseau ci-dessous.   
@@ -228,7 +228,7 @@ La notion de coût est directement liée au débit des liaisons entre les routeu
 Pour obtenir la métrique d'une route, il suffit d'additionner les coûts de chaque liaison (par exemple si pour aller d'un réseau 1 à un réseau 2 on doit traverser une liaison de coût 1, puis une liaison de coût 10 et enfin une liaison de coût 1, la métrique de cette route sera de 1 + 10 + 1 = 12). Comme dans le cas du protocole RIP, les routes ayant les métriques les plus faibles sont privilégiées.   
 [EN SAVOIR PLUS SUR LE PROTOCOLE OSFP](https://youtu.be/6FeNi1djwc8)
 
-!!! faq "Questions"
+!!! question "Questions"
 	16.Quel est le principe du protocole OSFP ?   
 	17.Quel est son principal avantage par rapport au protocole RIP ?   
 	18.En vous basant sur le protocole OSPF (métrique = somme des coûts), déterminez la table de routage du routeur A présent dans le réseau de la question 13. On donne les débits suivants :   
@@ -238,7 +238,7 @@ Pour obtenir la métrique d'une route, il suffit d'additionner les coûts de cha
 	19.Quel est, d'après la table de routage construite ci-dessus, le chemin qui sera emprunté par un paquet pour aller d'une machine ayant pour adresse IP 172.18.1.1/16 à une machine ayant pour adresse IP 172.16.5.3/16 ?     
 
 
-!!! important "A retenir"
+!!! tip "A retenir"
 	Faites vous un résumé de cours sachant que vous devez savoir :  
 	Ce qu'est un routeur, ce qu'est une table de routage, comment est remplie cette table, ce qui différencie RIP de OSPF et comment ils fonctionnent.  
 	Identifier la route empruntée par un paquet suivant le protocole de routage utilisé (RIP ou OSPF).

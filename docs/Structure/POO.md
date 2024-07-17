@@ -25,7 +25,7 @@ On peut modifier la valeur de l'attribut :
 voiture_de_maman.marque="citroen"
 ```
 
-!!! hint "Vocabulaire"
+!!! success "Vocabulaire"
 	`voiture_de_maman` et `voiture_de_papa` sont des instances de la classe `Voiture`. Ce sont des obets fabriqués à partir du moule `Voiture`.
 
 ## Méthode et `self`
@@ -202,7 +202,7 @@ vegie=Sandwich("blanche","staeck de soja","pita","salade")
 !!! note "Remarque"
 	Sans constructeur, on ne mettra pas d'arguments mais les valeurs des attributs seront celles définies par défaut.
 
-!!! attention "Instance de classe"
+!!! warning "Instance de classe"
 	`Vegie` est une instance de la classe sandwich.
 
 ### Créer et appeler uen méthode
@@ -256,7 +256,7 @@ print(vegie.get_pain())
 ```
 Le premier appel affiche 'pita' le second 'galette'.
 
-!!! hint "récapitulatif de la syntaxe"
+!!! tip "récapitulatif de la syntaxe"
 	```python
 	class MaClasse:  
 		attribut=…

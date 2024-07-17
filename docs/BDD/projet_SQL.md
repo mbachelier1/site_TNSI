@@ -85,7 +85,7 @@ Compléter la base de données avec les tables permettant d'obtenir ceci:
 </div>
 
 *on commencera par créer la table reparation avant celle de travaux.*  
-Télécharger les fichiers [reparation.csv](res/reparation.csv) et [travaux.csv](res/travaux.csv) et importer les données.
+Télécharger les fichiers [reparation.csv](res/Reparation.csv) et [travaux.csv](res/travaux.csv) et importer les données.
 
 ###**Exercice 1 : Les requêtes**
 Créer la requête SQl permettant : 
@@ -269,12 +269,4 @@ Résultat :
 
 Enregistrez vos fichiers dans le dossier www. Zippez ce dossier et le rendre au professeur en temps voulu.
 
-
-
-
-
-
 ---
-<p style="text-align: center; color:gray; font-size: 10px;">
-Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
-</p>

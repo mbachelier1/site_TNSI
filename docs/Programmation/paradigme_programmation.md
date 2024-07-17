@@ -55,7 +55,7 @@ En respectant ces règles on s'affranchit des effets de bord.
 	```
 
 
-!!! faq "Programmation fonctionnelle ou non?"
+!!! question "Programmation fonctionnelle ou non?"
 	Ce programme respecte-t-il le paradigme fonctionnel?  
 	```python
 	l = [4,7,3]
@@ -74,7 +74,7 @@ En respectant ces règles on s'affranchit des effets de bord.
 	        <div id="messageQCU1"></div>
 	        <div id="correctionQCU1" style="display:none;"> <p> La bonne réponse est Non car elle modifie une variable exterieure.</p></div>
 	   
-!!! faq "Programmation fonctionnelle ou non?"
+!!! question "Programmation fonctionnelle ou non?"
 	Ce programme respecte-t-il le paradigme fonctionnel?  
 	```python
 		i = 5
@@ -97,7 +97,7 @@ En respectant ces règles on s'affranchit des effets de bord.
 	        <div id="messageQCU2"></div>
 	        <div id="correctionQCU2" style="display:none;"> <p> La bonne réponse est Non car elle modifie une variable exterieure.</p></div>
 
-!!! faq "Programmation fonctionnelle ou non?"
+!!! question "Programmation fonctionnelle ou non?"
 	Ce programme respecte-t-il le paradigme fonctionnel?
 	```python
 	def mafonction(n):

@@ -35,7 +35,7 @@ notes = [11, 14, 18, 5, 12, 13, 15]
 print("Moyenne:", mean(notes))
 print("Écart-type:", stdev(notes))
 ```
-!!! caution "Attention"
+!!! warning "Attention"
 	Cette dernière méthode est priviligiée car elle permet d'importer uniqument les fonctions nécessaires et donc de gagner en temps d'éxecution si on utilise un module important. En remplaçant la liste des fonctions par `*` on importe tout le module.  
 
 **Aide d'un module**
@@ -112,7 +112,7 @@ while True:
 ## Créer son propore module
 ### Strucutre de base d'un module
 
-!!! important "Important"
+!!! success "Important"
     ![structure](img/structure.jpg)
     Pour obtenir cette structure on réera un dossier `mesmodules` contenant les diférents fichiers `.py` du module. On créera un fichier vide `__init__.py` dans ce dossier et on appelera les différentes parties du module dans le fichier comme ci-dessous :.
     Appel des modules :
@@ -187,7 +187,7 @@ def fib_to_array(n):
 Les fonctions doivent contenir des tests de façon à ce que lorsqu'une erreur est détectée, elle fasse afficher un message d'erreur compréhensible par l'utilisateur.  
 Elles doivent être documentées précisement.
 
-!!! important "Fonctions privées"
+!!! tip "Fonctions privées"
     On peut avoir besoin dans le module de créer des fonctions privées, c'est-à-dire qu'elle ne sera pas forcément accessible de l'extérieur mais ne sera utilisée que à l'intérieur du module : 
 
 ```python
@@ -213,6 +213,3 @@ Votre module devra donc se finir ainsi si vous ajoutez des tests devant s'affich
 Un petit tour par [ici](projet_modularite.html) pour voir le travail à faire.
 
 ---
-<p style="text-align: center; color:gray; font-size: 10px;">
-Création MB. (ré)utilisation et modification libre mais non commerciale CC-BY-NC
-</p>

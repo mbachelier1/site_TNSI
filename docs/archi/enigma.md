@@ -67,7 +67,7 @@ Le principe est le même que le cryptage précédent mais avant même de passer 
 	A l'aide du nouveau tableau contenant le cablâge,  essayer de crypter deux fois de suite la lettre C.
 	![trouver la lettre](img/rotor_avec_cablage.PNG){align=left}
 
-??? danger "Faites le avant pour être sur d'avoir compris"
+??? fail "Faites le avant pour être sur d'avoir compris"
     Premier C : I dans le cablage, devient R par le premier rotor, R devient U par le deuxieme rotor, U devient Q par le 3e rotor, et Q devient Z dans le réflecteur.  
     Le Z du réflecteur devient un B dans le rotor V, puis le B devient W, le W devient R et le R par l'inversion du câblage devient un S.  
     Le premier rotor tourne d'un cran et le O passe en 1er et tout se décale vers la droite.  
@@ -109,7 +109,7 @@ La création de l'objet `machine`de la classe `enigma` doit se faire de cette fa
 machine=enigma(premier_rotor,deuxieme_rotor,troisieme_rotor,reglage_premier_rotor,reglage_deuxieme_rotor,
                reglage_troisieme_rotor,choix_reflecteur)
 ```
-!!! caution "Type des paramètres"
+!!! warning "Type des paramètres"
 	`premier_rotor`,`deuxieme_rotor` , `troisieme_rotor` et `choix_reflecteur` sont des chaînes de 26 caractères contenant les lettres du rotor. Il faudra utiliser la variable globale `rotors` pour les récupérer.  
 	`reglage_premier_rotor`,`reglage_deuxieme_rotor` et `reglage_troisieme_rotor`  sont des chaînes de 1 caractère. il s'agit de la lettre apparaissant en premier.  
 
@@ -119,7 +119,7 @@ La création de l'objet `machine`de la classe `enigma` doit se faire de cette fa
 machine=enigma(premier_rotor,deuxieme_rotor,troisieme_rotor,reglage_premier_rotor,reglage_deuxieme_rotor,
                reglage_troisieme_rotor,choix_reflecteur,suite_cablage)
 ```
-!!! caution "Type des paramètres"
+!!! warning "Type des paramètres"
 	`premier_rotor`,`deuxieme_rotor` , `troisieme_rotor` et `choix_reflecteur` sont des chaînes de 26 caractères contenant les lettres du rotor. Il faudra utiliser la variable globale `rotors` pour les récupérer.  
 	`reglage_premier_rotor`,`reglage_deuxieme_rotor` , `reglage_troisieme_rotor` et` reglage_reflecteur` sont des chaînes de 1 caractère. il s'agit de la lettre apparaissant en premier.  
 	`suite_cablage` est une chaîne de 6 paires caractères à inverser.
@@ -263,7 +263,7 @@ if __name__=='__main__':
     msg=message(...)
 ```
 
-!!! faq "Décrypter ceci"
+!!! question "Décrypter ceci"
 	Pour tester votre machine votre Furher vous demande d'utiliser les réglages suivants :  
 	rotors dans l'ordre, IV (réglage D), II (réglage A) et III (réglage C)
 	rélecteur A  et câblage 'ENIGMATURING'.

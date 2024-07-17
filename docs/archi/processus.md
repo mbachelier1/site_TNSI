@@ -1,14 +1,14 @@
-#Gestion des processus
-##Qu'est-ce qu'un processus?
+# Gestion des processus
+## Qu'est-ce qu'un processus?
 Un programme écrit à l'aide d'un langage de haut de niveau (on parle de "code source") est, comme nous l'avons vu l'année dernière, transformé en langage machine afin de pouvoir être exécuté par un ordinateur.  
 
 On appelle processus un programme en cours d'exécution. 
 
-!!! caution "Attention"
+!!! warning "Attention"
 	Il ne faut pas confondre le code source du programme et un processus, qui lui correspond à l'exécution de ce programme par un ordinateur. Pour prendre une image assez classique, si une recette de cuisine correspond au code source du programme, le cuisinier en train de préparer cette recette dans sa cuisine correspond à un processus.   
 
 
-##Etats d'un processus
+## Etats d'un processus
 Tous les systèmes d'exploitation "modernes" (Linux, Windows, macOS, Android, iOS...) sont capables de gérer l'exécution de plusieurs processus en même temps. Mais pour être précis, cela n'est pas en véritable "en même temps", mais plutôt un "chacun son tour". Pour gérer ce "chacun son tour", les systèmes d'exploitation attribuent des "états" au processus.
 
 **Voici les différents états :**
@@ -24,7 +24,7 @@ Lorsque le processus finit par obtenir la ressource attendue, celui-ci peut pote
 
 Le passage de l'état "prêt" vers l'état "en exéution" constitue l'opération "d'élection". Le passage de l'état en exéution vers l'état en attente est l'opération de "blocage". Un processus est toujours créé dans l'état "prêt". Pour se terminer, un processus doit obligatoirement se trouver dans l'état "en exéution". 
 
-##Evolution des processus
+## Evolution des processus
 Dans un système monotâche (processeur simple coeur pour simplifier) une seule tâche peut être exécutée à la fois.
 
 !!! example "Un exemple concret"
@@ -62,7 +62,7 @@ Dans un système monotâche (processeur simple coeur pour simplifier) une seule 
 		9. mélanger le tout (mains) *pendant que les boulettes cuisent je finis le gâteau
 		10. cuire (four)
 
-!!! caution "vocabulaire"
+!!! warning "vocabulaire"
 	Chaque étape de ma recette est une étape de processus est appelée **thread**. Le **processus** est alors la recette entière.  
 
 Les différentes tâches (thread) d'un ordinateur sont réalisées de cette façon lorsque plusieurs applications sont ouvertes en même temps. Chaque programme attend son tour et la disponibilité de la ressource.
@@ -86,20 +86,20 @@ Chaque processus possède un identifiant appelé PID (Process Identification), c
 
 Chaque processus possède aussi un PPID (Parent Process Identification). Ce PPID permet de connaitre le processus parent d'un processus (par exemple le processus "init" vu ci-dessus à un PID de 1 et un PPID de 0). À noter que le processus 0 ne possède pas de PPID (c'est le seul dans cette situation). 
 
-!!! faq "Mais qui décide?"
+!!! question "Mais qui décide?"
 	Il va donc falloir partager le temps de processeur disponible entre tous les processus : c’est le travail de l’ordonnanceur (ou scheduler en anglais).
 	Ce dernier a pour tâche de sélectionner	le processus suivant à exécuter parmi ceux qui sont prêts.  
 
-##L'ordonnanceur
+## L'ordonnanceur
 
-###L'interruption
+## #L'interruption
 Pour éviter qu'une tâche ne monopolise une ressource ou un processeur de façon trop longue, un programme apelé `gestionnaire d'interruption`interrompt le processus toutes les 100ns (à la création du premier processeur INTEL c'était toutes les 55ms). Le processeur reprend alors la main et décide si la tâche peut continuer ou si on passe à une autre.  
 Les interruptions peuvent aussiavoir lieu lorsqu'une tâche change d'état (par exemple une attente d'entrée au clavier) ou lorsqu'elle est terminée.
 Les processus peuvent être plus ou moins priroritaires. En effet, si votre document met une demi seconde de plus à s'enregistrer vous ne verrez pas la différence. En revanche si votre musique s'interrompt une demie seconde il y a de forte chance pour que vous vous en rendiez compte.  
 Sous Linux, on peut passer des consignes à l’ordonnanceur en fixant des priorités aux processus dont on est propriétaire.
 Cette priorité est un nombre entre -20 (plus prioritaire) et +20 (moins prioritaire).
 
-!!! summary "liste des commandes linux sur les processus"
+!!! success "liste des commandes linux sur les processus"
 	| commande | Description                                                  | Exemple                                                  |
 	| :------: |:------------------------------------------------------------:| :-------------------------------------------------------:|
 	| ps       |   Affiche l’état des processus en cours                      |  `ps -a` : affiche les processus de tous les utilisateurs|
@@ -108,7 +108,7 @@ Cette priorité est un nombre entre -20 (plus prioritaire) et +20 (moins priorit
 	| kill     | termine le processus                                         | `kill 42` termine le processus de PID 42                 |
 	| renice   | redefinit la priorité du processus                           | `renice +10 42` redefinit à 10 la priorité du PID 42     |
 
-## Interbloquage (ou deadlock)
+##  Interbloquage (ou deadlock)
 ![carrefour](https://lecluseo.frama.io/leclusemaths/nsi/NSI_T/archi/process/carrefour.png){align=left}
 Les interblocages sont des situations de la vie quotidienne. Un exemple est celui du carrefour avec priorité à droite où chaque véhicule est bloqué car il doit laisser le passage au véhicule à sa droite.  
 
@@ -129,7 +129,7 @@ Cette situation d'interblocage a été théorisée par l'informatitien Edward Co
 	- Le processus B détient le dérouleur de bande et demande l’imprimante.
 	![Interblocage](img/interbloc.PNG)
 
-## Questions 
+##  Questions 
 
 1. Donner les cinq états possible d'un processus.
 2. Compléter le schéma suivant ainsi que la légende correspondant aux changements d'état (en trouvant le nom des changements d'état ou une description de quelques mots).
@@ -141,5 +141,5 @@ Cette situation d'interblocage a été théorisée par l'informatitien Edward Co
 7. Supposons deux processus A et B qui demandent des accès exclusifs aux enregistrements d’une base de données E1 et E2. Imaginez un interblocage dans cette situation. 
 
 
-##Fiche de cours
+##  Fiche de cours
 Faites une fiche résumé ou une carte mentale reprenant, la définition d'un processus, l'odonnancement de plusiurs processus et le principe de l'interblocage

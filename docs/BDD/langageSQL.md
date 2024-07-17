@@ -29,7 +29,7 @@ CREATE TABLE Notes (
 );
 
 ```
-!!! remarque "Clé étrangère"
+!!! note "Clé étrangère"
 	A noter que avec SQLite vous ne pourrez pas créer la clé étrangère après création de la table, il est donc indispensable de le faire au moment de la création de celle-ci.
 
 ### **Bloc de sélection**
@@ -177,7 +177,7 @@ SELECT * FROM Etudiants
 ```  
 
  
-!!! caution "Remarque"
+!!! warning "Remarque"
 	On remarque que un étudiant n'a pas de notes donc ne figure pas dans la jointure.
   
 
@@ -217,13 +217,10 @@ SELECT * FROM Etudiants
 
 ```
 
-!!! caution "Attention"
+!!! warning "Attention"
 	Seule la jointure gauche est tolérée par DB Browser mais d'autres logiciels permettent de faire une RIGHT OUTER JOIN et une FULL OUTER JOIN
 
 
 
 
 ---
-<p style="text-align: center; color:gray; font-size: 10px;">
-Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
-</p>

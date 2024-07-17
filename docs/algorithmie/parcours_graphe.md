@@ -10,10 +10,10 @@ Le principe du parcoursen largeur d'abord est de choisir un sommet et de parcour
 !!! note "Remarque"
 	Le "premier" ou "deuxieme" fils sera déterminé par la façon dont le graphe a été implémenté. En effet, on pour déterminer le parcours comme B, C, A, D, F, G, F et H.
 
-!!! faq "à partir d'autres noeuds"
+!!! question "à partir d'autres noeuds"
 	Développer l'algorithme en partant des noeuds H puis D.
 
-!!! caution "Etapes de la procédure"
+!!! warning "Etapes de la procédure"
 	On crée une file vide
 
 	1. On enfile le nœud de départ.  
@@ -40,7 +40,7 @@ Le principe du parcoursen largeur d'abord est de choisir un sommet et de parcour
 
 
 
-!!! faq "à partir d'autres noeuds"
+!!! question "à partir d'autres noeuds"
 	Développer l'algorithme en partant des noeuds H puis D.
 
 L'algorithme en pseudocode :
@@ -77,7 +77,7 @@ On démarre au noeud B, on explore son premier fils (A) et on met les autres en 
 !!! note "Remarque" 
 	Le "premier" ou "deuxieme" fils sera déterminé par la façon dont le graphe a été implémenté. Le résultat du parcours peut être différent.
 
-!!! caution "Etapes de la procédure"
+!!! warning "Etapes de la procédure"
 
 	1. On part d'un sommet que l'on empile;  
 	2. On dépile et on marque le sommet dépilé comme traité (il faudrait créer une liste pour les sommets déjà traités)  
@@ -96,7 +96,7 @@ On démarre au noeud B, on explore son premier fils (A) et on met les autres en 
 	- la pile d'attente est vide et on a visité tous les noeuds.
 
 
-!!! faq "à partir d'autres noeuds"
+!!! question "à partir d'autres noeuds"
 	Développer l'algorithme en partant des noeuds H puis D.
 
 
@@ -148,7 +148,7 @@ FIN
 ## Chercher son chemin
 Chercher son chemin dans un graphe c'est parcourir le graphe en mémorisant les noeuds par lesquels on passe, en s'arrêtant dès que l'on a rencontré le noeud d'arrivée.
 
-!!! hint "algorithme"
+!!! danger "algorithme"
 	```pseudocode
 	Fonction cherche_chemin(graphe,depart,arrivee)  
 	    P ← pile vide  
@@ -173,7 +173,7 @@ Le principe est le même que précédemment mais on ne s'arrête pas dès que le
 On place les chemins trouvés dans une liste et on retourne cette liste.
 
 
-!!! hint "algorithme"
+!!! danger "algorithme"
 	```pseudocode
 	Fonction cherche_chemin(graphe,depart,arrivee)  
 	    P ← pile vide  
@@ -203,7 +203,7 @@ Un cycle dans un graphe est un chemin dont le neoud de départ et le noeud d'arr
 
 Si on veut chercher tous les cycles à partir d'un sommet on applique l'algorithme de recherche de tous les chemins. Et si on veut tous les ycles du graphe, on appique ce dernier à tous les sommets.
 
-!!! hint "algorithme"
+!!! danger "algorithme"
 	```pseudocode
 	Fonction rechercher_cycle(graphe,sommet):
 	    cycle<-liste vide
@@ -271,7 +271,7 @@ On s'interesse au noeud 6 car c'est celui ayant la plus petite marque. On visite
 On a atteind ici le noeud d'arrivée (le 5) donc il faut maintenant remonter le tableau pour déterminer l'itinéraire. On vient du noeud 6, la dernière marque duu noeud 6 venait du noeud 3 et la dernière du noeud 3 venait du noeud 1.
 L'itinéraire le plus court pour joindre 5 à partir de 1 est donc 1, 3, 6, 5. 
 
-!!! hint "Les étapes de la procédure"
+!!! danger "Les étapes de la procédure"
 	1. Créer un tableau donc la premiere ligne contient tous les noeuds à qui on affecte la valeur infini.
 	2. Initialiser une liste de noeuds visités.
 	3. Pour le noeud de départ, affecter le tuple (ou autre) (0,D) où D est le noeud de départ.

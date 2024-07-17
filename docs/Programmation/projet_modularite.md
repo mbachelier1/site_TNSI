@@ -40,7 +40,7 @@ Dans une bibliothèque nommée `typeA.py` contenu dans le dossier `ìncertitude`
 **fonction `moyenne()`**  
 Cette fonction prend une liste de mesures en paramètre et retourne la moyenne des valeurs. 
 
-!!! error "DIY"
+!!! fail "DIY"
 	Ne pas importer de modules de calcul de moyenne ou autre, vous devez l'implémenter vous-même.  
 	La seule tolérance sera pour la fonction `sqrt` mais qui peut être remplacé par une puissance 0,5.
 
@@ -107,7 +107,7 @@ Elle permet de passer de l'incertitude absolue de la mesure à l'incertitude rel
 ```
 
 
-!!! help "Quelques aides précieuses"
+!!! tip "Quelques aides précieuses"
 	valeurs de k (1ere ligne contient le nombre de mesures, les deuxième et troisième lignes les valeurs de k pour 95% et 98%) :  
 	```python
 	#Tableau regroupant les valeurs de k
@@ -140,7 +140,7 @@ Les incertitudes de type B sont des incertitudes issues d'une mesure unique. Ell
 Lorsqu'on lit une graduation à l'aide d'une règle l'erreur peut venir de la lecture de la graduation mais aussi du positionnement du zéro. On a donc plus de chance de faire une mesure imprécise.
 L'incertitude se calcule ainsi :  
 
-$$U= \dfrac{2 \times UnitéDeGraduation}{\sqrt{6}}$$
+$U= \dfrac{2 \times UnitéDeGraduation}{\sqrt{6}}$
 
 ```python
 #exemple pour une règle graduée en mm l'incertitude est de 0,81mm
@@ -151,7 +151,7 @@ $$U= \dfrac{2 \times UnitéDeGraduation}{\sqrt{6}}$$
 **Cas de la lecture simple graduation**  
 Une lecture à simple graduation serait celle d'un baromètre à aiguille ou d'un thermomètre analogique. L'utilisation d'une burette en est aussi un bon exemple. Voici comment se calcule l'incertitude :  
 
-$$U= \dfrac{2 \times UnitéDeGraduation}{\sqrt{12}}$$
+$U= \dfrac{2 \times UnitéDeGraduation}{\sqrt{12}}$
 
 
 ```python
@@ -188,6 +188,3 @@ Il est important que les paramètres `digit` et `graduation` soient renseignés 
 Vous créerez ensuite le module `incertitudes` contenant les fichiers `typeA.py` et `typeB.py` qui pourront être utilisés comme un module.
 
 ---
-<p style="text-align: center; color:gray; font-size: 10px;">
-Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
-</p>

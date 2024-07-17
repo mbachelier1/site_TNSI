@@ -37,11 +37,10 @@ nav:
 
 
   
-  
 theme:
+  name: material
   logo: icones/logo4blanc.png
   favicon: icones/logo4.png
-  name: material
   font: false
   language: fr
   features:
@@ -65,7 +64,7 @@ theme:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: purple
+      primary: grey
       accent: blue
       toggle:
         icon: material/toggle-switch
@@ -85,12 +84,15 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.snippets
   - pymdownx.details
-  - pymdownx.highlight:
-      linenums: true
   - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
         custom_checkbox:    false   #   avec cases d'origine
         clickable_checkbox: true    #   et cliquables.
+  - pymdownx.highlight:
+      linenums: true
   - pymdownx.inlinehilite
+#  - pymdownx.emoji:
+#      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+#      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true 
@@ -118,8 +120,11 @@ plugins:
       theme_handler_path: theme-handler.py
 
 extra:
-  local: G:/info/site_NSI/site/
+  local: D:/Murie/Documents/Muriel/GitHub/site_1NSI
+  github : https://mbachelier1.github.io/site_1NSI
 extra_javascript:
+  - javascripts/extra.js
+  - javascripts/prism.js
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -128,3 +133,5 @@ extra_javascript:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/prism.css
+copyright: Créé par Muriel Bachelier 2021-2025

@@ -18,7 +18,7 @@ n ! = n x (n-1)x(n-2) x .. x 2 x 1.
 	3 ! = 3 x 2 x 1 = 6
 	8 ! = 8 x 7 x 6 x 5 x 4 x 3 x 2 x 1 = 40320  
   
-!!! caution "Par convention"
+!!! warning "Par convention"
 	On prendra 0! = 1 
 
 
@@ -65,11 +65,11 @@ def factorielle_recursif(n):
 print(factorielle_recursif(1))
 print(factorielle_recursif(8))
 ```
-!!! danger "Condition d'arrêt"
+!!! fail "Condition d'arrêt"
 	Il est impératif d'avoir une condition d'arrêt de la boucle, pour éviter la boucle infinie. Ici il s'agit de remonter les entiers jusqu'à ce que l'on arrive à 0 dont on connaît la valeur de la fonction factorielle.  
 	Toutes fonction récursive doit posséder une condition d'arrêt.  
 
-!!! caution "Oubli du `return`"
+!!! warning "Oubli du `return`"
 	Il est fréquent lorsqu'on débute avec cette pratique d'exécuter la fonction en omettant le mot clé `return`. La fonction ne renverra rien sans forcément donner un message d'erreur. Alors si cela ne "marche pas" c'est la première chose à vérifier.
 
 !!! question "Application"
@@ -91,6 +91,3 @@ print(factorielle_recursif(8))
 
 
 ---
-<p style="text-align: center; color:gray; font-size: 10px;">
-Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
-</p>

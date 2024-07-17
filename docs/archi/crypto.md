@@ -43,7 +43,7 @@ C=M⊕S  où M est le message et S la clé.
 
 Pour déchiffrer, on fait l'opération inverse : (M⊕S)⊕S=M
 
-!!! faq "Questions"
+!!! question "Questions"
 	1.Dans quel domaine pouvait-on utiliser la cryptographie dans l'antiquité ?  
 	2.Quel peut être le risque dans le cas d'une interception de communication si on utilise le chiffrement symétrique ?   
 	Si Eve intercepte tous les messages elle peut aussi intercepter la clé qui est forcément transmise en clair.  
@@ -85,7 +85,7 @@ Alice n'a plus qu'à regarder dans son fichier quelle clé elle doit utiliser po
 Une personne qui intercepterait la communication ne saurait pas quelle ligne a été résolue et aurait tout à résoudre pour trouver la clé, ce qui donne beaucoup plus de travail mais n'est pas impossible.  
 
 
-!!! faq "Questions"
+!!! question "Questions"
 	5.Quelle est la clé publique de ce système ?  
 	6.En quoi, le puzzle de Merkle est à la limite du chiffrement asymétrique.   
 
@@ -106,7 +106,7 @@ Pour éviter le problème du "Man in the middle" qui pourrait intercepter les me
 Ce certificat est un fichier contenant la clé publique, des informations sur la personne et une signature numérique que seule la personne à qui appartient la clé publique peut créer car elle est chiffrée à l'aide de la clé privée.
 
 
-!!! faq "Questions"
+!!! question "Questions"
 	7.Faites quelques recherches pour résumer en quelques phases (éventuellement avec un schéma) le principe du "Man in the middle".  
 	8.Dans quels cas utilise-t-on les certificats ?   
 

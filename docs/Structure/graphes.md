@@ -6,7 +6,7 @@
 ###Défintion
 Un graphe est la représentation théorique d'une situation réelle mais abstraite.   
 
-!!! note "Exemples"
+!!! example "Exemples"
     Plan de métro  
 	réseau routier  
 	réseau d'amis ou d'influence sur les réseaux sociaux  
@@ -34,13 +34,20 @@ Les noeuds sont appelés **sommets**, reliés par des **arêtes**. Les arêtes s
 **voisins** : Les voisins d'un sommet sont les sommets reliés par une seule arrête.  
 **successeur** :  les successeurs sont les voisins d'après.  
 **prédécesseurs** : Les prédécesseurs sont les voisins précédent.   
+**Graphe pondéré**
+Un graphe est dit pondéré si une valeur correspond à une arête ou un arc.
+![graphe pondéré](https://pixees.fr/informatiquelycee/n_site/img/nsi_term_structDo_graphe_4.png)
+Cette valeur eut être un temps, une distance, un débit d'octets, ou n'importe quoi d'autre.  
 
-###**matrice d'adjacence**
+### **Matrice d'adjacence**
 ![Matice d'un graphe non-orienté](img/matrice_non_oriente.png){align=right} 
 La matrice d'adjacence est un tableau à double entrée qui définit les liens entre les noeuds. Si le graphe est orienté, les colonnes sont les successeurs du noeud de la ligne courante. Si le graphe est non-orienté, la matrice est symétrique et les informations sont données en double (il faudra en tenir compte au moment de l'implémentation si l'on veut limiter la complexité de notre programme).  
 ![Matice d'un graphe orienté](img/matrice_oriente.png)
 
-###**Représenter en python la matrice d'adjacence**
+!!! note "Remarque"
+	Dans la matrice d'adjacence d'un graphe pondéré, on remplacera le 1 ar le poids de l'arête.
+
+### **Représenter en python la matrice d'adjacence**
 On peut représenter la matrice en python avec différentes structure, comme :
 
 - la liste

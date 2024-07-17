@@ -48,7 +48,7 @@ Chaque ligne de la table doit comporter un attribut qui l'identifie de façon un
 	- L'email d'un utilisateur peut servir de clé primaire, mais ce n'est pas conseillé.
 
 
-!!! Caution "Attention"
+!!! warning "Attention"
 	Il est préférable d'utiliser une clé primaire indépendante des données de la table pour ne pas perdre d’information lors d'une éventuelle mise à jour.
 
 Une **clé secondaire** ou **clé étrangère** est une clé utilisée dans une table pour faire référence à un enregistrement d'une autre table.
@@ -106,7 +106,4 @@ Un  système SGBD (service de gestion de base de données) est tenu d'assurer l'
 ## Un petit résumé vidéo :   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bhtzximjwk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
----
-<p style="text-align: center; color:gray; font-size: 10px;">
-Création MB. tilisation libre mais non commerciale CC-BY-NC 2021
-</p>
+---s

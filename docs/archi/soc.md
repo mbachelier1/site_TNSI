@@ -12,7 +12,7 @@ Dans un ordinateur “classique” tel qu’un PC de bureau, le « hardware » e
 - la carte graphique (ou GPU – Graphics Processing Unit) se charge d’afficher une image, qu’elle soit en 2D ou bien en 3D comme dans les jeux.  
 - la carte-mère (Motherboard) permet l’acheminement des données entre les composants (CPU, RAM, GPU, disque dur, SSD, cartes réseau …) via des « BUS ». 
 
-!!! important "Elements d'un ordinateur"
+!!! tip "Elements d'un ordinateur"
 	![Composants d'un ordinateur](img/elt_pc.png){align=left}
 	1- CPU surmonté d’un  dissipateur thermique (ventirad)   
 	2-Barrettes de RAM   
@@ -25,7 +25,7 @@ Mais depuis le début de l’ère des smartphones et des tablettes, on assiste �
 >On peut intégrer de la logique, de la mémoire (statique, dynamique, flash, ROM, PROM, EPROM, EEPROM), des dispositifs (capteurs) mécaniques, opto-électroniques, chimiques ou biologiques ou des circuits radio… 
 D’après Wikipédia  
 
-!!! faq "Question"
+!!! question "Question"
 	1-Qu’est-ce qu’un SoC ?   
 	2-Quels sont les appareils à base de SoC ?   
 	3-Au niveau hardware, qu’est-ce qui différencie fondamentalement un SoC des composants d’un ordinateur ?   
@@ -59,7 +59,7 @@ Le processeur d’image ou « Image Signal Processor » (ISP) est une puce prena
 ◼ Le processeur de sécurité (SPU)   
 Le processeur de sécurité ou « Secure Processing Unit » (SPU) est le « bouclier » du smartphone. Son alimentation électrique est indépendante afin de ne pas pouvoir être éteint en cas d’attaque sur celui-ci. Le SPU est d’une importance capitale. En effet celui-ci va stocker les données biométriques, bancaires, la carte SIM ou encore les titres de transport. C’est lui qui contient les clés de chiffrement des données de l’utilisateur. 
 
-!!! faq "Question"
+!!! question "Question"
 	4-Pourquoi les CPU d’un SoC embarquent-ils plusieurs cœurs ?   
 	5-Donner un ordre de grandeur de la fréquence du CPU d’un SoC.    
 	6-Sur quel paramètre influe la fréquence du CPU d’un SoC ?   
@@ -81,7 +81,7 @@ Outre leur taille miniaturisée bien adaptée aux terminaux nomades (smartphones
  
 En revanche, le principal inconvénient d’un SoC est que là ou un ordinateur équipé d'une carte mère permet de faire évoluer les composants individuellement, l'extrême intégration du SoC présente en revanche l'inconvénient de n'autoriser aucune mise à jour possible du matériel.   
 
-!!! faq "Questions"
+!!! question "Questions"
 	14-Quels sont les principaux avantages d’un SoC ?  
 	15-Citer le principal inconvénient d’un SoC.  
 
@@ -99,7 +99,7 @@ Au sein de la génération actuelle de smartphone on trouve une grande variété
 ![Snapdragon](img/snapdragon.png){align=right width=30%}
 Pour les derniers modèles de smartphones 2019-2020, la principale difficulté technologique est d’intégrer aux SoCs les modems 5G qui sont complexes à fabriquer. Pour l’instant ces derniers sont généralement gravés en 10 nm sur une puce indépendante du SoC. Le prochain défi technologique sera d’intégrer les modems 5G directement dans le SoC gravé en 7 nm puis 5 nm. 
 
-!!! faq "Question"
+!!! question "Question"
 	16-Pour les modèles 2019-2020 de téléphones portables, quelle est la finesse de gravures des SoC ?   
 	17-Quel est l’ordre de grandeur de la surface d’un SoC ?   
 	18-Quel est l’ordre de grandeur du nombre de transistors présents sur un SoC ?   
@@ -116,11 +116,11 @@ ARM propose des architectures qui sont vendues sous licence de propriété intel
 Une particularité des processeurs ARM est leur mode de vente. En effet, ARM Ltd. ne fabrique ni ne vend ses processeurs sous forme de circuits intégrés. La société vend les licences de ses processeurs de manière qu'ils soient gravés dans le silicium par d'autres fabricants. Aujourd'hui, la plupart des grands fondeurs de puces proposent de l'architecture ARM.   
 
 ![diagramme de fonctionnement](img/diagramme_soc_arm.png)
-!!! faq "Question"
+!!! question "Question"
 	22-Quel est l'avantage à ne pas vendre des processeurs directement ?  
 	23-Faites quelques recherches sur les problèmes d'approvisionnement des semi-conducteurs  
 
-!!! important "A retenir !!"
+!!! success "A retenir !!"
 	Faites une fiche ou une carte mentale sachant que vous devez savoir ce qu'est un SoC, ce qu'il contient, ses avantages par rapport à un système classique et où est ce qu'on les trouve.
 
 

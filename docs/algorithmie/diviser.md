@@ -44,7 +44,7 @@ On combine les tableaux deux à deux en comparant le premier élément de chaque
 	``` 
 
 
-!!! faq "A vous de jouer"
+!!! question "A vous de jouer"
 	Ecrire en pseudo code la division en sous-tableaux de 1 élément.
 
 ![animation](img/tri_fusion.gif)
@@ -77,7 +77,7 @@ De façon plus générale, avec un grand nombre de disque, si on arrive à cette
 on saura résoudre le problème :
 ![situation générale](img/algo_ndisques.gif)
 
-!!! attention "les étapes algorithmiques"
+!!! warning "les étapes algorithmiques"
 
 	- Tous les disques sont sur A
 	- transférer les n-1 diques sur B (se fera par récursivité en allant jusqu'au cas d'arrêt ou n=1)
@@ -86,7 +86,8 @@ on saura résoudre le problème :
 
 Le cas de base étant celui a 1 disque :
 ![cas de base](img/cas_de_base.PNG)
-!!! code "code"
+
+!!! success "code"
 
 	Voici ce que cela donne en python
 
@@ -120,7 +121,7 @@ Le cas de base étant celui a 1 disque :
 		```
 
 
-!!! faq "A faire"
+!!! questions "A faire"
 	Dérouler le code à la main pour 3 puis 4 disques.  
 	Tester ce code avec plusieurs disques en utilisant l'animation pour vérifier la démarche.  
 

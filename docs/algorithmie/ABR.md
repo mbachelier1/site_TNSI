@@ -28,7 +28,7 @@ Un arbre binaire de recherche (ABR) est un abre binaire dont les données du sou
 Les ABR permettent de ranger des données que l'on peut ensuite retrouver facilement en minimisant la coomplexité de la recherche. En effet, il est inutile de parourir tout l'arbre pour rechercher un nombre si l'on sait déjà s'il est plus petit que la racine. Il suffira de parcourir le sous-arbre gauche.  
 
 Algorithme de recherche d'une clé :
-![recherche](img/rechercher_cle.PNG)
+![recherche](img/recherche_cle.PNG)
 
 Algorithme d'insertion de clé :
 ![insertion](img/inserer_cle.PNG)
